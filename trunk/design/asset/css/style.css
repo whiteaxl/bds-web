@@ -180,7 +180,7 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-button, select, [type="button"], [type="text"], [type="email"], [type="search"], [type="submit"], [type="file"] {
+button, [type="button"], [type="text"], [type="email"], [type="search"], [type="submit"], [type="file"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   outline: none;
@@ -918,6 +918,10 @@ button, select, [type="button"], [type="text"], [type="email"], [type="search"],
 
 .row .col-33 {
   width: 33.33333%;
+}
+
+.row .col-40 {
+  width: 40%;
 }
 
 .row .col-40 {
@@ -3820,27 +3824,17 @@ button, select, [type="button"], [type="text"], [type="email"], [type="search"],
   text-align: center;
 }
 
-.box-filter .option {
+.box-filter .option .select {
+  width: 100%;
   height: 36px;
-  position: relative;
+  padding: 5px;
   border-radius: 3px;
   transition: all 0.3s;
+  border: 1px solid #cdd1d4;
 }
 
-.box-filter .option:hover {
+.box-filter .option .select:hover {
   background: #f5f6f7;
-}
-
-.box-filter .option .select {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  margin: 0;
-  background: transparent;
 }
 
 .box-filter .option .span {
@@ -5502,6 +5496,10 @@ button, select, [type="button"], [type="text"], [type="email"], [type="search"],
   color: #11c1f3;
 }
 
+.box-explore {
+  margin-bottom: 30px;
+}
+
 .box-explore .container {
   background: #e9e9e9;
   border-radius: 3px;
@@ -5676,38 +5674,37 @@ button, select, [type="button"], [type="text"], [type="email"], [type="search"],
   width: 1px;
 }
 
-.tooltip {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -ms-transform: translate3d(-50%, -50%, 0);
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
-  width: 280px;
-  background: #fff;
-  border-radius: 3px;
+.gm-style-iw {
   line-height: 1.42;
 }
 
-.tooltip .media {
+.gm-style-iw > div {
+  width: 280px;
+  background: #fff;
+  padding: 5px 0;
+  border-radius: 3px;
+  overflow: hidden !important;
+}
+
+.gm-style-iw .media {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  border-radius: 3px 0 0 3px;
+  border-radius: 3px;
 }
 
-.tooltip .media:before {
+.gm-style-iw .media:before {
   content: "";
   display: block;
   height: 100px;
 }
 
-.tooltip .price {
+.gm-style-iw .price {
   padding: 10px 10px 0;
   font-weight: 600;
 }
 
-.tooltip .info {
+.gm-style-iw .info {
   font-size: 13px;
   color: #869099;
   padding: 0 10px;
@@ -5715,7 +5712,7 @@ button, select, [type="button"], [type="text"], [type="email"], [type="search"],
 
 .box-advance {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .box-advance .title {
@@ -5726,6 +5723,7 @@ button, select, [type="button"], [type="text"], [type="email"], [type="search"],
 
 .box-advance .type {
   margin-top: 12px;
+  margin-bottom: 24px;
   background: #f5f5f5;
   border-radius: 3px;
   padding: 12px;
@@ -5743,16 +5741,57 @@ button, select, [type="button"], [type="text"], [type="email"], [type="search"],
   padding-right: 30px;
 }
 
-.box-advance .content {
-  line-height: 1.42;
+.box-advance .control .head + .group {
+  border-top: none;
+  margin-top: 0;
 }
 
-.box-advance .option {
-  border: 1px solid #ccc;
-  border-radius: 3px;
+.box-advance .group {
+  padding-top: 12px;
+  margin-top: 12px;
+  border-top: 1px dotted #ccc;
+}
+
+.box-advance .group .label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.box-advance .group .notice {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #869099;
+}
+
+.box-advance .group > .row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.box-advance .group > .row > .col {
+  padding: 5px 10px;
+}
+
+.box-advance .group > .row > .col .row {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+
+.box-advance .group > .row > .col .row .col {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.box-advance .content {
+  line-height: 1.42;
+  border-bottom: 1px solid #ccc;
   padding: 12px;
-  margin-top: -1px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.box-advance .control {
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .box-advance .head {
@@ -5782,9 +5821,86 @@ button, select, [type="button"], [type="text"], [type="email"], [type="search"],
   background: #ff7857;
 }
 
+.box-advance .tc {
+  text-align: center;
+  line-height: 32px;
+}
+
+.box-advance .or {
+  display: block;
+  padding-top: 32px;
+  text-align: center;
+}
+
+.box-advance .form-control {
+  display: block;
+  border: 1px solid #cdd1d4;
+  border-radius: 3px;
+  width: 100%;
+  padding: 5px 10px;
+  height: 32px;
+  font-size: 13px;
+  transition: border 0.3s;
+}
+
+.box-advance .form-control:hover {
+  border-color: #b2b8bc;
+}
+
+.box-advance .form-control:focus {
+  border-color: #11c1f3;
+}
+
+.box-advance .form-control.error {
+  border-color: #FF8F8F;
+  background: #FDECEC;
+}
+
+.box-advance .form-control.valid {
+  border-color: #2FD03A;
+  background: #D6F9D8;
+}
+
+.box-advance label.error {
+  display: block;
+  font-size: 13px;
+  color: #f00;
+  margin-top: 5px;
+}
+
+.box-advance .wrap {
+  margin-top: -1px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.box-advance .handle {
+  text-align: center;
+  padding: 15px 20px;
+  background: #e9e9e9;
+  border: 1px solid #fff;
+  border-radius: 0 0 2px 2px;
+}
+
+.box-advance .btn-submit {
+  display: inline-block;
+  text-align: center;
+  padding: 6px 20px;
+  font-weight: 600;
+  line-height: 20px;
+  border-radius: 3px;
+  transition: background 0.3s;
+  color: #fff;
+  background: #f74a27;
+}
+
+.box-advance .btn-submit:hover {
+  background: #ff7857;
+}
+
 .nav-tab {
   list-style: none;
-  margin-top: 24px;
   position: relative;
 }
 
@@ -6148,7 +6264,7 @@ button, select, [type="button"], [type="text"], [type="email"], [type="search"],
 }
 
 @media only screen and (max-width: 1129px) {
-  .box-news, .box-filter .container, .box-control, .box-detail, .box-list, .box-register, .box-mobile .cover, .box-mobile .item, .box-city, .box-notice, .box-estate .container, .box-place {
+  .box-advance, .box-news, .box-filter .container, .box-control, .box-detail, .box-register, .box-mobile .cover, .box-mobile .item, .box-city, .box-notice, .box-estate .container, .box-place {
     padding-left: 12px;
     padding-right: 12px;
   }
@@ -6519,7 +6635,7 @@ button, select, [type="button"], [type="text"], [type="email"], [type="search"],
   }
   .block-16 .item:first-child {
     padding-bottom: 10px;
-    border-bottom: 1px solid #e7f0f6;
+    border-top: none;
     margin-bottom: 0;
     background: transparent;
   }
