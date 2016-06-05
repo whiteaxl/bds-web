@@ -1,0 +1,229 @@
+<html>
+<head>
+<title>Insert Image</title>
+<style type="text/css">
+	.textbody{
+		FONT-FACE: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE:10pt
+	}
+	.form{
+		FONT-FACE: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE:10pt
+	}
+	body, td {font-size: 12px;}
+</style>
+
+<script src="../setting.js" type="text/javascript"></script>
+<script language="JavaScript">
+	//Language file
+	document.write('<scr' + 'ipt src="../languages/'+ editor_lang_dir +'lang.js" type="text/javascript"></scr' + 'ipt>');
+	document.write('<scr' + 'ipt src="../languages/'+ editor_lang_dir +'lang_image.js" type="text/javascript"></scr' + 'ipt>');
+</script>
+
+<script language="JavaScript">
+	var htmlID		= window.location.search.substr(1);
+	if ( editor_is_ie ){
+		var s_imageURL	= dialogArguments.editor_get_imageURL();
+	}
+	else{
+		var s_imageURL	= opener.editor_get_imageURL();
+	}
+
+	function Done(){
+		var the_form	= window.document.IMAGEFORM;
+
+		//Upload local file
+		if (the_form.imgType[1].checked == true){
+			if (the_form.ClientFile.value != ""){
+				the_form.action	= s_imageURL;
+				insertImage();
+				return true;
+			}
+			window.alert(editor_lang['pimage_error_file']);
+		}
+		//Remote file
+		else{
+			if ( (the_form.URLFile.value != "") && (the_form.URLFile.value != "http://")){
+				insertImage();
+				window.close();
+			}
+			else{
+				window.alert(editor_lang['pimage_error_url']);
+				the_form.URLFile.focus();
+			}
+		}
+		return false;
+	}
+
+	function insertImage(){
+		var the_form  		= window.document.IMAGEFORM;
+		var the_alt			= the_form.alterText.value;
+		var the_desc		= the_form.imageDesc.value;
+		var the_align		= the_form.imgAlign.options[the_form.imgAlign.selectedIndex].value;
+		var the_border		= the_form.imgBorder.value;
+		var the_horizon		= the_form.imgHorizontal.value;
+		var the_vertical	= the_form.imgVertical.value;
+		var img				= "<img src=\"";
+		var flag_upload		= false;
+
+		//Insert remote image
+		if ( (the_form.imgType[0].checked == true) && (the_form.URLFile.value != "") && (the_form.URLFile.value != "http://") ){
+			img	+= the_form.URLFile.value;
+		}
+		//Upload local image
+		else if( (the_form.imgType[1].checked==true) && (the_form.ClientFile.value!="")){			
+			img	+= "[_FILE_URL_]";
+			flag_upload	= true;
+		}
+	
+		img += "\"";
+		img += (the_alt != "") ? " ALT=\""+ the_alt +"\"" : "";
+		img += (the_border != "") ? " border=\""+ the_border +"\"" : "";
+		img += (the_align != "") ? " align=\"" + the_align + "\"" : "";
+		img += (the_horizon != "") ? " hspace=\"" + the_horizon + "\"" : "";
+		img += (the_vertical != "") ? " vspace=\"" + the_vertical + "\"" : "";
+		img += ">";
+
+		var img_result	= "";
+		if ( the_desc != "" ){
+			str	= (the_align != "") ? '<table align='+ the_align : '<table';
+			str	+= ' width=20 border=0 cellspacing=0 cellpadding=0><tr><td>'+ img +'</td></tr><tr><td align="center"><font color=#0000ff size=2>'+ the_desc +'</font></td></tr></table>';
+			img_result	= str;
+		}
+		else{
+			img_result	= img;
+		}
+
+		//Not insert the image. It will be inserted later
+		if ( flag_upload ){
+			the_form.html_id.value		= htmlID;
+			the_form.img_result.value	= img_result;
+			window.frames['frmMain'].width	= "100%";
+			window.frames['frmMain'].height	= "100%";
+			return;
+		}
+
+		//Insert image right now
+		if ( editor_is_ie ){
+			//Internet explorer
+			window.returnValue	= img_result;
+		}
+		else{
+			//Other browsers
+			window.opener.editor_insertHTML(htmlID, img_result);
+		}
+		window.close();
+		return;
+	}
+
+</script>
+</head>
+<BODY bgColor="#e0e0e0" leftMargin=0 text=#000000 topMargin=0 marginheight="0" marginwidth="0">
+
+<center>
+<iframe frameborder=0 id="frmMain" name="frmMain" width="0" height="0" style="background-color: #e0e0e0;"></iframe>
+
+<table bgColor="#e0e0e0" border=1 style="bordercolor: #e0e0e0;" cellPadding=0 cellSpacing=2 width="422">
+<form target="frmMain" name="IMAGEFORM" method="POST" action="" enctype="multipart/form-data" onsubmit="javascript: return Done();">
+<input type="hidden" name="html_id" value="">
+<input type="hidden" name="img_result" value="">
+    <tr> 
+      <td bgColor="#ffffff" width="100%"> 
+        <table bgColor="#e0e0e0" border=1 borderColor=#000000 borderColorDark=#ffffff borderColorLight=#999999 cellPadding=2 cellSpacing=0 width="100%">
+          <tr> 
+            <td bgColor="#e0e0e0" width="100%" align="center">
+	
+				<!-- Detail Table  -->
+				<table border=0 cellPadding=0 cellSpacing=0 style="border-collapse: collapse" bordercolor="#111111">
+				<tr bgColor="#e0e0e0"> 
+					<td width=113><input type="radio" id="imgType" name="imgType" value="URL" checked> <font class=textbody><script language="javascript">document.write(editor_lang['pimage_remote']);</script>:</font></td>
+					<td width=299><input class="form" type="text" id="URLFile" name="URLFile" size="41" style="width: 285px" value="http://" onFocus="javascript: window.document.IMAGEFORM.imgType[0].checked = true;"></td>
+				</tr>
+				<tr bgColor="#e0e0e0"> 
+					<td width=113 valign="top"><input type="radio" name="imgType" value="Client"> <font class="textbody"><script language="javascript">document.write(editor_lang['pimage_local']);</script>:</font></td>
+					<td width=299><input type="file" name="ClientFile" size="30" style="width: 285px" onFocus="javascript: window.document.IMAGEFORM.imgType[1].checked = true;"><br><font class=form><script language="javascript">document.write(editor_lang['pimage_local_upload']);</script></FONT><br><br></td>
+				</tr>
+				<tr bgColor="#e0e0e0"> 
+					<td width=113 valign="top"><font class="textbody">&nbsp; <script language="javascript">document.write(editor_lang['pimage_alternate']);</script>:</font></td>
+					<td width=299><input class="form" type="text" name=alterText size=40 style="width: 285px"></td>
+				</tr>
+				<tr bgColor="#e0e0e0"> 
+					<td width=113 valign="top"><font class="textbody">&nbsp; <script language="javascript">document.write(editor_lang['pimage_description']);</script>:</font></td>
+					<td width=299><textarea class="form" name="imageDesc" style="width: 285px" cols="35" rows="3"></textarea></td>
+				</tr>
+				<tr bgColor="#e0e0e0"> 
+					<td width=412 colspan="2">
+					
+						<!-- Begin img options -->
+						<table border="0" cellpadding="0" cellspacing="3" width="100%">
+						<tr>
+							<td width="58%" align="center">				
+							
+								<fieldset style="margin-left: 5px; margin-right: 5px;">
+								<legend><font class="textbody"><script language="javascript">document.write(editor_lang['pimage_layout']);</script></font></legend>
+								<table border="0" cellpadding="0" cellspacing="2" width="100%">
+								<tr>
+									<td width="50%" align="right"><font class="textbody"><script language="javascript">document.write(editor_lang['pimage_alignment']);</script>:</font></td>
+									<td width="50%" align="left">
+										<select class=form size="1" name="imgAlign">
+											<option value="">Default</option>
+											<option value="left">Left</option>
+											<option value="right">Right</option>
+											<option value="texttop">Texttop</option>
+											<option value="absmiddle">Absmiddle</option>
+											<option value="baseline">Baseline</option>
+											<option value="absbottom">Absbottom</option>
+											<option value="bottom">Bottom</option>
+											<option value="middle">Middle</option>
+											<option value="top">Top</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td align="right"><font class="textbody"><script language="javascript">document.write(editor_lang['pimage_border']);</script>:</font></td>
+									<td align="left"><input type="text" name="imgBorder" size="4" style="width: 40px" value="0"></td>
+								</tr>
+								</table>
+								</fieldset>
+							
+							</td>
+							<td width="2%" align="center">&nbsp;</td>
+							<td width="40%" align="left">
+								<fieldset style="margin-left:5px; margin-right:5px; width: 160px;">                  
+								<legend><font class="textbody"><script language="javascript">document.write(editor_lang['pimage_spacing']);</script></font></legend>
+								<table border="0" cellpadding="0" cellspacing="2" width="100%">
+								<tr>
+									<td width="55%" align="right"><font class="textbody"><script language="javascript">document.write(editor_lang['pimage_horizontal']);</script>:</font></td>
+									<td width="45%"><input class=form type="text" name="imgHorizontal" size="4" value="5" style="width: 40px"></td>
+								</tr>
+								<tr>
+									<td width="55%" align="right"><font class="textbody"><script language="javascript">document.write(editor_lang['pimage_vertical']);</script>:</font></td>
+									<td width="45%"><input class=form type="text" name="imgVertical" size="4" value="5" style="width: 40px"></td>
+								</tr>
+								</table>
+								</fieldset>  
+							</td>
+							</tr>
+							</table>
+							<!-- End img options -->
+					
+						</td>
+					</tr>
+					</table>            
+					<!-- End Detail Table -->
+
+            </td>
+          </tr>
+          <tr bgColor="#e0e0e0"> 
+            <td bgColor="#e0e0e0" height=2 align="center"> 
+				<script language="javascript">document.write('<input type="submit" name="smOK" value="'+ editor_lang['button_done'] +'">');</script>&nbsp;
+				<button name="cancel" onClick="javascript:window.close();"><script language="javascript">document.write(editor_lang['button_cancel']);</script></button>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+</form>
+</table>
+</center>
+
+</body>
+</html>

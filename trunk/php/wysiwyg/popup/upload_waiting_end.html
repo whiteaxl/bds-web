@@ -1,0 +1,20 @@
+
+OK !!!</strong><br>
+</center>
+
+<script language="javascript">
+	//Insert image now
+	if ( editor_is_ie ){
+		//Internet explorer
+		self.dialogArguments.add_usedFile("{FILE_URL}");
+		window.returnValue	= '{IMG_RESULT}';
+	}
+	else{
+		//Other browsers
+		parent.opener.add_usedFile("{FILE_URL}");
+		parent.opener.editor_insertHTML('{HTML_ID}', '{IMG_RESULT}');
+	}
+	window.parent.close();
+</script>
+</body>
+</html>

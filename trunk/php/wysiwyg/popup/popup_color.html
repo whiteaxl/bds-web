@@ -1,0 +1,140 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Select Color</title>
+<style type="text/css">
+	table.CTab  {cursor:pointer}
+	body, td {font-size: 12px;}
+</style>
+
+<script src="../setting.js" type="text/javascript"></script>
+<script language="JavaScript">
+	//Language file
+	document.write('<scr' + 'ipt src="../languages/'+ editor_lang_dir +'lang.js" type="text/javascript"></scr' + 'ipt>');
+</script>
+
+<script language="JavaScript">
+	function build_ColorTable(){
+		var sz			= "";
+		var szColor		= "";
+		var cPick1		= new Array("00","33","66","99","CC","FF");
+		var cPick2		= new Array("00","44","88","CC","FF");
+		var cPick3		= new Array("00","33","66","99","CC","FF");
+		var iColors1	= cPick1.length;
+		var iColors2	= cPick2.length;
+		var iColors3	= cPick3.length;
+		for (var r=iColors1-1; r>=0; r--){
+			sz	+= "<tr>";
+			for (var g=0; g<iColors2; g++) {
+				for (var b=0; b<iColors3; b++) {
+					szColor	= cPick3[b] + cPick2[g] + cPick1[r];
+					sz		+= "<td height=20 BGCOLOR='#" + szColor + "' TITLE='#" + szColor + "'>&nbsp;</td>";
+				}
+			}
+			sz	+= "</tr>";
+		}
+		document.write(sz);
+	}
+</script>
+
+<script language=javascript>
+<!-- 
+	function CTabClick(event) {
+		if ( editor_is_ie ){
+			document.getElementById('TD_ColorCode').innerText	= event.srcElement.title;
+			document.getElementById('TD_ColorS').style.backgroundColor	= event.srcElement.title;
+		}
+		else{
+			document.getElementById('TD_ColorCode').textContent	= event.target.title;
+			document.getElementById('TD_ColorS').style.backgroundColor	= event.target.title;
+		}
+		document.getElementById('TD_ColorN').style.backgroundColor	= "";
+	}
+		
+	function CTabOver(event){
+		if ( editor_is_ie ){
+			if ( event.srcElement.title ){
+				document.getElementById('TD_ColorN').style.backgroundColor	= event.srcElement.title;
+			}
+		}
+		else{
+			if ( event.target.title ){
+				document.getElementById('TD_ColorN').style.backgroundColor	= event.target.title;
+			}
+		}
+	}
+		
+	function CTabOut() {
+		TD_ColorN.innerText	= " ";
+		TD_ColorN.style.backgroundColor	= "";
+	}
+
+	function Done() {
+//		var the_color	= document.getElementById('TD_ColorS').style.backgroundColor;
+		var the_color	= document.getElementById('TD_ColorCode').innerHTML;
+		if ( editor_is_ie ){
+			window.returnValue	= the_color;
+		}
+		else{
+			if ( window.location.search.substr(1) == 'TblColorItem' ){
+				//return value - Insert table
+				window.opener.updateColor(the_color);
+			}
+			else{
+				var objStr		= window.location.search.substr(1).split(".");
+				var htmlID		= objStr[0];
+				var cmdColor	= objStr[1];
+				window.opener.editor_formatText(htmlID, cmdColor, false, the_color);
+			}
+		}
+		window.close();
+	}
+ -->
+</script>
+</head>
+<body bgcolor="#e0e0e0" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0">
+
+<center>
+<table width=292 bgcolor=#e0e0e0 border=0 bordercolor=#e0e0e0 bordercolordark=#e0e0e0 bordercolorlight=#e0e0e0 cellpadding=0 cellspacing=5>
+    <tr> 
+      <td bgcolor=#ffffff> 
+        <table bgcolor=#e0e0e0 border=1 bordercolor=#000000 bordercolordark=#ffffff bordercolorlight=#999999 cellpadding=2 cellspacing=0 width="100%">          <tr> 
+            <td width="21%" > 
+
+              <table class="CTab" width="100%" id="colorTable" border=0 cellspacing=0 cellpadding=0 onclick="CTabClick(event);" onMouseOver="CTabOver(event);" onMouseOut="CTabOut();">
+                <script language="javascript">build_ColorTable();</script>
+              </table>
+
+            </td>
+          </tr>
+          <tr> 
+            <td width="40%" height="15">
+
+              <table border=0 cellpadding=0 cellspacing=0 width="100%">
+                <tr bgcolor="#CCCCCC" style="font-family:'Arial, Helvetica, sans-serif'; font-size:12px"> 
+                  <td width="50" style="font-size:11px" align="center" id="TD_ColorCode"></td>
+                  <td width="77"> 
+                    <table border="1" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td id="TD_ColorS" width="45"><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;</font></td>
+                        <td width="25" id="TD_ColorN">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td align="right" nowrap>
+				  		<button id="ok" onClick="Done()"><script language="javascript">document.write(editor_lang['button_done']);</script></button> &nbsp;
+						<button onClick="javascript:window.close();"><script language="javascript">document.write(editor_lang['button_cancel']);</script></button>
+				  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  </center>
+  
+</body>
+</html>

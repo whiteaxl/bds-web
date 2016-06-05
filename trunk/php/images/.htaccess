@@ -1,0 +1,4 @@
+<Files ~ "\.(php|phtml|asp|jsp|php.rar|php.jpg|php.gif)$">
+order deny,allow
+deny from all
+</files>

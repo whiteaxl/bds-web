@@ -1,0 +1,81 @@
+.editor_menubar {
+	border-top: 0px;
+	height: 22px;
+	font-size: 18px;
+	width: 100%;
+}
+
+.editor_button {
+	border: 0px; 
+	height: 22px; 
+	width: 22px;
+	padding: 1px;
+}
+
+.editor_button_disabled {
+	border: 0px;
+	height: 22px; 
+	width: 22px;
+	padding: 1px;
+	clip:  rect();
+}
+
+.editor_bsep
+{
+	background-color: #E6E6E6; 
+	border-left: buttonhighlight solid 1px; 
+	border-right: buttonshadow solid 1px;
+	border-top: buttonhighlight solid 1px; 
+	font-size: 1px;
+	height: 20px; 
+	width: 3px;
+}
+
+.editor_imgbtn
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 20px;
+	height: 20px;
+}
+
+.editor_imgbtn_disabled
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 20px;
+	height: 20px;
+	filter: alpha(opacity=40); /* IE */
+    opacity: 0.40; /* Safari, Opera and Mozilla */
+}
+
+.editor_imgbtnDown
+{
+	position: relative;
+	left: 1px;
+	top: 1px;
+	height: 20px; 
+	width: 20px;
+}
+
+.editor_buttonOver
+{
+	background-color: #dff7d5; 
+	border: #339900 solid 1px; 
+	height: 22px; 
+	width: 22px;
+}
+
+
+.editor_buttonDown
+{
+	background-color: #FFFFFF; 
+	border-bottom: buttonhighlight solid 1px; 
+	border-left: buttonshadow solid 1px; 
+	border-right: buttonhighlight solid 1px; 
+	border-top:  buttonshadow solid 1px; 
+	height: 22px; 
+	width: 22px;
+}

@@ -1,0 +1,109 @@
+body {
+	COLOR: #000000; FONT-FAMILY: Verdana, Tahoma, Arial; font-size: 12px;
+}
+a{
+	COLOR: #2B0374; TEXT-DECORATION: none; outline: none
+}
+a:visited {
+	TEXT-DECORATION: none;
+}
+a:hover {
+	COLOR: #FF0000; TEXT-DECORATION: underline;
+}
+td,th{
+	font-family: Verdana, Tahoma, Arial;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.menugroup{
+	COLOR: #FF0000; FONT-SIZE: 12px; TEXT-DECORATION: none; FONT-WEIGHT: bold; height: 16px; padding-left: 15px;
+	cursor: pointer;
+}
+.menufunc{
+	COLOR: #200B64; FONT-SIZE: 12px; TEXT-DECORATION: none; padding-left: 3px;
+}
+.menufunc:hover{
+	COLOR: #FF0000; FONT-SIZE: 12px; TEXT-DECORATION: underline; padding-left: 3px;
+}
+
+.copyright {
+	COLOR: #627479; FONT-SIZE: 8pt; TEXT-DECORATION: none
+}
+.copyright:hover {
+	COLOR: #54BEC7; TEXT-DECORATION: underline; FONT-SIZE: 8pt;
+}
+.menu{
+	COLOR: #326D51; FONT-SIZE: 9pt; TEXT-DECORATION: none; FONT-WEIGHT: bold
+}
+.disabled{
+	COLOR: #838686; FONT-SIZE: 9pt
+}
+.archived{
+	BACKGROUND-COLOR: #66ffcc;
+}
+.date{
+	COLOR: #676D6D; FONT-SIZE: 8pt
+}
+.form {
+	BACKGROUND-COLOR: #FBFCFD; BORDER-BOTTOM: #FF0066 1px solid; BORDER-LEFT: #FF0066 1px solid; BORDER-RIGHT: #FF0066 1px solid; BORDER-TOP: #FF0066 1px solid; COLOR: #000000; FONT-FAMILY: Tahoma, Arial, Verdana; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.smallText{
+	COLOR: #000000; FONT-SIZE: 11px;
+}
+#.submit {
+#	BACKGROUND-COLOR: #CCCCCC; COLOR: #FF0000; CURSOR: pointer; FONT-SIZE: 12px; FONT-WEIGHT: bold;
+#}
+.tblborder {
+	BORDER-TOP: #6C9BB9 1px solid; BORDER-LEFT: #6C9BB9 1px solid; BORDER-BOTTOM: #6C9BB9 1px solid; BORDER-RIGHT: #6C9BB9 1px solid; BACKGROUND-COLOR: #FFFFFF;
+}
+
+.tdmenutop {
+	BACKGROUND-COLOR: #B4D8ED; HEIGHT: 22px; COLOR: #000000; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+.tdmenusub {
+	BACKGROUND-COLOR: #B4D8ED; HEIGHT: 22px; COLOR: #000000; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+.tdtext1 {
+	BACKGROUND-COLOR: #E1EBF1; COLOR: #000000; FONT-SIZE: 12px; height: 22px;
+}
+.tdtext2 {
+	BACKGROUND-COLOR: #EAF3F5; COLOR: #000000; FONT-SIZE: 12px; height: 22px;
+}
+.tdtext3 {
+	BACKGROUND-COLOR: #dfe0e0; COLOR: #000000; FONT-SIZE: 12px; height: 22px;
+}
+
+.title {color: #FF0000; font-weight: bold; font-size: 12px }
+.btitle {color: #000000; font-weight: bold; font-size: 14px }
+.author {color: #FF0000; font-weight: bold; font-size: 9pt }
+.pagetitle {color: #FF0000; font-weight: bold; font-size: 11px;	text-transform: uppercase; padding-top: 8px; }
+
+.tdmenu { height: 22px; BACKGROUND-COLOR: #B4D8ED; COLOR: #000000; FONT-SIZE: 12px; FONT-WEIGHT: bold; }
+.error {color: #003399; font-size: 12px; }
+.tooltip { BORDER-RIGHT: black 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: black 1px solid; PADDING-LEFT: 2px; Z-INDEX: 100; VISIBILITY: hidden; PADDING-BOTTOM: 2px; BORDER-LEFT: black 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: black 1px solid; POSITION: absolute; BACKGROUND-COLOR: #ffffee; }
+
+a.stitle{
+	FONT-FAMILY: Arial, Verdana, Tahoma; 
+	COLOR: #2B0374; TEXT-DECORATION: none; font-size: 11px;
+}
+a.stitle:hover {
+	FONT-FAMILY: Arial, Verdana, Tahoma; 
+	COLOR: #FF0000; TEXT-DECORATION: underline; font-size: 11px;
+}
+
+.pageBox {
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: #ffffff; 
+	border: #c0c0c0 solid 1px;
+	font-size: 11px;
+}
+.pageBoxB {
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: #80ffff; 
+	border: #c0c0c0 solid 1px;
+	font-size: 11px;
+	font-weight: bold;
+}

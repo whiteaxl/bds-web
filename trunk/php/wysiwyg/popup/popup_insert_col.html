@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Insert Col</title>
+<style type="text/css">
+	body, td {font-size: 12px;}
+</style>
+
+<script src="../setting.js" type="text/javascript"></script>
+<script language="JavaScript">
+	//Language file
+	document.write('<scr' + 'ipt src="../languages/'+ editor_lang_dir +'lang.js" type="text/javascript"></scr' + 'ipt>');
+	document.write('<scr' + 'ipt src="../languages/'+ editor_lang_dir +'lang_table.js" type="text/javascript"></scr' + 'ipt>');
+</script>
+
+<script language="JavaScript">
+	function Done(){
+		col_number	= document.COLFORM.numcol.value;
+
+		if ( document.COLFORM.insType[0].checked == false ){
+			//Insert left col
+			col_number		= 0 - col_number;
+		}
+
+		if ( editor_is_ie ){
+			window.returnValue	= col_number;
+		}
+		else{
+			var htmlID	= window.location.search.substr(1);
+			window.opener.editor_insertCol_detail(htmlID, col_number);
+		}
+		window.close();
+	}
+</script>
+</head>
+<BODY bgColor=#ffffff leftMargin=0 text=#000000 topMargin=0 marginheight="0" marginwidth="0">
+
+<center>
+  <TABLE bgColor=#e0e0e0 border=1 borderColor=#e0e0e0 borderColorDark=#555555 cellPadding=0 cellSpacing=2 width="100%">
+    <TR> 
+      <TD bgColor=#ffffff> 
+        <TABLE bgColor=#e0e0e0 border=1 borderColor=#000000 borderColorDark=#ffffff borderColorLight=#999999 cellPadding=2 cellSpacing=0 width="100%">
+          <TR> 
+            <TD bgColor=#e0e0e0 align="center">
+	
+			<!-- Detail Table  -->
+              <TABLE border=0 cellPadding=2 cellSpacing=0 width="100%">
+			  <form name="COLFORM">
+				<tr><td height="30"><input type="text" id="numcol" name="numcol" value="1" size="3" style="width: 30px" maxlength="2"> <script language="javascript">document.write(editor_lang['ptable_col_number']);</script></td></tr>
+				<tr><td><input type="radio" id="insType" name="insType" value="left" checked> <script language="javascript">document.write(editor_lang['ptable_col_insert_left']);</script></td></tr>
+				<tr><td><input type="radio" id="insType" name="insType" value="right"> <script language="javascript">document.write(editor_lang['ptable_col_insert_right']);</script></td></tr>
+				</form>
+              </TABLE>
+			  <br>
+			<!-- End Detail Table -->
+
+            </TD>
+          </TR>
+          <TR bgColor=#e0e0e0> 
+            <TD bgColor=#e0e0e0 align="center"><button name="ok" onClick="javascript: Done();"><script language="javascript">document.write(editor_lang['button_done']);</script></button>&nbsp;<button name="cancel" onClick="javascript:window.close();"><script language="javascript">document.write(editor_lang['button_cancel']);</script></button>
+            </TD>
+          </TR>
+        </TABLE>
+      </TD>
+    </TR>
+  </TABLE>
+</center>
+
+</body>
+</html>

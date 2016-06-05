@@ -1,0 +1,158 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Find and Replace</title>
+<style type="text/css">
+button {
+	width: 100px;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 11px;
+	margin-top: 3px;
+}
+body, td {
+	font-size: 12px;
+}
+</style>
+
+<script src="../setting.js" type="text/javascript"></script>
+<script language="JavaScript">
+	//Language file
+	document.write('<scr' + 'ipt src="../languages/'+ editor_lang_dir +'lang_findreplace.js" type="text/javascript"></scr' + 'ipt>');
+</script>
+
+<script language="JavaScript">
+	var htmlID		= window.location.search.substr(1);
+	var endDoc		= false;
+	var htmlObj;
+
+	function editor_onLoad(){
+		if ( editor_is_ie ){
+			dialogArguments.frames[htmlID].focus();
+			htmlObj		= dialogArguments.frames[htmlID].document.selection.createRange();
+		}
+		else{
+//			opener.frames[htmlID].focus();
+//			htmlObj	= opener.frames[htmlID];
+			htmlObj		= window.opener.document.getElementById(htmlID).contentWindow;
+		}
+	}
+
+	function editor_getType(){
+		var matchCase	= document.FINDFORM.matchCase.checked ? 4 : 0;
+		var matchWord	= document.FINDFORM.matchWord.checked ? 2 : 0;
+		return matchCase + matchWord;
+	}
+	
+	function editor_find(act){
+		if ( editor_is_ie ){
+			editor_find_ie(act);
+		}
+		else{
+			editor_find_moz(act);
+		}
+	}
+
+	function editor_find_ie(act){
+		endDoc		= false;
+		keyword		= document.FINDFORM.strFind.value;
+		if (keyword == ""){
+	    	alert(editor_lang['pfind_enter_keyword']);
+			return false;
+		}
+
+		htmlObj.collapse(false);
+		if ( htmlObj.findText(keyword, 1000000000, editor_getType()) ){
+			htmlObj.select();
+		}
+		else{
+			if (act == 'find'){
+				htmlObj.expand("textedit");
+				htmlObj.collapse();
+				htmlObj.select();
+				if ( !editor_find() ){
+					if ( endDoc ){
+				    	alert(editor_lang['pfind_not_found']);
+					}
+				}
+				endDoc	= false;
+			}
+			else{
+				endDoc	= true;
+				return false;
+			}
+		}
+		return true;
+	}
+
+	function editor_find_moz(act){
+		var keyword	= document.FINDFORM.strFind.value;
+		if (keyword == ""){
+	    	alert(editor_lang['pfind_enter_keyword']);
+			return false;
+		}
+
+		var matchCase	= document.FINDFORM.matchCase.checked;
+		var matchWord	= document.FINDFORM.matchWord.checked;
+
+		//Firefox: window.find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFrames, aShowDialog);
+		var sFound		= htmlObj.find(keyword, false, false, false, false, false, false);
+		if ( !sFound ){
+	    	alert(editor_lang['pfind_not_found']);
+		}
+		return true;
+	}
+	
+	function editor_replace() {
+		endDoc	= false;
+
+		keyword		= document.FINDFORM.strFind.value;
+		if (keyword == ""){
+	    	alert(editor_lang['pfind_enter_keyword']);
+			return false;
+		}
+	
+		replaceWord		= document.FINDFORM.strReplace.value;
+		if ( editor_find('replace') && !endDoc ){
+			htmlObj.pasteHTML(replaceWord);
+		}
+	}
+
+	function editor_replace_all() {
+		endDoc		= false;
+		keyword		= document.FINDFORM.strFind.value;
+		if (keyword == ""){
+	    	alert(editor_lang['pfind_enter_keyword']);
+			return false;
+		}
+
+		replaceWord		= document.FINDFORM.strReplace.value;
+		if ( editor_find('replace') && !endDoc ){
+			htmlObj.pasteHTML(replaceWord);
+			editor_replace_all();
+		}
+	}
+</script>
+</head>
+<BODY onload="editor_onLoad();" bgColor=#e0e0e0 leftMargin=0 text=#000000 topMargin=0 marginheight="0" marginwidth="0">
+<center>
+<table cellspacing="0" cellpadding="10" border="0">
+<form name="FINDFORM" method="POST">
+<tr> 
+	<td valign="top" nowrap>
+		<script language="javascript">document.write(editor_lang['pfind_find_text']);</script>:<br><input type="text" size="25" name="strFind">
+		<br><script language="javascript">document.write(editor_lang['pfind_replace_text']);</script>:<br><input type="text" size="25" name="strReplace"> 
+		<br><input type="checkbox" name="matchCase"> <script language="javascript">document.write(editor_lang['pfind_match_case']);</script>
+		<br><input type="checkbox" name="matchWord"> <script language="javascript">document.write(editor_lang['pfind_match_whole_word']);</script>
+	</td>
+	<td valign="top">
+		<button name="btnFind" type="button" onClick="editor_find('find');"><script language="javascript">document.write(editor_lang['pfind_findnext']);</script></button><br>
+		<button name="btnReplace" type="button" onClick="editor_replace();"><script language="javascript">document.write(editor_lang['pfind_replace']);</script></button><br> 
+		<button name="btnReplaceAll" type="button" onClick="editor_replace_all();"><script language="javascript">document.write(editor_lang['pfind_replace_all']);</script></button><br><br>
+		<button name="btnClose" type="button" onClick="window.close();"><script language="javascript">document.write(editor_lang['pfind_close']);</script></button></td>
+</tr>
+</form>
+</table>
+</center>
+
+</body>
+</html>
