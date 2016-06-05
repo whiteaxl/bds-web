@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Mobile | Reland</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Reland.vn">
+    <link rel="stylesheet" href="asset/css/style.css" type="text/css">
+    <!--[if lte IE 8]>
+    <script src="asset/js/html5.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="asset/css/ie.css" type="text/css">
+    <![endif]-->
+    <script src="asset/js/modernizr.min.js" type="text/javascript"></script>
+</head>
+<body class="page-list">
+    <div class="wrapper" id="wrapper">
+        <div class="main" id="main">
+            <header class="header">
+                <div class="header-top">
+                    <a href="#menu-left" title="Menu" class="btn-menu" id="btn-menu" data-menu="true">Menu</a>
+                    <h2 class="logo">
+                        <a href="index.html" title="Reland">
+                            <img src="asset/img/logo.png" width="455" height="92" alt="Logo"/>
+                        </a>
+                    </h2>
+                    <nav class="nav-main">
+                        <ul>
+                            <li>
+                                <a href="" title="">Bất động sản bán</a>
+                                <ul>
+                                    <li>
+                                        <a href="" title="">Nhà đất</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="">Chung cư</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="">BDS bán gần đây</a>
+                                    </li>
+                                    <li class="border">
+                                        <a href="" title="">Tìm kiếm nâng cao</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="">Tất cả</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" title="">Bất động sản cho thuê</a>
+                                <ul>
+                                    <li>
+                                        <a href="" title="">Nhà ở</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="">Phòng trọ</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="">Văn phòng</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="">Cửa hàng</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="">Tham khảo giá nhà cho thuê</a>
+                                    </li>
+                                    <li class="border">
+                                        <a href="" title="">Tìm kiếm nâng cao</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="">Tất cả</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" title="">Môi giới</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Mobile</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="nav-user">
+                        <ul>
+                            <li>
+                                <a class="link" href="#box-saved" data-open="true" title="">Lưu nhà</a>
+                            </li>
+                            <li>
+                                <a class="link" href="" title="">Lưu tìm kiếm</a>
+                            </li>
+                            <!--<li>
+                                <a class="btn" href="" title="">Đăng nhập</a>
+                            </li>-->
+                            <li>
+                                <a class="link" href="" title=""><span class="user"><i class="fa fa-user"></i> Nguyễn Tiến Chung</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="" title="">Thông tin tài khoản</a>
+                                    </li>
+                                    <li class="border">
+                                        <a href="" title=""><i class="fa fa-sign-out"></i> Thoát</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="#box-saved" class="btn-close" data-close="true"><i class="fa fa-angle-right"></i></a>
+                    <a href="#search-mobile" title="Search" class="btn-search" data-search="true"><i class="fa fa-search"></i></a>
+                </div>
+            </header><!-- //header -->
+            <div class="box-filter">
+                <div class="utility">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col w-460">
+                                <form action="search.html" method="post">
+                                    <div class="search">
+                                        <input type="search" name="search" placeholder="Search by neighborhood, city, zip or address" value="California City, CA" autocomplete="off" class="form-control"/>
+                                        <button class="btn-search" type="submit"><i class="fa fa-search"></i> <span class="text">Search</span></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter" id="filter">
+                    <form action="search.html" method="post">
+                        <div class="container">
+                            <div class="type">
+                                <div class="row">
+                                    <div class="col">
+                                        <label data-action="filter" data-choice="sale" data-reset="project" data-group="filter"><input type="radio" value="for_sale" name="search_type" checked> Bán</label>
+                                    </div>
+                                    <div class="col">
+                                        <label data-action="filter" data-choice="sold" data-reset="project" data-group="filter"><input type="radio" value="sold" name="search_type"> Đã bán</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project" data-content="sale" style="display: block">
+                                <div class="row">
+                                    <div class="col col-25">
+                                        <label><input type="checkbox" name="new_listings" value="new_listings"/> New Listings, Past Week</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label><input type="checkbox" name="recently_reduced" value="recently_reduced"/> Reduced Prices, Past Week</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label><input type="checkbox" name="new_construction" value="new_construction"/> New Construction</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label><input type="checkbox" name="fsbo" value="fsbo"/> For Sale By Owner</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label><input type="checkbox" name="resale" value="resale"/> Resale</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label><input type="checkbox" name="roreclosures" value="roreclosures"/> Foreclosures</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project" data-content="sold">
+                                <div class="head">SOLD WITHIN</div>
+                                <div class="row">
+                                    <div class="col col-25">
+                                        <label><input type="radio" name="sold_within" value="sold_any" disabled> Any</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label><input type="radio" name="sold_within" value="sold_3m" disabled> 3 Months</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label><input type="radio" name="sold_within" value="sold_6m" disabled> 6 Months</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label><input type="radio" name="sold_within" value="sold_9m" disabled> 9 Months</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="head">PROPERTY TYPE</div>
+                                <div class="row">
+                                    <div class="col col-25">
+                                        <label> <input data-action="all" type="checkbox" name="prop_type_all" checked disabled/> All</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label> <input data-action="property" type="checkbox" name="prop_type_1"/> Single Family Home</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label> <input data-action="property" type="checkbox" name="prop_type_2"/> Condo</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label> <input data-action="property" type="checkbox" name="prop_type_3"/> Townhome</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label> <input data-action="property" type="checkbox" name="prop_type_4"/> Coop</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label> <input data-action="property" type="checkbox" name="prop_type_5"/> Apartment</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label> <input data-action="property" type="checkbox" name="prop_type_6"/> Loft</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label> <input data-action="property" type="checkbox" name="prop_type_7"/> TIC</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label> <input data-action="property" type="checkbox" name="prop_type_8"/> Apt/Condo/Twnhm</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label> <input data-action="property" type="checkbox" name="prop_type_9"/> Mobile/Manufactured</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label> <input data-action="property" type="checkbox" name="prop_type_10"/> Farm/Ranch</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label> <input data-action="property" type="checkbox" name="prop_type_11"/> Lot/Land</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label> <input data-action="property" type="checkbox" name="prop_type_12"/> Multi-Family Home</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label> <input data-action="property" type="checkbox" name="prop_type_13"/> Income/Investment</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label> <input data-action="property" type="checkbox" name="prop_type_14"/> Houseboat</label>
+                                    </div>
+                                    <div class="col col-25">
+                                        <label> <input data-action="property" type="checkbox" name="prop_type_15"/> Unknown</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="row">
+                                    <div class="col col-33">
+                                        <div class="head">SQUARE FEET</div>
+                                        <div class="option">
+                                            <select class="select" data-select="true" name="sqft" title="Any Property Size">
+                                                <option value="">Any Property Size</option>
+                                                <option value="250">250+ sqft</option>
+                                                <option value="500">500+ sqft</option>
+                                                <option value="750">750+ sqft</option>
+                                                <option value="1000">1,000+ sqft</option>
+                                                <option value="1250">1,250+ sqft</option>
+                                                <option value="1500">1,500+ sqft</option>
+                                                <option value="1750">1,750+ sqft</option>
+                                                <option value="2000">2,000+ sqft</option>
+                                                <option value="2250">2,250+ sqft</option>
+                                                <option value="2500">2,500+ sqft</option>
+                                                <option value="2750">2,750+ sqft</option>
+                                                <option value="3000">3,000+ sqft</option>
+                                                <option value="4000">4,000+ sqft</option>
+                                                <option value="5000">5,000+ sqft</option>
+                                                <option value="10000">10,000+ sqft</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col col-33">
+                                        <div class="head">LOT SIZE</div>
+                                        <div class="option">
+                                            <select class="select" data-select="true" name="lot_size" title="Any Lot Size">
+                                                <option value="">Any Lot Size</option>
+                                                <option value="0.0459">2,000+ sqft</option>
+                                                <option value="0.0688">3,000+ sqft</option>
+                                                <option value="0.0918">4,000+ sqft</option>
+                                                <option value="0.1147">5,000+ sqft</option>
+                                                <option value="0.1721">7,500+ sqft</option>
+                                                <option value="0.25">1/4+ acre</option>
+                                                <option value="0.5">1/2+ acre</option>
+                                                <option value="1">1+ acre</option>
+                                                <option value="2">2+ acre</option>
+                                                <option value="5">5+ acre</option>
+                                                <option value="10">10+ acre</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col col-33">
+                                        <div class="head">Year Built</div>
+                                        <div class="row">
+                                            <div class="col col-40">
+                                                <input type="number" pattern="[0-9]*" placeholder="Min Year" class="form-control"/>
+                                            </div>
+                                            <div class="col col-20">
+                                                <div class="label">to</div>
+                                            </div>
+                                            <div class="col col-40">
+                                                <input type="number" pattern="[0-9]*" placeholder="Max Year" class="form-control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="keyword">
+                                <div class="row">
+                                    <div class="col col-40">
+                                        <div class="head">KEYWORDS</div>
+                                        <div class="form">
+                                            <input type="text" name="keyword" class="form-control" placeholder="Garage, pool, patio, etc" autocomplete="off"/>
+                                            <button class="btn-action" data-action="add"><i class="fa fa-plus"></i> Thêm</button>
+                                        </div>
+                                    </div>
+                                    <div class="col col-20">&nbsp;</div>
+                                    <div class="col col-40">
+                                        <a href="#mls" class="toggle">Find by MLS</a>
+                                        <div class="form" id="mls">
+                                            <input type="text" name="mls_id" class="form-control" placeholder="MLS ID" autocomplete="off"/>
+                                            <button class="btn-action" data-action="mls"><i class="fa fa-search"></i> Thêm</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="handle" data-action="fix">
+                            <div class="container">
+                                <button type="submit" class="btn-submit">Apply</button>
+                                <button type="reset" class="btn-reset">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- //box-filter -->
+            <section class="box-mobile">
+                <div class="cover">
+                    <div class="container">
+                        <div class="space"></div>
+                        <div class="group">
+                            <h2>Reland Mobile</h2>
+                            <p>Real estate. Anytime, anywhere</p>
+                        </div>
+                        <nav class="nav-accordion">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Real Estate" data-group="box-mobile" data-target="item" data-index="0" data-accordion="nav">
+                                        <img src="asset/img/img-real-estate-default.png" width="78" height="78" alt="Real Estate"/>
+                                        <span>Real Estate</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Rentals" data-group="box-mobile" data-target="item" data-index="1" data-accordion="nav">
+                                        <img src="asset/img/img-rent-default.png" width="78" height="78" alt="Rentals"/>
+                                        <span>Rentals</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mortgage" data-group="box-mobile" data-target="item" data-index="2" data-accordion="nav">
+                                        <img src="asset/img/img-mortgage-default.png" width="78" height="78" alt="Mortgage"/>
+                                        <span>Mortgage</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Agent" data-group="box-mobile" data-target="item" data-index="3" data-accordion="nav">
+                                        <img src="asset/img/img-agent-default.png" width="78" height="78" alt="Agent"/>
+                                        <span>Agent</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="item">
+                        <div class="head active" data-accordion="mobile" data-content="data" data-group="item">
+                            <h2>Reland Real Estate App</h2>
+                            <div class="toggle">HIDE DETAILS</div>
+                        </div>
+                        <div class="data">
+                            <ul class="nav-type">
+                                <li>
+                                    <a class="active" href="" title="">iPHONE</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">iPADANDROID</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">PHONEANDROID</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">TABLET</a>
+                                </li>
+                            </ul>
+                            <div class="row">
+                                <div class="col col-245">
+                                    <img src="asset/img/data/img-agent-iphone-225x256.png" width="225" height="256" alt=""/>
+                                </div>
+                                <div class="col col-640">
+                                    <h3>Reland Rentals iPhone App</h3>
+                                    <p>Find an apartment on-the-go with the top-rated Reland Rentals app. With just a tap, view nearby homes and apartments for rent, check out neighborhood details or share listings with roommates.</p>
+                                    <p>Enter your mobile number:</p>
+                                    <form action="mobile.html" class="form-mobile">
+                                        <div class="row">
+                                            <div class="col col-70">
+                                                <input type="number" class="form-control" name="sms_phone1" maxlength="3" size="3"/>
+                                            </div>
+                                            <div class="col"><span class="space">—</span></div>
+                                            <div class="col col-70">
+                                                <input type="number" class="form-control" name="sms_phone2" maxlength="3" size="3"/>
+                                            </div>
+                                            <div class="col"><span class="space">—</span></div>
+                                            <div class="col col-90">
+                                                <input type="number" class="form-control" name="sms_phone3" maxlength="4" size="4"/>
+                                            </div>
+                                            <div class="col">
+                                                <button class="btn-submit">Text Me the Free App</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="notice">US mobile numbers only. Message and data rates may apply.</div>
+                                </div>
+                                <div class="col col-265">
+                                    <a href="" title="">
+                                        <img src="asset/img/data/img-review-rentals-iphone-237x201.png" width="237" height="201" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="head" data-accordion="mobile" data-content="data" data-group="item">
+                            <h2>Reland Rentals App</h2>
+                            <div class="toggle">HIDE DETAILS</div>
+                        </div>
+                        <div class="data">
+                            <ul class="nav-type">
+                                <li>
+                                    <a class="active" href="" title="">iPHONE</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">iPADANDROID</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">PHONEANDROID</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">TABLET</a>
+                                </li>
+                            </ul>
+                            <div class="row">
+                                <div class="col col-245">
+                                    <img src="asset/img/data/img-real-estate-android-tablet-225x256.png" width="225" height="256" alt=""/>
+                                </div>
+                                <div class="col col-640">
+                                    <h3>Reland Rentals iPhone App</h3>
+                                    <p>Find an apartment on-the-go with the top-rated Reland Rentals app. With just a tap, view nearby homes and apartments for rent, check out neighborhood details or share listings with roommates.</p>
+                                    <p>Enter your mobile number:</p>
+                                    <form action="mobile.html" class="form-mobile">
+                                        <div class="row">
+                                            <div class="col col-70">
+                                                <input type="number" class="form-control" name="sms_phone1" maxlength="3" size="3"/>
+                                            </div>
+                                            <div class="col"><span class="space">—</span></div>
+                                            <div class="col col-70">
+                                                <input type="number" class="form-control" name="sms_phone2" maxlength="3" size="3"/>
+                                            </div>
+                                            <div class="col"><span class="space">—</span></div>
+                                            <div class="col col-90">
+                                                <input type="number" class="form-control" name="sms_phone3" maxlength="4" size="4"/>
+                                            </div>
+                                            <div class="col">
+                                                <button class="btn-submit">Text Me the Free App</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="notice">US mobile numbers only. Message and data rates may apply.</div>
+                                </div>
+                                <div class="col col-265">
+                                    <a href="" title="">
+                                        <img src="asset/img/data/img-review-rentals-iphone-237x201.png" width="237" height="201" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="head" data-accordion="mobile" data-content="data" data-group="item">
+                            <h2>Reland Mortgage App</h2>
+                            <div class="toggle">HIDE DETAILS</div>
+                        </div>
+                        <div class="data">
+                            <ul class="nav-type">
+                                <li>
+                                    <a class="active" href="" title="">iPHONE</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">iPADANDROID</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">PHONEANDROID</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">TABLET</a>
+                                </li>
+                            </ul>
+                            <div class="row">
+                                <div class="col col-245">
+                                    <img src="asset/img/data/img-real-estate-iphone-225x256.png" width="225" height="256" alt=""/>
+                                </div>
+                                <div class="col col-640">
+                                    <h3>Reland Rentals iPhone App</h3>
+                                    <p>Find an apartment on-the-go with the top-rated Reland Rentals app. With just a tap, view nearby homes and apartments for rent, check out neighborhood details or share listings with roommates.</p>
+                                    <p>Enter your mobile number:</p>
+                                    <form action="mobile.html" class="form-mobile">
+                                        <div class="row">
+                                            <div class="col col-70">
+                                                <input type="number" class="form-control" name="sms_phone1" maxlength="3" size="3"/>
+                                            </div>
+                                            <div class="col"><span class="space">—</span></div>
+                                            <div class="col col-70">
+                                                <input type="number" class="form-control" name="sms_phone2" maxlength="3" size="3"/>
+                                            </div>
+                                            <div class="col"><span class="space">—</span></div>
+                                            <div class="col col-90">
+                                                <input type="number" class="form-control" name="sms_phone3" maxlength="4" size="4"/>
+                                            </div>
+                                            <div class="col">
+                                                <button class="btn-submit">Text Me the Free App</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="notice">US mobile numbers only. Message and data rates may apply.</div>
+                                </div>
+                                <div class="col col-265">
+                                    <a href="" title="">
+                                        <img src="asset/img/data/img-review-rentals-iphone-237x201.png" width="237" height="201" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="head" data-accordion="mobile" data-content="data" data-group="item">
+                            <h2>Reland Agent App</h2>
+                            <div class="toggle">HIDE DETAILS</div>
+                        </div>
+                        <div class="data">
+                            <ul class="nav-type">
+                                <li>
+                                    <a class="active" href="" title="">iPHONE</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">iPADANDROID</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">PHONEANDROID</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">TABLET</a>
+                                </li>
+                            </ul>
+                            <div class="row">
+                                <div class="col col-245">
+                                    <img src="asset/img/data/img-agent-iphone-225x256.png" width="225" height="256" alt=""/>
+                                </div>
+                                <div class="col col-640">
+                                    <h3>Reland Rentals iPhone App</h3>
+                                    <p>Find an apartment on-the-go with the top-rated Reland Rentals app. With just a tap, view nearby homes and apartments for rent, check out neighborhood details or share listings with roommates.</p>
+                                    <p>Enter your mobile number:</p>
+                                    <form action="mobile.html" class="form-mobile">
+                                        <div class="row">
+                                            <div class="col col-70">
+                                                <input type="number" class="form-control" name="sms_phone1" maxlength="3" size="3"/>
+                                            </div>
+                                            <div class="col"><span class="space">—</span></div>
+                                            <div class="col col-70">
+                                                <input type="number" class="form-control" name="sms_phone1" maxlength="3" size="3"/>
+                                            </div>
+                                            <div class="col"><span class="space">—</span></div>
+                                            <div class="col col-90">
+                                                <input type="number" class="form-control" name="sms_phone1" maxlength="4" size="4"/>
+                                            </div>
+                                            <div class="col">
+                                                <button class="btn-submit">Text Me the Free App</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="notice">US mobile numbers only. Message and data rates may apply.</div>
+                                </div>
+                                <div class="col col-265">
+                                    <a href="" title="">
+                                        <img src="asset/img/data/img-review-rentals-iphone-237x201.png" width="237" height="201" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- //box-mobile -->
+            <div class="box-notice">
+                <div class="container">Don't have a smartphone? Find homes and get the local scoop on our mobile-optimized website. Visit <a href="">m.reland.com</a></div>
+            </div>
+            <section class="box-city">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-40">
+                            <h2>Most popular cities</h2>
+                            <ul>
+                                <li>
+                                    <a href="" title="">San Francisco real estate</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Brooklyn real estate</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Manhattan real estate</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Los Angeles real estate</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">San Diego real estate</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Miami real estate</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Chicago real estate</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Las Vegas real estate</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Queens real estate</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Austin real estate</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col col-60">
+                            <h2>Rentals</h2>
+                            <ul>
+                                <li>
+                                    <a href="" title="">Houston apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Las Vegas apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">San Antonio apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Phoenix apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Indianapolis apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Atlanta apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Austin apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Charlotte apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Dallas apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Orlando apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">New York apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Boston apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Chicago apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Miami apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Philadelphia apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">San Francisco apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Los Angeles apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">San Diego apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Brooklyn apartments</a>
+                                </li>
+                                <li>
+                                    <a href="" title="">Queens apartments</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="box-estate">
+                <div class="container">
+                    <h2>Residential Real Estate</h2>
+                    <ul>
+                        <li>
+                            <a href="" title="">San Francisco real estate</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Brooklyn real estate</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Manhattan real estate</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Los Angeles real estate</a>
+                        </li>
+                        <li>
+                            <a href="" title="">San Diego real estate</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Miami real estate</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Chicago real estate</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Las Vegas real estate</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Queens real estate</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Austin real estate</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Houston apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Las Vegas apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">San Antonio apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Phoenix apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Indianapolis apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Atlanta apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Austin apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Charlotte apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Dallas apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Orlando apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">New York apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Boston apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Chicago apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Miami apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Philadelphia apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">San Francisco apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Los Angeles apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">San Diego apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Brooklyn apartments</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Queens apartments</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="box-explore">
+                <div class="container">
+                    <div class="item">
+                        <h3>Explore Reland</h3>
+                        <ul>
+                            <li>
+                                <a href="" title="">Homes for Sale</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Rentals</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Houses for Rent</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Apartments for Rent</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Stats & Trends</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Real Estate Advice</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Real Estate App - iPhone</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Real Estate App - Android</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>For Professionals</h3>
+                        <ul>
+                            <li>
+                                <a href="" title="">Homes for Sale</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Rentals</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Houses for Rent</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Apartments for Rent</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Stats & Trends</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Real Estate Advice</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Real Estate App - iPhone</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Real Estate App - Android</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Corporate</h3>
+                        <ul>
+                            <li>
+                                <a href="" title="">About reland</a>
+                            </li>
+                            <li>
+                                <a href="" title="">About Zillow</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Group News</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Apartments for Rent</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Subscription Terms Community</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Blog</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Careers</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Investor</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="box-place">
+                <div class="container">
+                    <h2>The best place to start your real estate search.</h2>
+                    <p>Reland is an all-in-one real estate site that gives you the local scoop about <a href="">homes for sale</a>, <a href="">apartments for rent</a>, neighborhood insights, and real estate markets and trends to help you figure out exactly what, where, and when to buy, sell, or rent. You can also find a real estate agent, view prices of recently sold homes, and see home values in your community. Get advice and opinions from local real estate agents, brokers, and other local experts on Reland Voices, Reland's online real estate community.</p>
+                </div>
+            </section>
+            <footer class="footer">
+               <div class="footer-bot">
+                   <div class="row">
+                       <div class="col col-20">
+                           <h3>
+                               <a href="" title="">Top Real Estate Markets</a>
+                           </h3>
+                           <ul>
+                               <li>
+                                   <a href="" title="">San Francisco real estate</a>
+                               </li>
+                               <li>
+                                   <a href="" title="">Brooklyn real estate</a>
+                               </li>
+                               <li>
+                                   <a href="" title="">Manhattan real estate</a>
+                               </li>
+                               <li>
+                                   <a href="" title="">Los Angeles real estate</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">San Diego real estate</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Miami real estate</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Chicago real estate</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Las Vegas real estate</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Queens real estate</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Austin real estate</a>
+                               </li>
+                           </ul>
+                           <a class="more" href="#" data-more="true" data-parent="col" title="more">More</a>
+                       </div>
+                       <div class="col col-20">
+                           <h3>
+                               <a href="" title="">Top Rental Markets</a>
+                           </h3>
+                           <ul>
+                               <li>
+                                   <a href="" title="">Houston apartments</a>
+                               </li>
+                               <li>
+                                   <a href="" title="">Las Vegas apartments</a>
+                               </li>
+                               <li>
+                                   <a href="" title="">San Antonio apartments</a>
+                               </li>
+                               <li>
+                                   <a href="" title="">Phoenix apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Indianapolis apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Atlanta apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Austin apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Charlotte apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Dallas apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title=""> Miami apartments</a>
+                               </li>
+                           </ul>
+                           <a class="more" href="#" data-more="true" data-parent="col" title="more">More</a>
+                       </div>
+                       <div class="col col-20">
+                           <h3>
+                               <a href="" title="">Explore Reland</a>
+                           </h3>
+                           <ul>
+                               <li>
+                                   <a href="" title="">Houston apartments</a>
+                               </li>
+                               <li>
+                                   <a href="" title="">Las Vegas apartments</a>
+                               </li>
+                               <li>
+                                   <a href="" title="">San Antonio apartments</a>
+                               </li>
+                               <li>
+                                   <a href="" title="">Phoenix apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Indianapolis apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Atlanta apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Austin apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Charlotte apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Dallas apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title=""> Miami apartments</a>
+                               </li>
+                           </ul>
+                           <a class="more" href="#" data-more="true" data-parent="col" title="more">More</a>
+                       </div>
+                       <div class="col col-20">
+                           <h3>
+                               <a href="" title="">For Professionals</a>
+                           </h3>
+                           <ul>
+                               <li>
+                                   <a href="" title="">Houston apartments</a>
+                               </li>
+                               <li>
+                                   <a href="" title="">Las Vegas apartments</a>
+                               </li>
+                               <li>
+                                   <a href="" title="">San Antonio apartments</a>
+                               </li>
+                               <li>
+                                   <a href="" title="">Phoenix apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Indianapolis apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Atlanta apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Austin apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Charlotte apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Dallas apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title=""> Miami apartments</a>
+                               </li>
+                           </ul>
+                           <a class="more" href="#" data-more="true" data-parent="col" title="more">More</a>
+                       </div>
+                       <div class="col col-20">
+                           <h3>
+                               <a href="" title="">Reland Corporate</a>
+                           </h3>
+                           <ul>
+                               <li>
+                                   <a href="" title="">Houston apartments</a>
+                               </li>
+                               <li>
+                                   <a href="" title="">Las Vegas apartments</a>
+                               </li>
+                               <li>
+                                   <a href="" title="">San Antonio apartments</a>
+                               </li>
+                               <li>
+                                   <a href="" title="">Phoenix apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Indianapolis apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Atlanta apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Austin apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Charlotte apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title="">Dallas apartments</a>
+                               </li>
+                               <li class="hidden">
+                                   <a href="" title=""> Miami apartments</a>
+                               </li>
+                           </ul>
+                           <a class="more" href="#" data-more="true" data-parent="col" title="more">More</a>
+                       </div>
+                   </div>
+                   <nav class="navigation">
+                       <ul>
+                           <li>
+                               <a href="" title="">Buy</a>
+                           </li>
+                           <li>
+                               <a href="" title="">Sell</a>
+                           </li>
+                           <li>
+                               <a href="" title="">Rent</a>
+                           </li>
+                           <li>
+                               <a href="" title="">Mortgage</a>
+                           </li>
+                           <li>
+                               <a href="" title="">Find an Agent</a>
+                           </li>
+                       </ul>
+                   </nav>
+                   <div class="copyright">
+                       Copyright &copy; 2016 Reland, Inc. All rights reserved. <a href="" rel="nofollow"><i class="fa fa-home"></i> Fair Housing and Equal Opportunity.</a> Have a Question? Visit our <a href="" rel="nofollow">Help Center</a> to find the answer.
+                   </div>
+               </div>
+            </footer><!-- //footer -->
+            <div class="overlay" data-overlay="true"></div>
+        </div><!-- //main -->
+        <div class="menu-left" id="menu-left">
+            <div class="inner">
+                <nav class="nav-mobile">
+                    <ul>
+                        <li>
+                            <a href="index.html" title="Reland">
+                                <img src="asset/img/logo.png" width="455" height="92" alt="Logo"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" title="">
+                                <span>Đăng nhập/Đăng ký</span>
+                                <span>Thông tin cá nhân/Check out</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" title=""><i class="fa fa-home"></i> Home</a>
+                        </li>
+                        <li class="active">
+                            <a href="" title=""><i class="fa fa-search"></i> Search</a>
+                        </li>
+                        <li>
+                            <a href="" title=""><i class="fa fa-usd"></i> What's My Home Worth?</a>
+                        </li>
+                        <li>
+                            <a href="" title=""><i class="fa fa-users"></i> Find an Agent</a>
+                        </li>
+                        <li>
+                            <a href="" title=""><i class="fa fa-pie-chart"></i> Mortgage</a>
+                        </li>
+                        <li>
+                            <a href="" title=""><i class="fa fa-comments"></i> Advice</a>
+                        </li>
+                        <li>
+                            <a href="" title=""><i class="fa fa-info-circle"></i> Local Info</a>
+                        </li>
+                        <li>
+                            <a href="" title=""><i class="fa fa-question"></i> Help Center</a>
+                        </li>
+                        <li>
+                            <a href="" title=""><i class="fa fa-exchange"></i> Neighborhood Guides</a>
+                        </li>
+                    </ul>
+                    <div class="more">Reland Apps</div>
+                    <ul class="nav-mobile">
+                        <li>
+                            <a href="" title=""><i class="fa fa-home"></i> Reland Real Estate App</a>
+                        </li>
+                        <li>
+                            <a href="" title=""><i class="fa fa-life-ring"></i> Reland Rentals App</a>
+                        </li>
+                        <li>
+                            <a href="" title=""><i class="fa fa-ticket"></i> Reland Mortgage App</a>
+                        </li>
+                        <li>
+                            <a href="" title=""><i class="fa fa-suitcase"></i> Reland Agent App</a>
+                        </li>
+                    </ul>
+                    <div class="more">More</div>
+                    <ul class="nav-mobile">
+                        <li>
+                            <a href="" title="">Leave Feedback</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div><!-- //menu-left -->
+        <div class="box-saved" id="box-saved">
+            <ul class="nav-saved">
+                <li>
+                    <a class="active" href="#my-boards" data-tab="true" data-content="content" data-group="box-saved" title="My Boards">My Boards</a>
+                </li>
+                <li>
+                    <a href="#saved-homes" data-tab="true" data-content="content" data-group="box-saved" title="Saved Homes">Saved Homes</a>
+                </li>
+                <li>
+                    <a href="#saved-rentals" data-tab="true" data-content="content" data-group="box-saved" title="Saved Rentals">Saved Rentals</a>
+                </li>
+            </ul>
+            <div class="content mCustomScrollbar" style="display: block" id="my-boards">
+                <div class="create">
+                    <a href="#" title=""><i class="fa fa-plus"></i> Create Board</a>
+                </div>
+                <div class="boards">
+                    <div class="item">
+                        <a href="" title="">
+                            <span class="img" style="background-image: url(asset/img/data/img-40-1.jpg)">Dream Homes</span>
+                            <span class="name">Dream Homes</span>
+                            <span class="group">
+                                <span class="user">Only Me</span>
+                                <span class="type">2 homes</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" title="">
+                            <span class="img" style="background-image: url(asset/img/data/img-40-2.jpg)">Dream Homes</span>
+                            <span class="name">Home with Pools</span>
+                            <span class="group">
+                                <span class="user">Only Me</span>
+                                <span class="type">2 homes</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" title="">
+                            <span class="img" style="background-image: url(asset/img/data/img-40-2.jpg)">Dream Homes</span>
+                            <span class="name">Home with Pools</span>
+                            <span class="group">
+                                <span class="user">Only Me</span>
+                                <span class="type">2 homes</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content mCustomScrollbar" id="saved-homes">
+                <!--<div class="notice">
+                    You haven’t added any homes yet.<br/>
+                    Start searching for properties to add now.
+                </div>
+                <div class="handle">
+                    <a href="index.html" title="Search Homes">Search Homes</a>
+                </div>-->
+                <div class="saves">
+                    <div class="item">
+                        <a href="" title="">
+                            <span class="img" style="background-image: url(asset/img/data/img-40-1.jpg)">Dream Homes</span>
+                            <span class="price">$129,900</span>
+                            <span class="info">4 bd   2 ba   1744 sqft</span>
+                            <span class="loc">8912 Oleander Ave</span>
+                            <span class="loc">California City, CA</span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" title="">
+                            <span class="img" style="background-image: url(asset/img/data/img-40-2.jpg)">Dream Homes</span>
+                            <span class="price">$129,900</span>
+                            <span class="info">4 bd   2 ba   1744 sqft</span>
+                            <span class="loc">8912 Oleander Ave</span>
+                            <span class="loc">California City, CA</span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" title="">
+                            <span class="img" style="background-image: url(asset/img/data/img-40-3.jpg)">Dream Homes</span>
+                            <span class="price">$129,900</span>
+                            <span class="info">4 bd   2 ba   1744 sqft</span>
+                            <span class="loc">8912 Oleander Ave</span>
+                            <span class="loc">California City, CA</span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" title="">
+                            <span class="img" style="background-image: url(asset/img/data/img-40-4.jpg)">Dream Homes</span>
+                            <span class="price">$129,900</span>
+                            <span class="info">4 bd   2 ba   1744 sqft</span>
+                            <span class="loc">8912 Oleander Ave</span>
+                            <span class="loc">California City, CA</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content mCustomScrollbar" id="saved-rentals">
+                <div class="notice">
+                    You haven’t added any homes yet.<br/>
+                    Start searching for properties to add now.
+                </div>
+                <div class="handle">
+                    <a href="index.html" title="Search Homes">Search Homes</a>
+                </div>
+            </div>
+            <div id="loading" class="loading"></div>
+        </div><!-- //box-saved -->
+        <div class="box-login" id="box-login">
+            <div class="inner">
+                <form action="index.html" method="post" id="form-login" novalidate>
+                    <div class="head">Sign in or register<br/>to save your favorite homes</div>
+                    <a href="#box-login" class="btn-close" data-login="close"><i class="fa fa-times"></i></a>
+                    <div class="control">
+                        <input type="email" placeholder="Enter email address" class="form-control" name="email" required/>
+                    </div>
+                    <div class="handle">
+                        <button type="submit" class="btn-login">Submit</button>
+                    </div>
+                    <div class="rule">I accept Reland's <a href="/terms/" target="_blank">Terms of Use</a> and <a href="/privacy/" target="_blank">Privacy Policy</a>.</div>
+                    <div class="register">Are you a Real Estate Professional? <a href="/agent_signup/?redirect_url=http://www.Reland.com/"> Register here.</a></div>
+                </form>
+            </div>
+        </div><!-- //box-login -->
+        <div class="box-find" id="box-find">
+            <div class="data">
+                <div class="title">
+                    <span>Local Info</span>
+                    <a href="#box-find" data-filter="close"><i class="fa fa-times"></i></a>
+                </div>
+                <form action="search.html" method="post">
+                    <div class="head">Reland Heatmap</div>
+                    <ul class="list">
+                        <li>
+                            <a class="control" href="#radio_1_1" data-action="radio" data-group="group_1">Crime</a>
+                            <input type="radio" id="radio_1_1" name="group_1" value="Crime"/>
+                        </li>
+                        <li>
+                            <a class="accordion" href="#" data-accordion="true">Affordability</a>
+                            <ul>
+                                <li>
+                                    <a class="control" href="#radio_2_1" data-action="radio" data-group="group_2">Listing Price</a>
+                                    <input type="radio" id="radio_2_1" name="group_2" value="Listing Price"/>
+                                </li>
+                                <li>
+                                    <a class="control" href="#radio_2_2" data-action="radio" data-group="group_2">Sale Price</a>
+                                    <input type="radio" id="radio_2_2" name="group_2" value="Sale Price"/>
+                                </li>
+                                <li>
+                                    <a class="control" href="#radio_2_3" data-action="radio" data-group="group_2">Sale Price/Sqft</a>
+                                    <input type="radio" id="radio_2_3" name="group_2" value="Sale Price/Sqft"/>
+                                </li>
+                                <li>
+                                    <a class="control" href="#radio_2_4" data-action="radio" data-group="group_2">Reland Estimates</a>
+                                    <input type="radio" id="radio_2_4" name="group_2" value="Reland Estimates"/>
+                                </li>
+                                <li>
+                                    <a class="control" href="#radio_2_5" data-action="radio" data-group="group_2">Rental Price</a>
+                                    <input type="radio" id="radio_2_5" name="group_2" value="Rental Price"/>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="accordion" href="#" data-accordion="true">Hazards</a>
+                            <ul>
+                                <li>
+                                    <a class="control" href="#radio_3_1" data-action="radio" data-group="group_3">Earthquake</a>
+                                    <input type="radio" id="radio_3_1" name="group_3" value="Earthquake"/>
+                                </li>
+                                <li>
+                                    <a class="control" href="#radio_3_2" data-action="radio" data-group="group_3">Flooding</a>
+                                    <input type="radio" id="radio_3_2" name="group_3" value="Flooding"/>
+                                </li>
+                                <li>
+                                    <a class="control" href="#radio_3_3" data-action="radio" data-group="group_3">Tornado</a>
+                                    <input type="radio" id="radio_3_3" name="group_3" value="Tornado"/>
+                                </li>
+                                <li>
+                                    <a class="control" href="#radio_3_4" data-action="radio" data-group="group_3">Hurricane</a>
+                                    <input type="radio" id="radio_3_4" name="group_3" value="Hurricane"/>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="head">More</div>
+                    <ul class="list">
+                        <li>
+                            <a class="accordion" href="#" data-accordion="true">Schools</a>
+                            <ul>
+                                <li>
+                                    <a class="control" href="#check_1_1" data-action="check">Elementary</a>
+                                    <input type="checkbox" id="check_1_1" name="check_1_1" value="Elementary"/>
+                                </li>
+                                <li>
+                                    <a class="control" href="#check_1_2" data-action="check">Middle</a>
+                                    <input type="checkbox" id="check_1_2" name="check_1_2" value="Middle"/>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="accordion" href="#" data-accordion="true">Amenities</a>
+                            <ul>
+                                <li>
+                                    <a class="control" href="#check_2_1" data-action="check">Restaurants</a>
+                                    <input type="checkbox" id="check_2_1" name="check_2_1" value="Restaurants"/>
+                                </li>
+                                <li>
+                                    <a class="control" href="#check_2_2" data-action="check">Groceries</a>
+                                    <input type="checkbox" id="check_2_2" name="check_2_2" value="Groceries"/>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a href="#box-find" data-filter="close" title="Reset">Reset</a>
+                    </li>
+                    <li>
+                        <a href="#box-find" data-action="apply" title="Apply">Apply</a>
+                    </li>
+                </ul>
+            </nav>
+        </div><!-- //box-find -->
+        <div class="box-sort" id="box-sort">
+            <div class="inner">
+                <a class="btn-close" data-sort="close"><i class="fa fa-times"></i></a>
+                <ul class="sorts">
+                    <li data-action="sort" data-sort="">Best Match</li>
+                    <li data-action="sort" data-sort="date" data-order="desc">Newest</li>
+                    <li data-action="sort" data-sort="price" data-order="desc">Price (High-Low)</li>
+                    <li data-action="sort" data-sort="price" data-order="asc">Price (Low-High)</li>
+                    <li data-action="sort" data-sort="beds" data-order="desc">Most Bedrooms</li>
+                    <li data-action="sort" data-sort="bath" data-order="acs">Most Bathrooms</li>
+                    <li data-action="sort" data-sort="sqft" data-order="desc">Largest Sqft</li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- //wrapper -->
+    <!-- Script -->
+    <script src="asset/js/jquery-1.10.2.min.js"></script>
+    <script src="asset/js/jquery.scroll.min.js"></script>
+    <script src="asset/js/jquery.lazy-maps.min.js"></script>
+    <script src="asset/js/jquery.validate.min.js"></script>
+    <script src="asset/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        ;( function( $, window, document, undefined ) {
+            var $window			= $( window ),
+                    mapInstances	= [],
+                    $pluginInstance	= $('#google-map').lazyLoadGoogleMaps({
+                        callback: function( container, map ) {
+                            var $container	= $( container ),
+                                    myOptions = {
+                                        scrollwheel: false,
+                                        navigationControl: false,
+                                        mapTypeControl: false,
+                                        scaleControl: true,
+                                        zoom: 16,
+                                        streetViewControl: false,
+                                        center: new google.maps.LatLng(21.008415, 105.802989),
+                                        disableDefaultUI: false,
+                                        zoomControl: false,
+                                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                                    },
+                                    center		= myOptions.center;
+
+                            map.setOptions(myOptions);
+                            setMarkers(map);
+
+                            $.data( map, 'center', center );
+                            mapInstances.push( map );
+
+                            var updateCenter = function(){ $.data( map, 'center', map.getCenter() ); };
+                            google.maps.event.addListener( map, 'dragend', updateCenter );
+                            google.maps.event.addListener( map, 'zoom_changed', updateCenter );
+                            google.maps.event.addListenerOnce( map, 'idle', function(){ $container.addClass( 'is-loaded' ); });
+                        }
+                    });
+            function setMarkers(map){
+                //Sau nay neu co them chi nhanh thi nhap them vao mang duoi day
+                var reland_map = [
+                    ['P.2906, Tòa nhà 34T, Hoàng Đạo Thúy, Trung Hòa, Cầu Giấy, Hà Nội', 21.008415, 105.802989, 1]
+                ];
+                for(var i=0;i<reland_map.length;i++){
+                    var item = reland_map[i];
+                    var marker = new google.maps.Marker({
+                        position: {lat: item[1], lng: item[2]},
+                        map: map,
+                        title: item[0],
+                        zIndex: item[3]
+                    });
+                }
+            }
+            $window.on( 'resize', $pluginInstance.debounce( 1000, function() {
+                $.each( mapInstances, function() {
+                    this.setCenter( $.data( this, 'center' ) );
+                });
+            }));
+        })( jQuery, window, document );
+    </script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="asset/js/respond.src.min.js"></script>
+    <![endif]-->
+    <script src="asset/js/common.min.js"></script>
+    <!-- //Script -->
+</body>
+</html>
