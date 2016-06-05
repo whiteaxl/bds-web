@@ -19,519 +19,157 @@
 <body>
     <div class="wrapper" id="wrapper">
         <div class="main" id="main">
-            <header class="header">
-                <div class="header-top">
-                    <a href="#menu-left" title="Menu" class="btn-menu" id="btn-menu" data-menu="true">Menu</a>
-                    <h2 class="logo">
-                        <a href="index.html" title="Reland">
-                            <img src="asset/img/logo.png" width="455" height="92" alt="Logo"/>
-                        </a>
-                    </h2>
-                    <nav class="nav-main">
-                        <ul>
-                            <li>
-                                <a href="" title="">Bất động sản bán</a>
-                                <ul>
-                                    <li>
-                                        <a href="" title="">Nhà đất</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Chung cư</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">BDS bán gần đây</a>
-                                    </li>
-                                    <li class="border">
-                                        <a href="" title="">Tìm kiếm nâng cao</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Tất cả</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="" title="">Bất động sản cho thuê</a>
-                                <ul>
-                                    <li>
-                                        <a href="" title="">Nhà ở</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Phòng trọ</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Văn phòng</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Cửa hàng</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Tham khảo giá nhà cho thuê</a>
-                                    </li>
-                                    <li class="border">
-                                        <a href="" title="">Tìm kiếm nâng cao</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Tất cả</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="" title="">Môi giới</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Mobile</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav class="nav-user">
-                        <ul>
-                            <li>
-                                <a class="link" href="#box-saved" data-open="true" title="">Lưu nhà</a>
-                            </li>
-                            <li>
-                                <a class="link" href="" title="">Lưu tìm kiếm</a>
-                            </li>
-                            <!--<li>
-                                <a class="btn" href="" title="">Đăng nhập</a>
-                            </li>-->
-                            <li>
-                                <a class="link" href="" title=""><span class="user"><i class="fa fa-user"></i> Nguyễn Tiến Chung</span></a>
-                                <ul>
-                                    <li>
-                                        <a href="" title="">Thông tin tài khoản</a>
-                                    </li>
-                                    <li class="border">
-                                        <a href="" title=""><i class="fa fa-sign-out"></i> Thoát</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                    <a href="#box-saved" class="btn-close" data-close="true"><i class="fa fa-angle-right"></i></a>
-                    <a href="#search-mobile" title="Search" class="btn-search" data-search="true"><i class="fa fa-search"></i></a>
-                </div>
-            </header><!-- //header -->
-            <section class="box-mobile">
+            <section class="box-advance-mobile">
                 <div class="container">
                     <form action="advance.html">
                         <ul class="nav-search">
                             <li>
-                                <a href="" title="">For sale</a>
+                                <a class="active" href="" title="">For sale</a>
                             </li>
                             <li>
                                 <a href="" title="">For rent</a>
                             </li>
                         </ul>
+                        <div class="search">
+                            <input type="text" class="form-control" name="keyword" placeholder="City, State, OR ZIP"/>
+                        </div>
+                        <div class="group">
+                            <div class="control">
+                                <label for="select-type" class="label">Property Type</label>
+                                <select id="select-type" name="type" class="form-control">
+                                    <option value="" selected="selected">Any type</option>
+                                    <option value="single-family">Single-Family Home</option>
+                                    <option value="condo">Condo</option>
+                                    <option value="loft">Loft</option>
+                                    <option value="tic">TIC</option>
+                                    <option value="apartment,condo,townhouse">Apt/Condo/Twnhm</option>
+                                    <option value="mobile">Mobile/Manufactured</option>
+                                    <option value="farm">Farm/Ranch</option>
+                                    <option value="multifamily">Multi-Family Home</option>
+                                    <option value="investment">Income/Investment</option>
+                                    <option value="houseboat">Houseboat</option>
+                                    <option value="unspecified">Unspecified</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="control">
+                                <label for="min_price" class="label">Price range</label>
+                                <input type="number" id="min_price" name="min_price" class="form-control"/>
+                            </div>
+                            <div class="control">
+                                <label for="max_price" class="label">to</label>
+                                <input type="number" id="max_price" name="max_price" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="control">
+                                <label for="min_num_beds" class="label">Beds</label>
+                                <div class="action">
+                                    <input type="number" data-ui="input" data-target="min_num_beds_slider" name="min_num_beds" id="min_num_beds" class="form-slider" min="0" max="6"/>
+                                    <div id="min_num_beds_slider" data-ui="slider" data-target="min_num_beds"></div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <label for="min_num_baths" class="label">Baths</label>
+                                <div class="action">
+                                    <input type="number" data-ui="input" data-target="min_num_baths_slider" name="min_num_baths" id="min_num_baths" class="form-slider" min="0" max="6"/>
+                                    <div id="min_num_baths_slider" data-ui="slider" data-target="min_num_baths"></div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <label for="min_size" class="label">Square Footage</label>
+                                <div class="action">
+                                    <input type="number" data-ui="input" data-target="min_size_slider" name="min_size" id="min_size" class="form-slider" min="0" max="6"/>
+                                    <div id="min_size_slider" data-ui="slider" data-target="min_size"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="option">
+                            <h2 class="head">More Options</h2>
+                            <div class="inner">
+                                <div class="group">
+                                    <div class="control">
+                                        <label for="lotsize" class="label">Lot Size</label>
+                                        <select id="lotsize" name="lotsize" class="form-control">
+                                            <option value="">Any</option>
+                                            <option value="0.0459p">2,000+ sqft</option>
+                                            <option value="0.0688p">3,000+ sqft</option>
+                                            <option value="0.0918p">4,000+ sqft</option>
+                                            <option value="0.1147p">5,000+ sqft</option>
+                                            <option value="0.1721p">7,500+ sqft</option>
+                                            <option value="0.25p">1/4+ acre</option>
+                                            <option value="0.5p">1/2+ acre</option>
+                                            <option value="1p">1+ acre</option>
+                                            <option value="2p">2+ acre</option>
+                                            <option value="5p">5+ acre</option>
+                                            <option value="10p">10+ acre</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="group">
+                                    <div class="control">
+                                        <label for="min_built" class="label">Year built</label>
+                                        <input type="number" id="min_built" name="min_built" class="form-control"/>
+                                    </div>
+                                    <div class="control">
+                                        <label for="max_built" class="label">to</label>
+                                        <input type="number" id="max_built" name="max_built" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="group">
+                                    <div class="row">
+                                        <div class="col col-40">
+                                            <label for="keyword">Keyword</label>
+                                        </div>
+                                        <div class="col col-60">
+                                            <input type="text" id="keyword" placeholder="pool, garage, etc" name="keyword" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col col-40">
+                                            <label for="mls">MLS</label>
+                                        </div>
+                                        <div class="col col-60">
+                                            <input type="text" id="mls" name="mls" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <div class="check">
+                                        <label>Include estimates</label>
+                                        <input type="checkbox" name="display_estimates" id="display_estimates" value="1">
+                                        <div class="checkbox" data-check="toggle" data-target="display_estimates"></div>
+                                    </div>
+                                    <div class="check">
+                                        <label>Open house only</label>
+                                        <input type="checkbox" name="display_oh" id="display_oh" value="1">
+                                        <div class="checkbox" data-check="toggle" data-target="display_oh"></div>
+                                    </div>
+                                    <div class="check">
+                                        <label>Price reduced only</label>
+                                        <input type="checkbox" name="display_priceredux" id="display_priceredux" value="1">
+                                        <div class="checkbox" data-check="toggle" data-target="display_priceredux"></div>
+                                    </div>
+                                    <div class="check">
+                                        <label>Include new homes</label>
+                                        <input type="checkbox" name="display_new_homes" id="display_new_homes" value="1">
+                                        <div class="checkbox" data-check="toggle" data-target="display_new_homes"></div>
+                                    </div>
+                                    <div class="check">
+                                        <label>Include foreclosures</label>
+                                        <input type="checkbox" name="display_foreclosure" id="display_foreclosure" value="1">
+                                        <div class="checkbox" data-check="toggle" data-target="display_foreclosure"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="handle">
+                            <a href="" title="Cancel" class="btn btn-cancel">Cancel</a>
+                            <button class="btn btn-reset" type="reset">Reset</button>
+                            <button class="btn btn-submit" type="submit">Search</button>
+                        </div>
                     </form>
                 </div>
             </section>
-            <section class="box-estate">
-                <div class="container">
-                    <h2>Residential Real Estate</h2>
-                    <ul>
-                        <li>
-                            <a href="" title="">San Francisco real estate</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Brooklyn real estate</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Manhattan real estate</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Los Angeles real estate</a>
-                        </li>
-                        <li>
-                            <a href="" title="">San Diego real estate</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Miami real estate</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Chicago real estate</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Las Vegas real estate</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Queens real estate</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Austin real estate</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Houston apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Las Vegas apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">San Antonio apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Phoenix apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Indianapolis apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Atlanta apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Austin apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Charlotte apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Dallas apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Orlando apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">New York apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Boston apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Chicago apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Miami apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Philadelphia apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">San Francisco apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Los Angeles apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">San Diego apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Brooklyn apartments</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Queens apartments</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="box-explore">
-                <div class="container">
-                    <div class="item">
-                        <h3>Explore Reland</h3>
-                        <ul>
-                            <li>
-                                <a href="" title="">Homes for Sale</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Rentals</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Houses for Rent</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Apartments for Rent</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Stats &amp; Trends</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Real Estate Advice</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Real Estate App - iPhone</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Real Estate App - Android</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="item">
-                        <h3>For Professionals</h3>
-                        <ul>
-                            <li>
-                                <a href="" title="">Homes for Sale</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Rentals</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Houses for Rent</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Apartments for Rent</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Stats &amp; Trends</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Real Estate Advice</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Real Estate App - iPhone</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Real Estate App - Android</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="item">
-                        <h3>Corporate</h3>
-                        <ul>
-                            <li>
-                                <a href="" title="">About reland</a>
-                            </li>
-                            <li>
-                                <a href="" title="">About Zillow</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Group News</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Apartments for Rent</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Subscription Terms Community</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Blog</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Careers</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Investor</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <footer class="footer">
-               <div class="footer-bot">
-                   <div class="row">
-                       <div class="col col-20">
-                           <h3>
-                               <a href="" title="">Top Real Estate Markets</a>
-                           </h3>
-                           <ul>
-                               <li>
-                                   <a href="" title="">San Francisco real estate</a>
-                               </li>
-                               <li>
-                                   <a href="" title="">Brooklyn real estate</a>
-                               </li>
-                               <li>
-                                   <a href="" title="">Manhattan real estate</a>
-                               </li>
-                               <li>
-                                   <a href="" title="">Los Angeles real estate</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">San Diego real estate</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Miami real estate</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Chicago real estate</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Las Vegas real estate</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Queens real estate</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Austin real estate</a>
-                               </li>
-                           </ul>
-                           <a class="more" href="#" data-more="true" data-parent="col" title="more">More</a>
-                       </div>
-                       <div class="col col-20">
-                           <h3>
-                               <a href="" title="">Top Rental Markets</a>
-                           </h3>
-                           <ul>
-                               <li>
-                                   <a href="" title="">Houston apartments</a>
-                               </li>
-                               <li>
-                                   <a href="" title="">Las Vegas apartments</a>
-                               </li>
-                               <li>
-                                   <a href="" title="">San Antonio apartments</a>
-                               </li>
-                               <li>
-                                   <a href="" title="">Phoenix apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Indianapolis apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Atlanta apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Austin apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Charlotte apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Dallas apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title=""> Miami apartments</a>
-                               </li>
-                           </ul>
-                           <a class="more" href="#" data-more="true" data-parent="col" title="more">More</a>
-                       </div>
-                       <div class="col col-20">
-                           <h3>
-                               <a href="" title="">Explore Reland</a>
-                           </h3>
-                           <ul>
-                               <li>
-                                   <a href="" title="">Houston apartments</a>
-                               </li>
-                               <li>
-                                   <a href="" title="">Las Vegas apartments</a>
-                               </li>
-                               <li>
-                                   <a href="" title="">San Antonio apartments</a>
-                               </li>
-                               <li>
-                                   <a href="" title="">Phoenix apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Indianapolis apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Atlanta apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Austin apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Charlotte apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Dallas apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title=""> Miami apartments</a>
-                               </li>
-                           </ul>
-                           <a class="more" href="#" data-more="true" data-parent="col" title="more">More</a>
-                       </div>
-                       <div class="col col-20">
-                           <h3>
-                               <a href="" title="">For Professionals</a>
-                           </h3>
-                           <ul>
-                               <li>
-                                   <a href="" title="">Houston apartments</a>
-                               </li>
-                               <li>
-                                   <a href="" title="">Las Vegas apartments</a>
-                               </li>
-                               <li>
-                                   <a href="" title="">San Antonio apartments</a>
-                               </li>
-                               <li>
-                                   <a href="" title="">Phoenix apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Indianapolis apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Atlanta apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Austin apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Charlotte apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Dallas apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title=""> Miami apartments</a>
-                               </li>
-                           </ul>
-                           <a class="more" href="#" data-more="true" data-parent="col" title="more">More</a>
-                       </div>
-                       <div class="col col-20">
-                           <h3>
-                               <a href="" title="">Reland Corporate</a>
-                           </h3>
-                           <ul>
-                               <li>
-                                   <a href="" title="">Houston apartments</a>
-                               </li>
-                               <li>
-                                   <a href="" title="">Las Vegas apartments</a>
-                               </li>
-                               <li>
-                                   <a href="" title="">San Antonio apartments</a>
-                               </li>
-                               <li>
-                                   <a href="" title="">Phoenix apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Indianapolis apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Atlanta apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Austin apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Charlotte apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title="">Dallas apartments</a>
-                               </li>
-                               <li class="hidden">
-                                   <a href="" title=""> Miami apartments</a>
-                               </li>
-                           </ul>
-                           <a class="more" href="#" data-more="true" data-parent="col" title="more">More</a>
-                       </div>
-                   </div>
-                   <nav class="navigation">
-                       <ul>
-                           <li>
-                               <a href="" title="">Buy</a>
-                           </li>
-                           <li>
-                               <a href="" title="">Sell</a>
-                           </li>
-                           <li>
-                               <a href="" title="">Rent</a>
-                           </li>
-                           <li>
-                               <a href="" title="">Mortgage</a>
-                           </li>
-                           <li>
-                               <a href="" title="">Find an Agent</a>
-                           </li>
-                       </ul>
-                   </nav>
-                   <div class="copyright">
-                       Copyright &copy; 2016 Reland, Inc. All rights reserved. <a href="" rel="nofollow"><i class="fa fa-home"></i> Fair Housing and Equal Opportunity.</a> Have a Question? Visit our <a href="" rel="nofollow">Help Center</a> to find the answer.
-                   </div>
-               </div>
-            </footer><!-- //footer -->
-            <div class="overlay" data-overlay="true"></div>
         </div><!-- //main -->
         <div class="menu-left" id="menu-left">
             <div class="inner">
@@ -842,6 +480,7 @@
     </div><!-- //wrapper -->
     <!-- Script -->
     <script src="asset/js/jquery-1.10.2.min.js"></script>
+    <script src="asset/js/jquery-ui.min.js"></script>
     <script src="asset/js/jquery.scroll.min.js"></script>
     <script src="asset/js/jquery.lazy-maps.min.js"></script>
     <script src="asset/js/jquery.validate.min.js"></script>
