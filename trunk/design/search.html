@@ -249,20 +249,20 @@
                             <li>
                                 <a class="link" href="" title="">Lưu tìm kiếm</a>
                             </li>
-                            <!--<li>
-                                <a class="btn" href="" title="">Đăng nhập</a>
-                            </li>-->
                             <li>
-                                <a class="link" href="" title=""><span class="user"><i class="fa fa-user"></i> Nguyễn Tiến Chung</span></a>
-                                <ul>
-                                    <li>
-                                        <a href="" title="">Thông tin tài khoản</a>
-                                    </li>
-                                    <li class="border">
-                                        <a href="" title=""><i class="fa fa-sign-out"></i> Thoát</a>
-                                    </li>
-                                </ul>
+                                <a class="btn" href="" title="">Đăng nhập</a>
                             </li>
+                            <!--<li>-->
+                                <!--<a class="link" href="" title=""><span class="user"><i class="fa fa-user"></i> Nguyễn Tiến Chung</span></a>-->
+                                <!--<ul>-->
+                                    <!--<li>-->
+                                        <!--<a href="" title="">Thông tin tài khoản</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="border">-->
+                                        <!--<a href="" title=""><i class="fa fa-sign-out"></i> Thoát</a>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</li>-->
                         </ul>
                     </nav>
                     <a href="#box-saved" class="btn-close" data-close="true"><i class="fa fa-angle-right"></i></a>
@@ -373,9 +373,19 @@
                                 </div>
                             </div>
                             <div class="col w-160">
-                                <button class="btn-find" data-find="true">
+                                <button class="btn-find disabled" data-find="true">
                                     <i class="fa fa-star"></i> <span class="text">Lưu tìm kiếm</span>
                                 </button>
+                                <div id="saved" class="saved">
+                                    <button class="close"><i class="fa fa-times"></i></button>
+                                    <h6 class="head">Tên tìm kiếm</h6>
+                                    <div class="control">
+                                        <input class="form-control" type="text" name="search_name" placeholder="Tên tìm kiếm của bạn" value="Newhall, CA 1 Bedroom 2 Bathroom Homes For Sale"/>
+                                    </div>
+                                    <div class="action">
+                                        <button class="btn-update">Cập nhật tên</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1384,6 +1394,45 @@
                 </ul>
             </nav>
         </div><!-- //box-find -->
+        <div class="box-share">
+            <div class="inner">
+                <h3 class="head">Your search is saved.</h3>
+                <button class="btn-close"><i class="fa fa-times"></i></button>
+                <div class="avatar">
+                    <img src="//static.trulia-cdn.com/images/share_search_img.png">
+                </div>
+                <h4 class="suggest">Are you searching with anyone?</h4>
+                <div class="hightlight">Share this search.</div>
+                <div class="control">
+                    <input type="text" name="to_emails[]" placeholder="Friend or Family Member's Email Address" class="form-control"/>
+                </div>
+                <div class="control">
+                    <button class="btn-add">+ Add Another</button>
+                </div>
+                <div class="control">
+                    <input type="text" name="from_name" placeholder="Your Name" value="Quangthanh112" class="form-control"/>
+                </div>
+                <div class="control">
+                    <input type="text" name="from_email" placeholder="Your Email" value="quangthanh112@gmail.com" class="form-control"/>
+                </div>
+                <div class="control">
+                    <textarea name ="message" class="form-control" placeholder="Message">Hey there! I saved this search on Trulia, please check out these homes that are listed. Remember to save this search to be first to catch any new listings.</textarea>
+                </div>
+                <div class="actions">
+                    <div class="row">
+                        <div class="col col-65">
+                            <p>We do not subscribe the recipients to emails without their permission</p>
+                        </div>
+                        <div class="col col-35">
+                            <button class="btn-share"><i class="fa fa-envelope"></i> Share</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="term">
+                    <p>By sending, you agree to Reland's <a href="" target="_blank">Terms of Use</a> &amp; <a href="" target="_blank">Privacy Policy</a>.</p>
+                </div>
+            </div>
+        </div>
     </div><!-- //wrapper -->
     <!-- Script -->
     <script src="asset/js/jquery-1.10.2.min.js"></script>
