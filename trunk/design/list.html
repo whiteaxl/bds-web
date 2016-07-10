@@ -115,157 +115,130 @@
                 <div class="utility">
                     <div class="container">
                         <div class="row">
-                            <div class="col w-340">
+                            <div class="col w-240">
                                 <form action="search.html" method="post">
                                     <div class="search">
-                                        <input type="search" name="search" placeholder="Search by neighborhood, city, zip or address" value="California City, CA" autocomplete="off" class="form-control"/>
-                                        <button class="btn-search" type="submit"><i class="fa fa-search"></i> <span class="text">Search</span></button>
+                                        <input type="search" name="search" placeholder="Tìm kiếm theo địa chính, đường, dự án" value="Quận Cầu Giấy, Hà Nội" autocomplete="off" class="form-control"/>
+                                        <button class="btn-search" type="submit"><i class="fa fa-search"></i></button>
                                     </div>
                                 </form>
                             </div>
-                            <div class="col w-290">
+                            <div class="col w-130">
+                                <div class="option">
+                                    <select class="select" data-select="true" name="round" title="Bán kính">
+                                        <option value="1000">Bán kính 1km</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col w-240">
                                 <div class="row">
                                     <div class="col w-115">
                                         <div class="option">
                                             <select class="select" data-select="true" name="price_min" title="Min Price">
-                                                <option value="">Min Price</option>
-                                                <option value="10000">$10,000</option>
-                                                <option value="20000">$20,000</option>
-                                                <option value="30000">$30,000</option>
-                                                <option value="50000">$50,000</option>
-                                                <option value="100000">$100,000</option>
-                                                <option value="130000">$130,000</option>
-                                                <option value="150000">$150,000</option>
-                                                <option value="200000">$200,000</option>
-                                                <option value="250000">$250,000</option>
-                                                <option value="300000">$300,000</option>
-                                                <option value="350000">$350,000</option>
-                                                <option value="400000">$400,000</option>
-                                                <option value="450000">$450,000</option>
-                                                <option value="500000">$500,000</option>
-                                                <option value="550000">$550,000</option>
-                                                <option value="600000">$600,000</option>
-                                                <option value="650000">$650,000</option>
-                                                <option value="700000">$700,000</option>
-                                                <option value="750000">$750,000</option>
-                                                <option value="800000">$800,000</option>
-                                                <option value="850000">$850,000</option>
-                                                <option value="900000">$900,000</option>
-                                                <option value="950000">$950,000</option>
-                                                <option value="1000000">$1M</option>
-                                                <option value="1100000">$1.1M</option>
-                                                <option value="1200000">$1.2M</option>
-                                                <option value="1250000">$1.25M</option>
-                                                <option value="1400000">$1.4M</option>
-                                                <option value="1500000">$1.5M</option>
-                                                <option value="1600000">$1.6M</option>
-                                                <option value="1700000">$1.7M</option>
-                                                <option value="1750000">$1.75M</option>
-                                                <option value="1800000">$1.8M</option>
-                                                <option value="1900000">$1.9M</option>
-                                                <option value="2000000">$2M</option>
-                                                <option value="2250000">$2.25M</option>
-                                                <option value="2500000">$2.5M</option>
-                                                <option value="2750000">$2.75M</option>
-                                                <option value="3000000">$3M</option>
-                                                <option value="3500000">$3.5M</option>
-                                                <option value="4000000">$4M</option>
-                                                <option value="5000000">$5M</option>
-                                                <option value="10000000">$10M</option>
-                                                <option value="20000000">$20M</option>
+                                                <option value="">Giá từ 0</option>
+                                                <option value="10000">1 Tỷ</option>
+                                                <option value="20000">2 Tỷ</option>
+                                                <option value="30000">3 Tỷ</option>
+                                                <option value="50000">5 Tỷ</option>
+                                                <option value="100000">7 Tỷ</option>
+                                                <option value="130000">10 Tỷ</option>
+                                                <option value="150000">20 Tỷ</option>
+                                                <option value="200000">30 Tỷ</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col w-50">
-                                        <div class="label">To</div>
+                                        <div class="label">Đến</div>
                                     </div>
                                     <div class="col w-115">
                                         <div class="option">
                                             <select class="select" data-select="true" name="price_max" title="Max Price">
-                                                <option value="">Max Price</option>
-                                                <option value="10000">$10,000</option>
-                                                <option value="20000">$20,000</option>
-                                                <option value="30000">$30,000</option>
-                                                <option value="50000">$50,000</option>
-                                                <option value="100000">$100,000</option>
-                                                <option value="130000">$130,000</option>
-                                                <option value="150000">$150,000</option>
-                                                <option value="200000">$200,000</option>
-                                                <option value="250000">$250,000</option>
-                                                <option value="300000">$300,000</option>
-                                                <option value="350000">$350,000</option>
-                                                <option value="400000">$400,000</option>
-                                                <option value="450000">$450,000</option>
-                                                <option value="500000">$500,000</option>
-                                                <option value="550000">$550,000</option>
-                                                <option value="600000">$600,000</option>
-                                                <option value="650000">$650,000</option>
-                                                <option value="700000">$700,000</option>
-                                                <option value="750000">$750,000</option>
-                                                <option value="800000">$800,000</option>
-                                                <option value="850000">$850,000</option>
-                                                <option value="900000">$900,000</option>
-                                                <option value="950000">$950,000</option>
-                                                <option value="1000000">$1M</option>
-                                                <option value="1100000">$1.1M</option>
-                                                <option value="1200000">$1.2M</option>
-                                                <option value="1250000">$1.25M</option>
-                                                <option value="1400000">$1.4M</option>
-                                                <option value="1500000">$1.5M</option>
-                                                <option value="1600000">$1.6M</option>
-                                                <option value="1700000">$1.7M</option>
-                                                <option value="1750000">$1.75M</option>
-                                                <option value="1800000">$1.8M</option>
-                                                <option value="1900000">$1.9M</option>
-                                                <option value="2000000">$2M</option>
-                                                <option value="2250000">$2.25M</option>
-                                                <option value="2500000">$2.5M</option>
-                                                <option value="2750000">$2.75M</option>
-                                                <option value="3000000">$3M</option>
-                                                <option value="3500000">$3.5M</option>
-                                                <option value="4000000">$4M</option>
-                                                <option value="5000000">$5M</option>
-                                                <option value="10000000">$10M</option>
-                                                <option value="20000000">$20M</option>
+                                                <option value="">Bất kỳ</option>
+                                                <option value="10000">1 Tỷ</option>
+                                                <option value="20000">2 Tỷ</option>
+                                                <option value="30000">3 Tỷ</option>
+                                                <option value="50000">5 Tỷ</option>
+                                                <option value="100000">7 Tỷ</option>
+                                                <option value="130000">10 Tỷ</option>
+                                                <option value="150000">20 Tỷ</option>
+                                                <option value="200000">30 Tỷ</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col w-120">
-                                <div class="option">
-                                    <select class="select" data-select="true" name="beds" title="All Beds">
-                                        <option value="">All Beds</option>
-                                        <option value="0">0+ Beds</option>
-                                        <option value="1">1+ Beds</option>
-                                        <option value="2">2+ Beds</option>
-                                        <option value="3">3+ Beds</option>
-                                        <option value="4">4+ Beds</option>
-                                        <option value="5">5+ Beds</option>
-                                    </select>
+                            <div class="col w-240">
+                                <div class="row">
+                                    <div class="col w-115">
+                                        <div class="option">
+                                            <select class="select" data-select="true" name="beds" title="All Beds">
+                                                <option value="">Diện tích từ 0</option>
+                                                <option value="1">10 m2</option>
+                                                <option value="2">20 m2</option>
+                                                <option value="3">30 m2</option>
+                                                <option value="4">40 m2</option>
+                                                <option value="5">50 m2</option>
+                                                <option value="6">60 m2</option>
+                                                <option value="7">70 m2</option>
+                                                <option value="8">80 m2</option>
+                                                <option value="9">90 m2</option>
+                                                <option value="10">100 m2</option>
+                                                <option value="15">150 m2</option>
+                                                <option value="20">200 m2</option>
+                                                <option value="25">250 m2</option>
+                                                <option value="30">300 m2</option>
+                                                <option value="40">400 m2</option>
+                                                <option value="50">500 m2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col w-50">
+                                        <div class="label">Đến</div>
+                                    </div>
+                                    <div class="col w-115">
+                                        <div class="option">
+                                            <select class="select" data-select="true" name="baths" title="All Baths">
+                                                <option value="">Bất kỳ</option>
+                                                <option value="1">10 m2</option>
+                                                <option value="2">20 m2</option>
+                                                <option value="3">30 m2</option>
+                                                <option value="4">40 m2</option>
+                                                <option value="5">50 m2</option>
+                                                <option value="6">60 m2</option>
+                                                <option value="7">70 m2</option>
+                                                <option value="8">80 m2</option>
+                                                <option value="9">90 m2</option>
+                                                <option value="10">100 m2</option>
+                                                <option value="15">150 m2</option>
+                                                <option value="20">200 m2</option>
+                                                <option value="25">250 m2</option>
+                                                <option value="30">300 m2</option>
+                                                <option value="40">400 m2</option>
+                                                <option value="50">500 m2</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col w-120">
-                                <div class="option">
-                                    <select class="select" data-select="true" name="baths" title="All Baths">
-                                        <option value="">All Baths</option>
-                                        <option value="1">1+ Baths</option>
-                                        <option value="2">2+ Baths</option>
-                                        <option value="3">3+ Baths</option>
-                                        <option value="4">4+ Baths</option>
-                                        <option value="5">5+ Baths</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col w-120">
+                            <div class="col w-130">
                                 <div class="handle">
-                                    <a href="#filter" data-toggle-text="Less Filters" data-action="more">More Filters</a>
+                                    <a href="#filter" data-toggle-text="Bộ lọc thu gọn" data-action="more"><span>Bộ lọc nâng cao</span></a>
                                 </div>
                             </div>
-                            <div class="col w-160">
-                                <button class="btn-find" data-find="true">
-                                    <i class="fa fa-star"></i> <span class="text">Save search</span>
+                            <div class="col w-150">
+                                <button class="btn-find disabled" data-find="true">
+                                    <i class="fa fa-star"></i> <span class="text">Lưu tìm kiếm</span>
                                 </button>
+                                <div id="saved" class="saved">
+                                    <button class="close"><i class="fa fa-times"></i></button>
+                                    <h6 class="head">Tên tìm kiếm</h6>
+                                    <div class="control">
+                                        <input class="form-control" type="text" name="search_name" placeholder="Tên tìm kiếm của bạn" value="Newhall, CA 1 Bedroom 2 Bathroom Homes For Sale"/>
+                                    </div>
+                                    <div class="action">
+                                        <button class="btn-update">Cập nhật tên</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
