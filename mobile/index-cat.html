@@ -20,35 +20,46 @@
 	<script src="js/javascript.min.js"></script>
     <script>
     	$(function(){
-			var searchadd = [
-			  {
-				diadiem: "CT1B1 - KDT Xa La",
-				diadiemlbl: "Địa điểm",
-				diadiemicon: "iconLocation gray",
-				label: "Xala",
-				quanlbl: "Quận",
-				quanicon: "iconStar red",
-				tinh: "Hà Nội",
-				tinhlbl: "Tỉnh",
-				tinhicon: "iconStar red"
+			$.widget( "custom.catcomplete", $.ui.autocomplete, {
+			  _create: function() {
+				this._super();
+				this.widget().menu( "option", "items", "> :not(.ui-autocomplete-category)" );
+			  },
+			  _renderMenu: function( ul, items ) {
+				var that = this,
+				  currentCategory = "";
+				$.each( items, function( index, item ) {
+				  var li;
+				  if ( item.category != currentCategory ) {
+					ul.append( "<li class='ui-autocomplete-category'>" + item.categorylbl + "</li>" );
+					currentCategory = item.category;
+				  }
+				  li = that._renderItemData( ul, item );
+				  if ( item.category ) {
+					li.attr( "aria-label", item.category + " : " + item.label );
+				  }
+				});
 			  }
+			});
+			var data = [
+			  { label: "Hà đông, Hà Nội", icon:"iconHeart red", des:"Bán liền kề quận Hà đông", category: "vitrihientai", categorylbl:"Vị trí hiện tại"},
+			  { label: "CT1, KDT Xa La", icon:"iconHeart red", des:"Bán liền kề quận Hà đông", category: "vitrihientai", categorylbl:"Vị trí hiện tại"},
+			  { label: "CTB1, KDT Dương Nội", icon:"iconHeart red", des:"Bán liền kề quận Hà đông", category: "vitrihientai", categorylbl:"Vị trí hiện tại"},
+			  { label: "CT1A1, KDT Linh Đàm", icon:"fa fa-history gray", des:"Bán liền kề quận Hà đông", category: "vitriganday", categorylbl:"Tìm kiếm gần đây"},
+			  { label: "45 Hà Đông", icon:"fa fa-history gray", des:"Bán liền kề quận Hà đông", category: "vitriganday", categorylbl:"Tìm kiếm gần đây"},
+			  { label: "CT4, Xa La", icon:"fa fa-history gray", des:"Bán liền kề quận Hà đông", category: "vitriganday", categorylbl:"Tìm kiếm gần đây"}
 			];
-			$("#searchadd").autocomplete({
-			  minLength: 0,
-			  source: searchadd,
-			  focus: function( event, ui ) {
-				$( "#searchadd" ).val( ui.item.label );
-				return false;
-			  }
+		 
+			$( "#searchadd" ).catcomplete({
+			  delay: 0,
+			  source: data
 			})
-			.autocomplete( "instance" )._renderItem = function( ul, item ) {
-				ul.addClass('relandAutoOne');
+			.catcomplete( "instance" )._renderItem = function( ul, item ) {
+				ul.addClass('relandAuto');
 				return $( "<li>")
-				.append("<p><i class='" + item.diadiemicon + "'></i>" + item.diadiem + "<span>" + item.diadiemlbl + "</span></p>")
-				.append("<p><i class='" + item.quanicon + "'></i>" + item.label + "<span>" + item.quanlbl + "</span></p>")
-				.append("<p><i class='" + item.tinhicon + "'></i>" + item.tinh + "<span>" + item.tinhlbl + "</span></p>")
+				.append("<i class='" + item.icon + "'></i>" + item.label + "<span>" + item.des + "</span>")
 				.appendTo( ul );
-			};	
+			};
 		});
 	</script>
 </head>
