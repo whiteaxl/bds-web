@@ -86,7 +86,7 @@
                     <nav class="nav-user">
                         <ul>
                             <li>
-                                <a class="link" href="#box-saved" data-open="true" title="">Lưu nhà</a>
+                                <a class="link" title="">Lưu nhà</a>
                             </li>
                             <li>
                                 <a class="link" href="" title="">Lưu tìm kiếm</a>
@@ -107,7 +107,6 @@
                             </li>
                         </ul>
                     </nav>
-                    <a href="#box-saved" class="btn-close" data-close="true"><i class="fa fa-angle-right"></i></a>
                     <a href="#search-mobile" title="Search" class="btn-search" data-search="true"><i class="fa fa-search"></i></a>
                 </div>
             </header><!-- //header -->
@@ -165,7 +164,7 @@
                                 <div class="control">
                                     <div class="row">
                                         <div class="col col-220">
-                                            <div class="type">LOẠI BẤT ĐỘNG SẢN</div>
+                                            <div class="type">Loại tin đăng</div>
                                         </div>
                                         <div class="col col-910">
                                             <div class="option">
@@ -223,73 +222,142 @@
                                                 <div class="row">
                                                     <div class="col col-50">
                                                         <label class="label" for="post_acreage">Diện tích</label>
-                                                        <select class="form-control" name="acreage" id="post_acreage">
-                                                            <option value="">Bất kỳ</option>
-                                                            <option value="1">10 m2</option>
-                                                            <option value="2">20 m2</option>
-                                                            <option value="3">30 m2</option>
-                                                            <option value="4">40 m2</option>
-                                                            <option value="5">50 m2</option>
-                                                            <option value="6">60 m2</option>
-                                                            <option value="7">70 m2</option>
-                                                            <option value="8">80 m2</option>
-                                                            <option value="9">90 m2</option>
-                                                            <option value="10">100 m2</option>
-                                                            <option value="15">150 m2</option>
-                                                            <option value="20">200 m2</option>
-                                                            <option value="25">250 m2</option>
-                                                            <option value="30">300 m2</option>
-                                                            <option value="40">400 m2</option>
-                                                            <option value="50">500 m2</option>
-                                                        </select>
+                                                        <input type="text" class="form-control" name="acreage" id="post_acreage"/>
                                                     </div>
                                                     <div class="col col-50">
-                                                        <label class="label" for="post_bed">Số phòng ngủ</label>
-                                                        <select class="form-control" name="bed" id="post_bed">
-                                                            <option value="">Bất kỳ</option>
-                                                            <option value="0">0</option>
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                            <option value="4">4</option>
-                                                            <option value="5">5</option>
-                                                            <option value="6">6</option>
-                                                            <option value="7">7</option>
-                                                            <option value="8">8</option>
-                                                            <option value="9">9+</option>
-                                                        </select>
+                                                        <label class="label" for="bed_0">Số phòng ngủ</label>
+                                                        <div class="list">
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_bed" id="bed_0" checked/>
+                                                                <label for="bed_0">0</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_bed" id="bed_1"/>
+                                                                <label for="bed_1">1</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_bed" id="bed_2"/>
+                                                                <label for="bed_2">2</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_bed" id="bed_3"/>
+                                                                <label for="bed_3">3</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_bed" id="bed_4"/>
+                                                                <label for="bed_4">4</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_bed" id="bed_5"/>
+                                                                <label for="bed_5">5</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_bed" id="bed_6"/>
+                                                                <label for="bed_6">6</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_bed" id="bed_7"/>
+                                                                <label for="bed_7">7</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_bed" id="bed_8"/>
+                                                                <label for="bed_8">8</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_bed" id="bed_9"/>
+                                                                <label for="bed_9">9+</label>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col col-50">
-                                                        <label class="label" for="post_shower">Số phòng tắm</label>
-                                                        <select class="form-control" name="bed" id="post_shower">
-                                                            <option value="">Bất kỳ</option>
-                                                            <option value="0">0</option>
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                            <option value="4">4</option>
-                                                            <option value="5">5</option>
-                                                            <option value="6">6</option>
-                                                            <option value="7">7</option>
-                                                            <option value="8">8</option>
-                                                            <option value="9">9+</option>
-                                                        </select>
+                                                        <label class="label" for="shower_0">Số phòng tắm</label>
+                                                        <div class="list">
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_shower" id="shower_0" checked/>
+                                                                <label for="shower_0">0</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_shower" id="shower_1"/>
+                                                                <label for="shower_1">1</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_shower" id="shower_2"/>
+                                                                <label for="shower_2">2</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_shower" id="shower_3"/>
+                                                                <label for="shower_3">3</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_shower" id="shower_4"/>
+                                                                <label for="shower_4">4</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_shower" id="shower_5"/>
+                                                                <label for="shower_5">5</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_shower" id="shower_6"/>
+                                                                <label for="shower_6">6</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_shower" id="shower_7"/>
+                                                                <label for="shower_7">7</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_shower" id="shower_8"/>
+                                                                <label for="shower_8">8</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_shower" id="shower_9"/>
+                                                                <label for="shower_9">9+</label>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col col-50">
-                                                        <label class="label" for="post_floors">Số tầng</label>
-                                                        <select class="form-control" name="floors" id="post_floors">
-                                                            <option value="">Bất kỳ</option>
-                                                            <option value="0">0</option>
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                            <option value="4">4</option>
-                                                            <option value="5">5</option>
-                                                            <option value="6">6</option>
-                                                            <option value="7">7</option>
-                                                            <option value="8">8</option>
-                                                            <option value="9">9+</option>
-                                                        </select>
+                                                        <label class="label" for="floors_0">Số tầng</label>
+                                                        <div class="list">
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_floors" id="floors_0" checked/>
+                                                                <label for="floors_0">0</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_floors" id="floors_1"/>
+                                                                <label for="floors_1">1</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_floors" id="floors_2"/>
+                                                                <label for="floors_2">2</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_floors" id="floors_3"/>
+                                                                <label for="floors_3">3</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_floors" id="floors_4"/>
+                                                                <label for="floors_4">4</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_floors" id="floors_5"/>
+                                                                <label for="floors_5">5</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_floors" id="floors_6"/>
+                                                                <label for="floors_6">6</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_floors" id="floors_7"/>
+                                                                <label for="floors_7">7</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_floors" id="floors_8"/>
+                                                                <label for="floors_8">8</label>
+                                                            </div>
+                                                            <div class="check">
+                                                                <input class="radio" type="radio" name="post_floors" id="floors_9"/>
+                                                                <label for="floors_9">9+</label>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -412,15 +480,23 @@
                                                 </div>
                                             </div>
                                             <div class="group">
-                                                <label class="label" for="post_address">Địa chỉ</label>
-                                                <textarea name="address" class="form-control" id="post_address"></textarea>
-                                            </div>
-                                            <div class="group">
                                                 <div class="label">Bản đồ</div>
+                                                <div class="row">
+                                                    <div class="col col-50">
+                                                        <div class="search">
+                                                            <input type="search" name="search" placeholder="Tìm kiếm theo địa chính, đường, dự án" value="Quận Cầu Giấy, Hà Nội" autocomplete="off" class="form-control">
+                                                            <button class="btn-search"><i class="fa fa-search"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="map">
                                                     <div id="google-map"></div>
                                                     <!--<img src="asset/img/img-map.jpg" width="730"  height="480" alt=""/>-->
                                                 </div>
+                                            </div>
+                                            <div class="group">
+                                                <label class="label" for="post_address">Địa chỉ</label>
+                                                <textarea name="address" class="form-control" id="post_address"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -433,11 +509,38 @@
                                         <div class="col col-910">
                                             <div class="group">
                                                 <label class="label" for="post_price">Giá</label>
-                                                <input type="text" name="price" class="form-control" id="post_price"/>
+                                                <div class="row">
+                                                    <div class="col col-30">
+                                                        <input type="number" name="price" class="form-control" id="post_price"/>
+                                                    </div>
+                                                    <div class="col col-70">
+                                                        <div class="row">
+                                                            <div class="col col-33">
+                                                                <label><input type="radio" name="unit" checked/> Tỷ</label>
+                                                            </div>
+                                                            <div class="col col-33">
+                                                                <label><input type="radio" name="unit"/> Triệu</label>
+                                                            </div>
+                                                            <div class="col col-33">
+                                                                <label><input type="radio" name="unit"/> Triệu/Tháng</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="group">
                                                 <label class="label" for="post_contact">Liên hệ</label>
-                                                <input type="text" name="contact" class="form-control" id="post_contact"/>
+                                                <div class="row">
+                                                    <div class="col col-33">
+                                                        <input type="text" name="username" value="tienchung" class="form-control" id="post_contact"/>
+                                                    </div>
+                                                    <div class="col col-33">
+                                                        <input type="number" name="phone" value="01687270027" class="form-control"/>
+                                                    </div>
+                                                    <div class="col col-33">
+                                                        <input type="email" name="email" value="tienchung@gmail.com" class="form-control"/>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -530,113 +633,6 @@
                 </nav>
             </div>
         </div><!-- //menu-left -->
-        <div class="box-saved" id="box-saved">
-            <ul class="nav-saved">
-                <li>
-                    <a class="active" href="#my-boards" data-tab="true" data-content="content" data-group="box-saved" title="My Boards">My Boards</a>
-                </li>
-                <li>
-                    <a href="#saved-homes" data-tab="true" data-content="content" data-group="box-saved" title="Saved Homes">Saved Homes</a>
-                </li>
-                <li>
-                    <a href="#saved-rentals" data-tab="true" data-content="content" data-group="box-saved" title="Saved Rentals">Saved Rentals</a>
-                </li>
-            </ul>
-            <div class="content mCustomScrollbar" style="display: block" id="my-boards">
-                <div class="create">
-                    <a href="#" title=""><i class="fa fa-plus"></i> Create Board</a>
-                </div>
-                <div class="boards">
-                    <div class="item">
-                        <a href="" title="">
-                            <span class="img" style="background-image: url(asset/img/data/img-40-1.jpg)">Dream Homes</span>
-                            <span class="name">Dream Homes</span>
-                            <span class="group">
-                                <span class="user">Only Me</span>
-                                <span class="type">2 homes</span>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="" title="">
-                            <span class="img" style="background-image: url(asset/img/data/img-40-2.jpg)">Dream Homes</span>
-                            <span class="name">Home with Pools</span>
-                            <span class="group">
-                                <span class="user">Only Me</span>
-                                <span class="type">2 homes</span>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="" title="">
-                            <span class="img" style="background-image: url(asset/img/data/img-40-2.jpg)">Dream Homes</span>
-                            <span class="name">Home with Pools</span>
-                            <span class="group">
-                                <span class="user">Only Me</span>
-                                <span class="type">2 homes</span>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="content mCustomScrollbar" id="saved-homes">
-                <!--<div class="notice">
-                    You haven’t added any homes yet.<br/>
-                    Start searching for properties to add now.
-                </div>
-                <div class="handle">
-                    <a href="index.html" title="Search Homes">Search Homes</a>
-                </div>-->
-                <div class="saves">
-                    <div class="item">
-                        <a href="" title="">
-                            <span class="img" style="background-image: url(asset/img/data/img-40-1.jpg)">Dream Homes</span>
-                            <span class="price">$129,900</span>
-                            <span class="info">4 bd   2 ba   1744 sqft</span>
-                            <span class="loc">8912 Oleander Ave</span>
-                            <span class="loc">California City, CA</span>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="" title="">
-                            <span class="img" style="background-image: url(asset/img/data/img-40-2.jpg)">Dream Homes</span>
-                            <span class="price">$129,900</span>
-                            <span class="info">4 bd   2 ba   1744 sqft</span>
-                            <span class="loc">8912 Oleander Ave</span>
-                            <span class="loc">California City, CA</span>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="" title="">
-                            <span class="img" style="background-image: url(asset/img/data/img-40-3.jpg)">Dream Homes</span>
-                            <span class="price">$129,900</span>
-                            <span class="info">4 bd   2 ba   1744 sqft</span>
-                            <span class="loc">8912 Oleander Ave</span>
-                            <span class="loc">California City, CA</span>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="" title="">
-                            <span class="img" style="background-image: url(asset/img/data/img-40-4.jpg)">Dream Homes</span>
-                            <span class="price">$129,900</span>
-                            <span class="info">4 bd   2 ba   1744 sqft</span>
-                            <span class="loc">8912 Oleander Ave</span>
-                            <span class="loc">California City, CA</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="content mCustomScrollbar" id="saved-rentals">
-                <div class="notice">
-                    You haven’t added any homes yet.<br/>
-                    Start searching for properties to add now.
-                </div>
-                <div class="handle">
-                    <a href="index.html" title="Search Homes">Search Homes</a>
-                </div>
-            </div>
-            <div id="loading" class="loading"></div>
-        </div><!-- //box-saved -->
         <div class="box-login" id="box-login">
             <div class="inner">
                 <form action="index.html" method="post" id="form-login" novalidate>
