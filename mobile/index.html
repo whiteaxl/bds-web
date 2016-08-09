@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
@@ -100,8 +101,8 @@
             <div class="clb ovh"></div>
             <div class="search-box post-box">
             	<ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#postbuy" aria-controls="postbuy" role="tab" data-toggle="tab">Bán</a></li>
-                    <li role="presentation"><a href="#postsale" aria-controls="postsale" role="tab" data-toggle="tab">Cho thuê</a></li>
+                    <li role="presentation" class="active"><a  aria-controls="postbuy">Bán</a></li>
+                    <li role="presentation"><a aria-controls="postsale">Cho thuê</a></li>
                 </ul>
                 <div class="tab-content">
 	                <div role="tabpanel" class="tab-pane active" id="postbuy">
@@ -158,15 +159,12 @@
                                 <label class="btn">
                                     <input type="radio" name="options" id="room7" autocomplete="off">7
                                 </label>
-                                <label class="btn">
-                                    <input type="radio" name="options" id="room8" autocomplete="off">8
-                                </label>
-                                <label class="btn">
-                                    <input type="radio" name="options" id="room9" autocomplete="off">9
+                                <label class="btn other">
+                                    <input type="radio" name="options" id="room8" autocomplete="off"><input type="text" value="" placeholder="Khác" />
                                 </label>
                             </div>
                         </div>
-                        <div class="room-box collapse-box collapse-cus group-cus ovh">
+                        <div class="bathroom-box collapse-box collapse-cus group-cus ovh">
                             <a class="collapse-title">Số phòng tắm</a>
                             <div class="btn-group" data-toggle="buttons">
                                 <label class="btn active">
@@ -194,10 +192,7 @@
                                     <input type="radio" name="options" id="bathroom7" autocomplete="off">7
                                 </label>
                                 <label class="btn">
-                                    <input type="radio" name="options" id="bathroom8" autocomplete="off">8
-                                </label>
-                                <label class="btn">
-                                    <input type="radio" name="options" id="bathroom9" autocomplete="off">9
+                                    <input type="radio" name="options" id="bathroom8" autocomplete="off"><input type="text" value="" placeholder="Khác" />
                                 </label>
                             </div>
                         </div>
@@ -229,32 +224,205 @@
                                     <input type="radio" name="options" id="step7" autocomplete="off">7
                                 </label>
                                 <label class="btn">
-                                    <input type="radio" name="options" id="step8" autocomplete="off">8
-                                </label>
-                                <label class="btn">
-                                    <input type="radio" name="options" id="step9" autocomplete="off">9
+                                    <input type="radio" name="options" id="step8" autocomplete="off"><input type="text" value="" placeholder="Khác" />
                                 </label>
                             </div>
                         </div>
                         <div class="title border">Vị trí</div>
+						<div class="maps-box collapse-box">
+                            <a role="button" class="collapse-title" data-toggle="modal" data-target="#mapsBox">Bản đồ <span><label>Chọn vị trí</label> <i class="iconRightOpen"></i></span></a>
+                        </div>
+						<div class="address-box collapse-box">
+                            <a role="button" class="collapse-title" data-toggle="modal" data-target="#addressBox">Địa chỉ <span><label>Đường Phùng Hưng...</label> <i class="iconRightOpen"></i></span></a>
+                        </div>
+						<div class="project-box collapse-box">
+                            <a role="button" class="collapse-title" data-toggle="modal" data-target="#projectBox">Thuộc dự án <span><label>KDT Xa La</label> <i class="iconRightOpen"></i></span></a>
+                        </div>
                         <div class="trend-box collapse-box">
                             <a role="button" class="collapse-title" data-toggle="modal" data-target="#trendBox">Hướng nhà <span><label>Bất kỳ</label> <i class="iconRightOpen"></i></span></a>
                         </div>
-                        <div class="dt-box collapse-box fr">
+                        <div class="dt-box collapse-box  border-none fr">
                             <a class="collapse-title"><label>Đường trước nhà (m)</label> <span><input type="text" placeholder="5,5"></span></a>
+                        </div>                        
+                        <div class="title border">Thông tin khách</div>
+                        <div class="other-box uln">
+                        	<ul class="list-check">
+                                <li><a href="javascript:void(0)">Nhà mới xây <i class="iconCheck"></i></a></li>
+                                <li><a href="javascript:void(0)">Nhà lô góc <i class="iconCheck"></i></a></li>
+                                <li><a href="javascript:void(0)">Ôtô đỗ cửa <i class="iconCheck"></i></a></li>
+                                <li><a href="javascript:void(0)">Đã có sổ đỏ <i class="iconCheck"></i></a></li>
+                                <li><a href="javascript:void(0)">Nội thất đầy đủ <i class="iconCheck"></i></a></li>
+                                <li><a href="javascript:void(0)">Chính chủ đăng tin <i class="iconCheck"></i></a></li>
+                            </ul>
                         </div>
-                        <div class="project-box collapse-box">
-                            <a role="button" class="collapse-title" data-toggle="modal" data-target="#projectBox">Thuộc dự án <span><label>KDT Xa La</label> <i class="iconRightOpen"></i></span></a>
+						<div class="title border">Giá và liên hệ</div>
+                        <div class="pr-box collapse-box fr">
+							<a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Giá (triệu)<span><input type="text" /></span></a>
                         </div>
-                        <div class="address-box collapse-box">
-                            <a role="button" class="collapse-title" data-toggle="modal" data-target="#addressBox">Địa chỉ <span><label>Đường Phùng Hưng...</label> <i class="iconRightOpen"></i></span></a>
+                        <div class="contact-box collapse-box border-none">
+                            <a role="button" class="collapse-title" data-toggle="modal" data-target="#contactBox">Liên hệ <span><label>Mr Việt - 0968 898 678</label> <i class="iconRightOpen"></i></span></a>
                         </div>
-                        <div class="maps-box collapse-box border-none">
+                        <div class="title border">Thông tin chi tiết</div>
+                        <div class="detail-box collapse-box">
+                            <a role="button" class="collapse-title" data-toggle="modal" data-target="#detailBox">Chi tiết <span><label>Nội thất đầy đủ</label> <i class="iconRightOpen"></i></span></a>
+                        </div>
+						<div class="clb ovh mb10">&nbsp;</div>
+						<div class="pd15"><button type="reset" class="btn btn-danger btn-block">Thực hiện</button></div>
+						<div class="clb ovh mb10">&nbsp;</div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="postsale">
+                    	<div class="title">Đặc điểm</div>
+                        <div class="type-box collapse-box">
+                            <a role="button" class="collapse-title" data-toggle="modal" data-target="#typeBox">Loại nhà <span><label>Chung cư</label> <i class="iconRightOpen"></i></span></a>
+                        </div>
+                        <div class="dt-box collapse-box fr">
+                            <a class="collapse-title"><label>Diện tích (m2)</label> <span><input type="text" pattern="\d*" placeholder="200"></span></a>
+                        </div>
+                        <div class="dt-box collapse-box fr">
+                            <a class="collapse-title"><label>Mặt tiền</label> <span><input type="text" placeholder="5,5"></span></a>
+                        </div>
+                        <div class="year-box collapse-box">
+                            <a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Năm xây dựng <span><label id="psarea_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
+                            <div class="yearBox spinner spinner-hide">
+                                <select id="psarea" class="drum">
+                                    <option selected value="a0">2016</option>
+                                    <option value="psa1">2015</option>
+                                    <option value="psa2">2014</option>
+                                    <option value="psa3">2013</option>
+                                    <option value="psa5">2012</option>
+                                    <option value="psa6">2011</option>
+                                    <option value="psa7">2010</option>
+                                    <option value="psa8">2009</option>
+                                    <option value="psa9">2008</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="room-box collapse-box collapse-cus group-cus ovh">
+                            <a class="collapse-title">Số phòng ngủ</a>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn active">
+                                    <input type="radio" name="options" id="room0" autocomplete="off" checked>0
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="room1" autocomplete="off">1
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="room2" autocomplete="off">2
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="room3" autocomplete="off">3
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="room4" autocomplete="off">4
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="room5" autocomplete="off">5
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="room6" autocomplete="off">6
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="room7" autocomplete="off">7
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="room8" autocomplete="off"><input type="text" value="<input type="text" value="" placeholder="Khác" />" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="bathroom-box collapse-box collapse-cus group-cus ovh">
+                            <a class="collapse-title">Số phòng tắm</a>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn active">
+                                    <input type="radio" name="options" id="bathroom0" autocomplete="off" checked>0
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="bathroom1" autocomplete="off">1
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="bathroom2" autocomplete="off">2
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="bathroom3" autocomplete="off">3
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="bathroom4" autocomplete="off">4
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="bathroom5" autocomplete="off">5
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="bathroom6" autocomplete="off">6
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="bathroom7" autocomplete="off">7
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="bathroom8" autocomplete="off"><input type="text" value="" placeholder="Khác" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="step-box collapse-box collapse-cus group-cus ovh border-none">
+                            <a class="collapse-title">Số tầng</a>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn active">
+                                    <input type="radio" name="options" id="step0" autocomplete="off" checked>0
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="step1" autocomplete="off">1
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="step2" autocomplete="off">2
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="step3" autocomplete="off">3
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="step4" autocomplete="off">4
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="step5" autocomplete="off">5
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="step6" autocomplete="off">6
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="step7" autocomplete="off">7
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="options" id="step8" autocomplete="off"><input type="text" value="" placeholder="Khác" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="title border">Vị trí</div>
+						<div class="maps-box collapse-box">
                             <a role="button" class="collapse-title" data-toggle="modal" data-target="#mapsBox">Bản đồ <span><label>Chọn vị trí</label> <i class="iconRightOpen"></i></span></a>
                         </div>
-                        <div class="title border">Giá và liên hệ</div>
+						<div class="address-box collapse-box">
+                            <a role="button" class="collapse-title" data-toggle="modal" data-target="#addressBox">Địa chỉ <span><label>Đường Phùng Hưng...</label> <i class="iconRightOpen"></i></span></a>
+                        </div>
+						<div class="project-box collapse-box">
+                            <a role="button" class="collapse-title" data-toggle="modal" data-target="#projectBox">Thuộc dự án <span><label>KDT Xa La</label> <i class="iconRightOpen"></i></span></a>
+                        </div>
+                        <div class="trend-box collapse-box">
+                            <a role="button" class="collapse-title" data-toggle="modal" data-target="#trendBox">Hướng nhà <span><label>Bất kỳ</label> <i class="iconRightOpen"></i></span></a>
+                        </div>
+                        <div class="dt-box collapse-box  border-none fr">
+                            <a class="collapse-title"><label>Đường trước nhà (m)</label> <span><input type="text" placeholder="5,5"></span></a>
+                        </div>                        
+                        <div class="title border">Thông tin khách</div>
+                        <div class="other-box uln">
+                        	<ul class="list-check">
+                                <li><a href="javascript:void(0)">Nhà mới xây <i class="iconCheck"></i></a></li>
+                                <li><a href="javascript:void(0)">Nhà lô góc <i class="iconCheck"></i></a></li>
+                                <li><a href="javascript:void(0)">Ôtô đỗ cửa <i class="iconCheck"></i></a></li>
+                                <li><a href="javascript:void(0)">Đã có sổ đỏ <i class="iconCheck"></i></a></li>
+                                <li><a href="javascript:void(0)">Nội thất đầy đủ <i class="iconCheck"></i></a></li>
+                                <li><a href="javascript:void(0)">Chính chủ đăng tin <i class="iconCheck"></i></a></li>
+                            </ul>
+                        </div>
+						<div class="title border">Giá và liên hệ</div>
                         <div class="pr-box collapse-box fr">
-                            <a class="collapse-title"><label>Giá (triệu)</label> <span><input type="text" pattern="\d*" placeholder="1500"></span></a>
+							<a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Giá (triệu)<span><input type="text" /></span></a>
                         </div>
                         <div class="contact-box collapse-box border-none">
                             <a role="button" class="collapse-title" data-toggle="modal" data-target="#contactBox">Liên hệ <span><label>Mr Việt - 0968 898 678</label> <i class="iconRightOpen"></i></span></a>
@@ -263,26 +431,10 @@
                         <div class="detail-box collapse-box border-none">
                             <a role="button" class="collapse-title" data-toggle="modal" data-target="#detailBox">Chi tiết <span><label>Nội thất đầy đủ</label> <i class="iconRightOpen"></i></span></a>
                         </div>
-                        <div class="title border">Thông tin khách</div>
-                        <div class="other-box uln">
-                        	<ul class="list-check">
-                                <li><a href="javascript:void(0)">Nhà mới xây <i class="iconCheck"></i></a></li>
-                                <li><a href="javascript:void(0)">Nhà lô góc <i class="iconCheck"></i></a></li>
-                                <li><a href="javascript:void(0)">Ôtô đỗ cửa <i class="iconCheck"></i></a></li>
-                                <li><a href="javascript:void(0)">Nhà kinh doanh được <i class="iconCheck"></i></a></li>
-                                <li><a href="javascript:void(0)">Nội thất đầy đủ <i class="iconCheck"></i></a></li>
-                                <li><a href="javascript:void(0)">Chính chủ đăng tin <i class="iconCheck"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="postsale">
-                    	thue
+						<div class="pd15"><button type="reset" class="btn btn-danger btn-block">Thực hiện</button></div>
+						<div class="clb ovh mb10">&nbsp;</div>
                     </div>
                 </div>
-            </div>
-        	<div class="post-footer fixed">
-                <a onClick="postExit()" class="pull-left">Thoát</a>
-                <a href="#" class="pull-right">Đăng tin</a>
             </div>
         </form>
     </div>
@@ -290,13 +442,13 @@
     	<form>
     	<div class="search-fr">
         	<i class="iconSearch"></i>
-        	<input type="text" class="input-fr" id="searchadd" placeholder="Nhập khu vực hoặc địa điểm cần tìm kiếm" />
+        	<input type="text" class="input-fr" id="searchadd" placeholder="Nhập khu vực hoặc địa điểm cần tìm" />
             <a href="javascript:void(0)" class="close-search"><i class="iconCancel"></i> Thoát</a>
         </div>
         <div class="search-box">
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#searchbuy" aria-controls="searchbuy" role="tab" data-toggle="tab">Bán</a></li>
-                <li role="presentation"><a href="#searchsale" aria-controls="searchsale" role="tab" data-toggle="tab">Cho thuê</a></li>
+                <li class="active"><a href="javascript:void(0)" aria-controls="searchbuy">Bán</a></li>
+                <li><a href="javascript:void(0)" aria-controls="searchsale">Cho thuê</a></li>
             </ul>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="searchbuy">
@@ -378,7 +530,7 @@
                         </div>
                     </div>
                     <div class="area-box collapse-box">
-                        <a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Diện tích <span><label id="area_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
+                        <a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Diện tích <span><label id="area2_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
                         <div class="areaBox spinner spinner-hide">
                         	<select id="area" class="drum">
                             	<option selected value="a0">Bất kỳ</option>
@@ -391,9 +543,19 @@
                                 <option value="a8">200 m2</option>
                                 <option value="a9">300 m2</option>
                             </select>
+							<select id="area2" class="drum">
+                            	<option selected value="a0">Bất kỳ</option>
+                                <option value="a12">10 m2</option>
+                                <option value="a22">20 m2</option>
+                                <option value="a32">30 m2</option>
+                                <option value="a52">50 m2</option>
+                                <option value="a62">70 m2</option>
+                                <option value="a72">100 m2</option>
+                                <option value="a82">200 m2</option>
+                                <option value="a92">300 m2</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="area-box collapse-box collapse-none"></div>
                     <div class="btn-box collapse-box btn-more">
                     	<a role="button" class="collapse-title blue">Mở rộng</a>
                     </div>
@@ -417,27 +579,158 @@
                                 </select>
                             </div>
                         </div>
-                        
                     </div>
-                    <div class="area-box collapse-box collapse-none"></div>
-                    <div class="btn-box collapse-box btn-reset">
+					<div class="pd15"><button type="reset" class="btn btn-danger btn-block">Thực hiện</button></div>
+					<div class="btn-box collapse-box btn-reset border-none">
                     	<button type="reset" class="collapse-title red">Thiết lập lại</button>
                     </div>
+					<div class="clb ovh mb10">&nbsp;</div>
                 </div>
                 <!--END tabs-->
-                <div role="tabpanel" class="tab-pane" id="searchsale">Cho thuê</div>
+                <div role="tabpanel" class="tab-pane" id="searchsale">
+					<div class="title">Các điều kiện</div>
+                    <div class="price-box collapse-box">
+                    	<a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Mức giá <span><label id="tprices2_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
+                        <div class="priceBox spinner spinner-hide">
+                        	<select id="tprices1" class="drum">
+                            	<option selected value="0">0</option>
+                                <option value="t1">1 tỷ</option>
+                                <option value="t2">2 tỷ</option>
+                                <option value="t3">3 tỷ</option>
+                                <option value="t5">5 tỷ</option>
+                                <option value="t6">7 tỷ</option>
+                                <option value="t7">10 tỷ</option>
+                                <option value="t8">20 tỷ</option>
+                                <option value="t9">30 tỷ</option>
+                            </select>
+                            <select id="tprices2" class="drum">
+                            	<option selected value="p0">Bất kỳ</option>
+                                <option value="tp1">1 tỷ</option>
+                                <option value="tp2">2 tỷ</option>
+                                <option value="tp3">3 tỷ</option>
+                                <option value="tp4">5 tỷ</option>
+                                <option value="tp5">7 tỷ</option>
+                                <option value="tp6">10 tỷ</option>
+                                <option value="tp7">20 tỷ</option>
+                                <option value="tp8">30 tỷ</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="type-box collapse-box">
+                    	<a role="button" class="collapse-title" data-toggle="modal" data-target="#typeBox">Loại nhà đất <span><label>Bất kỳ</label> <i class="iconRightOpen"></i></span></a>
+                    </div>
+                    <div class="room-box collapse-box collapse-cus group-cus ovh">
+                    	<a class="collapse-title">Số phòng ngủ</a>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn active">
+                            	<input type="radio" name="options" id="room0" autocomplete="off" checked>Bất kỳ
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="room1" autocomplete="off">1+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="room2" autocomplete="off">2+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="room3" autocomplete="off">3+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="room4" autocomplete="off">4+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="room5" autocomplete="off">5+
+                            </label>
+                        </div>
+                    </div>
+                    <div class="room-box collapse-box collapse-cus group-cus ovh">
+                    	<a class="collapse-title">Số phòng tắm</a>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn active">
+                            	<input type="radio" name="options" id="bathroom0" autocomplete="off" checked>Bất kỳ
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="bathroom1" autocomplete="off">1+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="bathroom2" autocomplete="off">2+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="bathroom3" autocomplete="off">3+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="bathroom4" autocomplete="off">4+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="bathroom5" autocomplete="off">5+
+                            </label>
+                        </div>
+                    </div>
+                    <div class="area-box collapse-box">
+                        <a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Diện tích <span><label id="tarea2_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
+                        <div class="areaBox spinner spinner-hide">
+                        	<select id="tarea" class="drum">
+                            	<option selected value="ta0">Bất kỳ</option>
+                                <option value="ta1">10 m2</option>
+                                <option value="ta2">20 m2</option>
+                                <option value="ta3">30 m2</option>
+                                <option value="ta5">50 m2</option>
+                                <option value="ta6">70 m2</option>
+                                <option value="ta7">100 m2</option>
+                                <option value="ta8">200 m2</option>
+                                <option value="ta9">300 m2</option>
+                            </select>
+							<select id="tarea2" class="drum">
+                            	<option selected value="ta0">Bất kỳ</option>
+                                <option value="ta12">10 m2</option>
+                                <option value="ta22">20 m2</option>
+                                <option value="ta32">30 m2</option>
+                                <option value="ta52">50 m2</option>
+                                <option value="ta62">70 m2</option>
+                                <option value="ta72">100 m2</option>
+                                <option value="ta82">200 m2</option>
+                                <option value="ta92">300 m2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="btn-box collapse-box btn-more">
+                    	<a role="button" class="collapse-title blue">Mở rộng</a>
+                    </div>
+                    <div class="more-box more-box-hide">
+                    	<div class="trend-box collapse-box">
+                            <a role="button" class="collapse-title" data-toggle="modal" data-target="#trendBox">Hướng nhà <span><label>Bất kỳ</label> <i class="iconRightOpen"></i></span></a>
+                        </div>
+                        <div class="date-box collapse-box">
+                            <a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Ngày đăng <span><label id="tdatepost_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
+                            <div class="dateBox spinner spinner-hide">
+                                <select id="tdatepost" class="drum">
+                                    <option selected value="ta0">Bất kỳ</option>
+                                    <option value="ta1">1 ngày</option>
+                                    <option value="ta2">2 ngày</option>
+                                    <option value="ta3">3 ngày</option>
+                                    <option value="ta5">5 ngày</option>
+                                    <option value="ta6">7 ngày</option>
+                                    <option value="ta7">30 ngày</option>
+                                    <option value="ta8">60 ngày</option>
+                                    <option value="ta9">90 ngày</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pd15"><button type="reset" class="btn btn-danger btn-block">Thực hiện</button></div>
+					<div class="btn-box collapse-box btn-reset border-none">
+                    	<button type="reset" class="collapse-title red">Thiết lập lại</button>
+                    </div>
+					<div class="clb ovh mb10">&nbsp;</div>
+				</div>
                 <!--END tabs-->
             </div>
-        </div>
-        <div class="search-footer">
-        	<a href="#" class="pull-left">Thoát</a>
-            <a href="#" class="pull-right">Thực hiện</a>
         </div>
         </form>
     </div>
     <header class="main blue">
-        <a href="javascript:void(0)" class="nav_mobile header-icon"><i class="iconMenu"></i></a>
-        <span>Trang chủ</span>
+        <a href="javascript:void(0)" class="nav_mobile header-icon"><i class="iconMenu"></i><span>33</span></a>
+		<a href="index.html" class="pull-left"><img src="img/logo.png" /></a>
+		<a href="javascript:void(0)" class="chat_mobile header-icon pull-right"><i class="iconChat"></i><span>3</span></a>
         <a href="javascript:void(0)" class="search_mobile header-icon"><i class="iconSearch"></i></a>
     </header>
     <div class="reland-title fixed">
@@ -467,7 +760,7 @@
                     </a>
                 </li>
                 <li>
-                	<a href="#" class="heart"><i class="icon-heart"></i></a>
+                	<a href="#" class="heart"><i class="icon-heart active"></i></a>
                 	<a href="#">
                     	<span class="img" style="background-image:url(images/big.jpg)"></span>
                         <span class="des bgOpa">
@@ -696,7 +989,7 @@
     </div>
     <div class="overlay"></div>
     
-    <div class="modal fade modal-choose" id="typeBox" tabindex="-1" role="dialog" aria-labelledby="typeBoxLabel">
+    <div class="modal  fade modal-choose" id="typeBox" tabindex="-1" role="dialog" aria-labelledby="typeBoxLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -706,24 +999,28 @@
                 <div class="modal-body uln">
                 	<ul class="type-list">
                     	<li><a href="#" class="active">Tất cả các loại</a></li>
-                        <li><a href="#">Loại nhà đất 1</a></li>
-                        <li><a href="#">Loại nhà đất 2</a></li>
-                        <li><a href="#">Loại nhà đất 3</a></li>
-                        <li><a href="#">Loại nhà đất 4</a></li>
-                        <li><a href="#">Loại nhà đất 5</a></li>
-                        <li><a href="#">Loại nhà đất 6</a></li>
-                        <li><a href="#">Loại nhà đất 7</a></li>
-                        <li><a href="#">Loại nhà đất 8</a></li>
-                        <li><a href="#">Loại nhà đất 9</a></li>
-                        <li><a href="#">Loại nhà đất 10</a></li>
-                        <li><a href="#">Loại nhà đất 11</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Loại nhà đất 1</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Loại nhà đất 2</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Loại nhà đất 3</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Loại nhà đất 4</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Loại nhà đất 5</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Loại nhà đất 6</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Loại nhà đất 7</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Loại nhà đất 8</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Loại nhà đất 9</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Loại nhà đất 10</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Loại nhà đất 11</a></li>
+						<li><a>&nbsp;</a></li>
+						<li><a>&nbsp;</a></li>
+						<li><a>&nbsp;</a></li>
+						<li><a>&nbsp;</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
     
-    <div class="modal fade modal-choose" id="trendBox" tabindex="-1" role="dialog" aria-labelledby="trendBoxLabel">
+    <div class="modal  fade modal-choose" id="trendBox" tabindex="-1" role="dialog" aria-labelledby="trendBoxLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -732,18 +1029,22 @@
                 </div>
                 <div class="modal-body uln">
                 	<ul class="type-list">
-                    	<li><a href="#" class="active">Tất cả các loại</a></li>
-                        <li><a href="#">Hướng nhà 1</a></li>
-                        <li><a href="#">Hướng nhà 2</a></li>
-                        <li><a href="#">Hướng nhà 3</a></li>
-                        <li><a href="#">Hướng nhà 4</a></li>
-                        <li><a href="#">Hướng nhà 5</a></li>
-                        <li><a href="#">Hướng nhà 6</a></li>
-                        <li><a href="#">Hướng nhà 7</a></li>
-                        <li><a href="#">Hướng nhà 8</a></li>
-                        <li><a href="#">Hướng nhà 9</a></li>
-                        <li><a href="#">Hướng nhà 10</a></li>
-                        <li><a href="#">Hướng nhà 11</a></li>
+                    	<li><a href="#" class="active" data-dismiss="modal" aria-label="Close">Tất cả các loại</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Hướng nhà 1</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Hướng nhà 2</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Hướng nhà 3</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Hướng nhà 4</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Hướng nhà 5</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Hướng nhà 6</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Hướng nhà 7</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Hướng nhà 8</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Hướng nhà 9</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Hướng nhà 10</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Hướng nhà 11</a></li>
+						<li><a>&nbsp;</a></li>
+						<li><a>&nbsp;</a></li>
+						<li><a>&nbsp;</a></li>
+						<li><a>&nbsp;</a></li>
                     </ul>
                 </div>
             </div>
@@ -898,11 +1199,11 @@
                 </div>
                 <div class="modal-body uln">
                 	<ul class="type-list">
-                    	<li><a href="#" class="active">Tất cả các loại</a></li>
-                        <li><a href="#">KDT Linh Đàm</a></li>
-                        <li><a href="#">KDT Xa La</a></li>
-                        <li><a href="#">KDT Hà Đông</a></li>
-                        <li><a href="#">KĐT Dương Nội</a></li>
+                    	<li><a href="#" class="active" data-dismiss="modal" aria-label="Close">Tất cả các loại</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">KDT Linh Đàm</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">KDT Xa La</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">KDT Hà Đông</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">KĐT Dương Nội</a></li>
                     </ul>
                 </div>
             </div>
@@ -918,11 +1219,11 @@
                 </div>
                 <div class="modal-body uln">
                 	<div class="title">Số nhà, ngõ, đường</div>
-                    <input type="text" class="modal-ipt mb10">
+                    <div class="pd15"><input type="text" class="form-control mb10"></div>
                     <div class="note-fr pd15">Ví dụ: Số 15, ngõ 68 Hai Bà Trưng</div>
                     <div class="clb">&nbsp;</div>
                     <div class="title">Phường, quận, thành phố</div>
-                    <input type="text" class="modal-ipt mb10" value="Phường Phúc La, Hà Đông, Hà Nội">
+                    <div class="pd15"><input type="text" class="form-control mb10" value="Phường Phúc La, Hà Đông, Hà Nội"></div>
                     <div class="note-fr pd15">Thông tin này được lấy từ vị trí bạn chọn trên bản đồ. Nếu chưa thấy đúng bạn quay lại bản đồ chọn lại vị trí nhà.</div>
                 </div>
             </div>
@@ -952,11 +1253,12 @@
                 	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconLeftOpen"></span></button>
                 	<h4 class="modal-title" id="contactBoxLabel">Liên hệ</h4>
                 </div>
+				<div class="title border">Thông tin liên hệ <a  class="pull-right" onClick="showhide('#contactBox .contact-list');">Ẩn/Hiện</a></div>
                 <div class="modal-body uln">
-                	<ul class="type-list">
-                    	<li><a href="#" class="active">Ms Anh - 097 389 8990</a></li>
-                        <li><a href="#">Mr Nam - 0165 988 1234</a></li>
-                        <li><a href="#">Mr Quan - 099 323 8900</a></li>
+                	<ul class="contact-list">
+                    	<li><a href="#" class="active">Tên liên lạc <span class="pull-right datetime"><input type="text" value="Trần Việt Anh" /></span></a></li>
+                        <li><a href="#">Điện thoại <span class="pull-right datetime"><input type="text" value="0165 988 1234" /></span></a></li>
+                        <li><a href="#">Email <span class="pull-right datetime"><input type="text" value="tranvietanh88@gmail.com" /></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -968,14 +1270,10 @@
             <div class="modal-content">
                 <div class="modal-header">
                 	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconLeftOpen"></span></button>
-                	<h4 class="modal-title" id="detailBoxLabel">Liên hệ</h4>
+                	<h4 class="modal-title" id="detailBoxLabel">Chi tiết</h4>
                 </div>
                 <div class="modal-body uln">
-                	<ul class="type-list">
-                    	<li><a href="#" class="active">Nội thất đầy đủ...</a></li>
-                        <li><a href="#">Không gian thoáng mát</a></li>
-                        <li><a href="#">Căn nhà lý tưởng</a></li>
-                    </ul>
+                	<textarea placeholder="Mô tả những gì bạn muốn bán (cho thuê). Ví dụ: Địa chỉ, diện tích, giá, hướng nhà..."></textarea>
                 </div>
             </div>
         </div>
