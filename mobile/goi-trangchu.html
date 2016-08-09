@@ -51,15 +51,15 @@
     </nav>
     <div class="search">
     	<form>
-    	<div class="search-fr fr">
+    	<div class="search-fr">
         	<i class="iconSearch"></i>
-        	<input type="text" class="input-fr" id="searchadd" placeholder="Nhập khu vực hoặc địa điểm cần tìm kiếm" />
+        	<input type="text" class="input-fr" id="searchadd" placeholder="Nhập khu vực hoặc địa điểm cần tìm" />
             <a href="javascript:void(0)" class="close-search"><i class="iconCancel"></i> Thoát</a>
         </div>
         <div class="search-box">
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#searchbuy" aria-controls="searchbuy" role="tab" data-toggle="tab">Bán</a></li>
-                <li role="presentation"><a href="#searchsale" aria-controls="searchsale" role="tab" data-toggle="tab">Cho thuê</a></li>
+                <li class="active"><a href="javascript:void(0)" aria-controls="searchbuy">Bán</a></li>
+                <li><a href="javascript:void(0)" aria-controls="searchsale">Cho thuê</a></li>
             </ul>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="searchbuy">
@@ -141,7 +141,7 @@
                         </div>
                     </div>
                     <div class="area-box collapse-box">
-                        <a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Diện tích <span><label id="area_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
+                        <a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Diện tích <span><label id="area2_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
                         <div class="areaBox spinner spinner-hide">
                         	<select id="area" class="drum">
                             	<option selected value="a0">Bất kỳ</option>
@@ -154,9 +154,19 @@
                                 <option value="a8">200 m2</option>
                                 <option value="a9">300 m2</option>
                             </select>
+							<select id="area2" class="drum">
+                            	<option selected value="a0">Bất kỳ</option>
+                                <option value="a12">10 m2</option>
+                                <option value="a22">20 m2</option>
+                                <option value="a32">30 m2</option>
+                                <option value="a52">50 m2</option>
+                                <option value="a62">70 m2</option>
+                                <option value="a72">100 m2</option>
+                                <option value="a82">200 m2</option>
+                                <option value="a92">300 m2</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="area-box collapse-box collapse-none"></div>
                     <div class="btn-box collapse-box btn-more">
                     	<a role="button" class="collapse-title blue">Mở rộng</a>
                     </div>
@@ -180,47 +190,260 @@
                                 </select>
                             </div>
                         </div>
-                        
                     </div>
-                    <div class="area-box collapse-box collapse-none"></div>
-                    <div class="btn-box collapse-box btn-reset">
+					<div class="pd15"><button type="reset" class="btn btn-danger btn-block">Thực hiện</button></div>
+					<div class="btn-box collapse-box btn-reset border-none">
                     	<button type="reset" class="collapse-title red">Thiết lập lại</button>
                     </div>
+					<div class="clb ovh mb10">&nbsp;</div>
                 </div>
                 <!--END tabs-->
-                <div role="tabpanel" class="tab-pane" id="searchsale">Cho thuê</div>
+                <div role="tabpanel" class="tab-pane" id="searchsale">
+					<div class="title">Các điều kiện</div>
+                    <div class="price-box collapse-box">
+                    	<a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Mức giá <span><label id="tprices2_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
+                        <div class="priceBox spinner spinner-hide">
+                        	<select id="tprices1" class="drum">
+                            	<option selected value="0">0</option>
+                                <option value="t1">1 tỷ</option>
+                                <option value="t2">2 tỷ</option>
+                                <option value="t3">3 tỷ</option>
+                                <option value="t5">5 tỷ</option>
+                                <option value="t6">7 tỷ</option>
+                                <option value="t7">10 tỷ</option>
+                                <option value="t8">20 tỷ</option>
+                                <option value="t9">30 tỷ</option>
+                            </select>
+                            <select id="tprices2" class="drum">
+                            	<option selected value="p0">Bất kỳ</option>
+                                <option value="tp1">1 tỷ</option>
+                                <option value="tp2">2 tỷ</option>
+                                <option value="tp3">3 tỷ</option>
+                                <option value="tp4">5 tỷ</option>
+                                <option value="tp5">7 tỷ</option>
+                                <option value="tp6">10 tỷ</option>
+                                <option value="tp7">20 tỷ</option>
+                                <option value="tp8">30 tỷ</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="type-box collapse-box">
+                    	<a role="button" class="collapse-title" data-toggle="modal" data-target="#typeBox">Loại nhà đất <span><label>Bất kỳ</label> <i class="iconRightOpen"></i></span></a>
+                    </div>
+                    <div class="room-box collapse-box collapse-cus group-cus ovh">
+                    	<a class="collapse-title">Số phòng ngủ</a>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn active">
+                            	<input type="radio" name="options" id="room0" autocomplete="off" checked>Bất kỳ
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="room1" autocomplete="off">1+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="room2" autocomplete="off">2+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="room3" autocomplete="off">3+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="room4" autocomplete="off">4+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="room5" autocomplete="off">5+
+                            </label>
+                        </div>
+                    </div>
+                    <div class="room-box collapse-box collapse-cus group-cus ovh">
+                    	<a class="collapse-title">Số phòng tắm</a>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn active">
+                            	<input type="radio" name="options" id="bathroom0" autocomplete="off" checked>Bất kỳ
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="bathroom1" autocomplete="off">1+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="bathroom2" autocomplete="off">2+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="bathroom3" autocomplete="off">3+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="bathroom4" autocomplete="off">4+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="bathroom5" autocomplete="off">5+
+                            </label>
+                        </div>
+                    </div>
+                    <div class="area-box collapse-box">
+                        <a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Diện tích <span><label id="tarea2_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
+                        <div class="areaBox spinner spinner-hide">
+                        	<select id="tarea" class="drum">
+                            	<option selected value="ta0">Bất kỳ</option>
+                                <option value="ta1">10 m2</option>
+                                <option value="ta2">20 m2</option>
+                                <option value="ta3">30 m2</option>
+                                <option value="ta5">50 m2</option>
+                                <option value="ta6">70 m2</option>
+                                <option value="ta7">100 m2</option>
+                                <option value="ta8">200 m2</option>
+                                <option value="ta9">300 m2</option>
+                            </select>
+							<select id="tarea2" class="drum">
+                            	<option selected value="ta0">Bất kỳ</option>
+                                <option value="ta12">10 m2</option>
+                                <option value="ta22">20 m2</option>
+                                <option value="ta32">30 m2</option>
+                                <option value="ta52">50 m2</option>
+                                <option value="ta62">70 m2</option>
+                                <option value="ta72">100 m2</option>
+                                <option value="ta82">200 m2</option>
+                                <option value="ta92">300 m2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="btn-box collapse-box btn-more">
+                    	<a role="button" class="collapse-title blue">Mở rộng</a>
+                    </div>
+                    <div class="more-box more-box-hide">
+                    	<div class="trend-box collapse-box">
+                            <a role="button" class="collapse-title" data-toggle="modal" data-target="#trendBox">Hướng nhà <span><label>Bất kỳ</label> <i class="iconRightOpen"></i></span></a>
+                        </div>
+                        <div class="date-box collapse-box">
+                            <a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Ngày đăng <span><label id="tdatepost_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
+                            <div class="dateBox spinner spinner-hide">
+                                <select id="tdatepost" class="drum">
+                                    <option selected value="ta0">Bất kỳ</option>
+                                    <option value="ta1">1 ngày</option>
+                                    <option value="ta2">2 ngày</option>
+                                    <option value="ta3">3 ngày</option>
+                                    <option value="ta5">5 ngày</option>
+                                    <option value="ta6">7 ngày</option>
+                                    <option value="ta7">30 ngày</option>
+                                    <option value="ta8">60 ngày</option>
+                                    <option value="ta9">90 ngày</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pd15"><button type="reset" class="btn btn-danger btn-block">Thực hiện</button></div>
+					<div class="btn-box collapse-box btn-reset border-none">
+                    	<button type="reset" class="collapse-title red">Thiết lập lại</button>
+                    </div>
+					<div class="clb ovh mb10">&nbsp;</div>
+				</div>
                 <!--END tabs-->
             </div>
-        </div>
-        <div class="search-footer">
-        	<a href="#" class="pull-left">Thoát</a>
-            <a href="#" class="pull-right">Thực hiện</a>
         </div>
         </form>
     </div>
     <header class="main blue">
-        <a href="quanly-tin.html" class="header-icon"><i class="iconLeftOpen"></i></a>
-        <span>Nâng cấp tin</span>
+        <a href="javascript:void(0)" class="nav_mobile header-icon"><i class="iconMenu"></i><span>33</span></a>
+		<a href="index.html" class="pull-left"><img src="img/logo.png" /></a>
+		<a href="javascript:void(0)" class="chat_mobile header-icon pull-right"><i class="iconChat"></i><span>3</span></a>
+        <a href="javascript:void(0)" class="search_mobile header-icon"><i class="iconSearch"></i></a>
     </header>
-    <div class="wapper page-bg">
-    	<div class="adv-page">
-            <div class="note-fr pdall15">Để tin của bạn được nhiều người xem hơn, hãy nâng cấp tin bằng các gói dịch vụ sau:</div>
-            <div class="collapse-none collapse-box border-top">
-                <a role="button" class="collapse-title paytitle red" href="goi-vitri.html"><i class="p-icon i-advlocaltion"></i>Gói VỊ TRÍ <span>Chưa có <i class="iconRightOpen"></i></span></a>
-            </div>
-            <div class="note-fr pdall15">Sử dụng các g VỊ TRÍ để tin c bạn luôn nằm trên c tin khác trong KẾT QUẢ TÌM KIẾM của người dùng.</div>
-            <div class="collapse-none collapse-box border-top">
-                <a role="button" class="collapse-title paytitle yellow" href="goi-trangchu.html"><i class="p-icon i-advhome"></i>Gói TRANG CHỦ <span>Tiêu chuẩn <i class="iconRightOpen"></i></span></a>
-            </div>
-            <div class="note-fr pdall15">Sử dụng các gói TRANG CHỦ để tin của bạn luôn n trên các tin khác trong các BỘ SƯU TẬP ở màn hình chính.</div>
-            <div class="collapse-none collapse-box border-top packLogo">
-				<a role="button" class="collapse-title paytitle blue" href="goi-logo.html"><i class="p-icon i-advlogo"></i>Gói LOGO <span><abbr>Cần bán gấp</abbr> <i class="iconRightOpen"></i></span></a>
-            </div>
-            <div class="note-fr pdall15">Sử dụng các gói LOGO để tin c bạn thu hút được nhiều sự chú ý của người xem hơn.</div>
-        </div>
+    <header class="main blue">
+        <a href="nang-cap-tin.html" class="header-icon"><i class="iconLeftOpen"></i></a>
+        <span>Gói Trang chủ</span>
+		<a href="index.html" class="header-text pull-right">Thực hiện</a>
+    </header>
+    <div class="wapper">
+		<div class="pack-page"  data-toggle="buttons">
+			<div class="title border-bottom">Tài khoản và phí dịch vụ</div>
+			<div class="card-chart">
+				<div class="chart-reland">
+					<div class="chart" id="packetbox"></div>
+					<script>
+						$(function(){
+						  $("#packetbox").drawDoughnutChart([
+							{ title: "Phí dịch vụ", value : 50,  color: "#cacaca"},
+							{ title: "Tài khoản khuyến mại", value:  100,   color: "#ff8400"},
+							{ title: "Tài khoản chính", value : 400,  color: "#00a8e6"},						
+						  ]);
+						});
+					</script>
+				</div>
+				<div class="chart-txt chart-txt-3 uln ovh">
+					<ul>
+						<li class="chart-txt-1"><i></i>400k<span>Tài khoản chính</span></li>
+						<li class="chart-txt-2"><i></i>100k<span>Tài khoản khuyến mại</span></li>
+						<li class="chart-txt-3"><i></i>150k<span>Phí dịch vụ</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="clb ovh title border">CÁC GÓI DỊCH VỤ <span>(Tính theo ngày)</span></div>
+			<div class="collapse-box group-cus pack-box packd border-none">
+				<a class="collapse-title">Đặc biệt</a>
+				<div class="btn-group">
+					<label class="btn">
+						<input type="radio" name="packet" id="packd0" autocomplete="off">1
+					</label>
+					<label class="btn">
+						<input type="radio" name="packet" id="packd1" autocomplete="off">7
+					</label>
+					<label class="btn">
+						<input type="radio" name="packet" id="packd2" autocomplete="off">14
+					</label>
+					<label class="btn">
+						<input type="radio" name="packet" id="packd3" autocomplete="off">30
+					</label>
+					<label class="btn">
+						<input type="radio" name="packet" id="packd4" autocomplete="off">90
+					</label>
+				</div>
+				<a><i class="iconCheck"></i></a>
+			</div>
+			<div class="note-fr pdall15 title border"><span>Sử dụng các gói TRANG CHỦ để tin của bạn luôn trên các tin khác trong các BỘ SƯU TẬP ở màn hình chính.</span></div>
+			<div class="collapse-box group-cus pack-box border-none">
+				<a class="collapse-title">Cao cấp</a>
+				<div class="btn-group">
+					<label class="btn">
+						<input type="radio" name="packet" id="packc0" autocomplete="off">1
+					</label>
+					<label class="btn">
+						<input type="radio" name="packet" id="packc1" autocomplete="off">7
+					</label>
+					<label class="btn">
+						<input type="radio" name="packet" id="packc2" autocomplete="off">14
+					</label>
+					<label class="btn">
+						<input type="radio" name="packet" id="packc3" autocomplete="off">30
+					</label>
+					<label class="btn">
+						<input type="radio" name="packet" id="packc4" autocomplete="off">90
+					</label>
+				</div>
+				<a><i class="iconCheck"></i></a>
+			</div>
+			<div class="note-fr pdall15 title border"><span>Sử dụng các gói TRANG CHỦ để tin của bạn luôn trên các tin khác trong các BỘ SƯU TẬP ở màn hình chính.</span></div>
+			<div class="collapse-box group-cus pack-box border-none">
+				<a class="collapse-title">Tiêu chuẩn</a>
+				<div class="btn-group">
+					<label class="btn">
+						<input type="radio" name="packet" id="packt0" autocomplete="off">1
+					</label>
+					<label class="btn">
+						<input type="radio" name="packet" id="packt1" autocomplete="off">7
+					</label>
+					<label class="btn">
+						<input type="radio" name="packet" id="packt2" autocomplete="off">14
+					</label>
+					<label class="btn">
+						<input type="radio" name="packet" id="packt3" autocomplete="off">30
+					</label>
+					<label class="btn">
+						<input type="radio" name="packet" id="packt4" autocomplete="off">90
+					</label>
+				</div>
+				<a><i class="iconCheck"></i></a>
+			</div>
+			<div class="note-fr pdall15 title border-top"><span>Sử dụng các gói LOGO để tin của bạn thu hút được nhiều sự chú ý của người xem hơn.</span></div>
+		</div>
     </div>
-    <div class="overlay"></div>
-	
+	<div class="overlay"></div>
+    
     <div class="modal fade modal-choose" id="typeBox" tabindex="-1" role="dialog" aria-labelledby="typeBoxLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

@@ -15,6 +15,10 @@ function update(){
 			$(".input-fr").removeAttr("style");
 		}
 	}
+	
+	var postimg = ($ww-20)/4 - 10;
+	$(".post .postimg ul li").width(postimg).height(postimg);
+	$(".post .postimg input[type=file]+label").height(postimg-2).css("line-height", postimg+"px");
 }
 
 // check click detail
