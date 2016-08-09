@@ -1,0 +1,64 @@
+// responsive
+// --------------------------
+@media (max-width:375px){
+	.post{
+		.postimg{
+			ul{
+				li{
+					width:78px;
+					height:78px;
+					input[type="file"] {
+						& + label{
+							height:78px;
+							line-height:78px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.pack-box{
+		.collapse-title{
+			width:105px;
+		}
+	}
+}
+
+@media (max-width:320px){
+	.post{
+		.postimg{
+			ul{
+				li{
+					width:65px;
+					height:65px;
+					input[type="file"] {
+						& + label{
+							height:65px;
+							line-height:65px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.pack-box{
+		.collapse-title{
+			width:85px;
+		}
+		.btn-group{
+			width:58%;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
