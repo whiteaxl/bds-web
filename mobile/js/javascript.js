@@ -114,6 +114,11 @@ function spinner(me, box, item){
 	}
 }
 
+// toggle class box click
+function boxClassToggle(box, clas){
+	$(box).toggleClass(clas);
+}
+
 // show toggle box click
 function showhide(box){
 	$(box).toggle();
@@ -225,10 +230,31 @@ $(function(){
 		$(this).toggleClass("active");
 	});
 	
+	// reset value input other in post page
 	$(".btn-group .btn").click(function(){
 		if(!$(this).hasClass("other")) {
 			$(this).parent().find("input").val('');
 		}
+	});
+	
+	// set active packet
+	$(".pack-box .btn-group .btn").each(function(){
+		if ($(this).hasClass("active")) $(this).parent().parent().find(".iconCheck").addClass("actived");
+	});
+	$(".pack-box .btn-group .btn").click(function(){
+		$(".pack-box .iconCheck").removeClass("actived");
+		$(".pack-box .collapse-title").removeClass("actived");
+		$(this).parent().parent().find(".iconCheck").addClass("actived");
+		$(this).parent().parent().find(".collapse-title").addClass("actived");
+	});
+	
+	$(".pack-box a").click(function(){
+		$(".pack-box .collapse-title").removeClass("actived");
+		$(".pack-box .iconCheck").removeClass("actived");
+		$(".pack-box .btn-group .btn").removeClass("active");
+		$(this).parent().find(".collapse-title").addClass("actived");
+		$(this).parent().find(".iconCheck").addClass("actived");
+		$(this).parent().find(".btn-group .btn:nth-child(2)").addClass("active");
 	});
 	
 	// input search click in search
