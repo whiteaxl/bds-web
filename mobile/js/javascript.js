@@ -148,6 +148,10 @@ $(function(){
 		 update();	 
 	});
 	
+	$(".reland-title.fixed h3").html($(".wapper .reland-box:first-child h3").html());
+	$(".reland-title.fixed h4").html($(".wapper .reland-box:first-child h4").html());
+	$(".reland-title.fixed h5").html($(".wapper .reland-box:first-child h5").html());
+	
 	showNotify();
 	
 	// menu click icon
