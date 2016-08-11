@@ -22,7 +22,7 @@
 <body class="hfixed both">
     <header class="main blue">
         <a href="list.html" class="nav_mobile header-icon"><i class="iconLeftOpen"></i></a>
-		<a href="javascript:void(0)" class="header-text pull-right"><img src="img/dots-three-horizontal.svg" width="20"></a>
+		<a role="button" data-toggle="modal" data-target="#detailAlertBox" class="header-icon header-alert pull-right"><i class="iconBell"></i></a>
         <a href="javascript:void(0)" class="pull-right header-icon iconShareContent">
         	<svg xmlns="http://www.w3.org/2000/svg" fill="white" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
 			  <g id="_x37_02-share_x40_2x.png_1_">
@@ -35,10 +35,10 @@
     </header>
     <div class="wapper">
     	<div class="detail">
-        	<div class="img" style="background-image:url(images/big.jpg)"><a href="javascript:void(0)"><i class="iconCamera"></i> 3/16</a></div>
+        	<div class="img" style="background-image:url(images/big.jpg)"><a href="javascript:void(0)"><i class="iconCamera"></i> 3/16</a><span class="bgOpa"></span></div>
             <div class="desSort">
             	<div class="price">10, 5 tỷ</div>
-                <div class="address">KDT Xa La, Hà Đông, Hà Nội <a href="#" class="streetview"><i class="fa fa-street-view"></i></a></div>
+                <div class="address">KDT Xa La, Hà Đông, Hà Nội</div>
                 <div class="note">
                 	<ul>
                     	<li><label>Bán</label></li>
@@ -63,6 +63,9 @@
             </div>
             <div class="dir-box collapse-box">
                 <a role="button" class="collapse-title" href="#"><i class="iconCar"></i> Dẫn đường <span><i class="iconRightOpen"></i></span></a>
+            </div>
+            <div class="dir-box collapse-box">
+                <a role="button" class="collapse-title" href="#"><i class="iconUser"></i> Xem phố <span><i class="iconRightOpen"></i></span></a>
             </div>
             <div class="area-box collapse-box">
                 <a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Đặc điểm <span><i class="iconUpOpen"></i></span></a>
@@ -263,6 +266,32 @@
         </ul>
     </footer>
     <div class="overlay"></div>
+
+    <div class="modal fade modal-choose modal-none" id="detailAlertBox" tabindex="-1" role="dialog" aria-labelledby="detailAlertBoxLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconLeftOpen"></span></button>
+                    <h4 class="modal-title" id="detailAlertBoxLabel">Thông báo cho chúng tôi</h4>
+                </div>
+                <div class="modal-body uln">
+                    <div class="title border-bottom">Chọn lý do</div>
+                    <ul class="type-list">
+                        <li><a href="#" data-dismiss="modal" aria-label="Close" class="active">Thông tin vị trí không chính xác</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Hình ảnh không phù hợp</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Tin bài sao chép</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Nội dung thông tin không có thật</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Nhà đã được bán</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Khác</a></li>
+                    </ul>
+                    <div class="title border-top"></div>
+                    <input type="text" name="" class="modal-ipt" placeholder="Lý do thông báo...">
+                    <div class="collapse-box border-none border-top">&nbsp;</div>
+                    <div class="pd15"><button type="reset" class="btn btn-warning btn-block">Gửi</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
        
 </body>
 </html>
