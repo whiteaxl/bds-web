@@ -160,8 +160,6 @@ $(function(){
 	$(".reland-title.fixed h4").html($(".wapper .reland-box:first-child h4").html());
 	$(".reland-title.fixed h5").html($(".wapper .reland-box:first-child h5").html());
 	
-	showNotify();
-	
 	// menu click icon
 	$(".nav_mobile").click(function(){
 		$(".overlay").show();

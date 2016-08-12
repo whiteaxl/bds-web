@@ -343,7 +343,12 @@
 		<a href="javascript:void(0)" class="chat_mobile header-icon pull-right"><i class="iconChat"></i><span>3</span></a>
         <a href="javascript:void(0)" class="search_mobile header-icon"><i class="iconSearch"></i></a>
     </header>
-	<div class="notifyBox">Hiện có 24 thông báo mới</div>
+    <script type="text/javascript">
+        $(function(){
+            showNotify("Hiện có 24 thông báo mới", '.mapsnotify');
+        })
+    </script>
+	<div class="notifyBox mapsnotify">Hiện có 24 thông báo mới</div>
     <div class="wapper">
     	<div class="maps">
         	<img src="images/maps.jpg" width="100%" height="100%" />
@@ -673,7 +678,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconLeftOpen"></span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconCancel"></span></button>
                     <h4 class="modal-title" id="saveUtilitiesLabel">Tiện ích</h4>
                 </div>
                 <div class="modal-body uln">
