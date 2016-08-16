@@ -140,7 +140,7 @@ function showNotify(text, box, item, itemtext){
 	if(item!==null || item != "") $(item).html(itemtext);
 	if(text!==null || text != "") $(".notifyBox").html(text);
 	if(box!==null || box != ""){
-		$(box).fadeIn(100).delay(900).slideUp(150);
+		$(box).fadeIn(100).delay(1800).slideUp(150);
 	}
 	else{
 		$(".notifyBox").fadeIn(100).delay(900).slideUp(150);
@@ -348,12 +348,12 @@ $(function(){
 	$(window).scroll(function (event) {
         event.stopPropagation();
         windowPos = $(window).scrollTop();
-		if($(".wapper .reland-box").find("div").hasClass("reland-title")){
+		if($(".wapper .reland-box .reland-title").hasClass("fixed")){
+			console.log("dfgf");
 			for(var i=1; i<=box; i++){
 				var items = $(".wapper .reland-box_"+i);
-				var pos = items.offset().top;
+				var pos = items.offset().top-120;
 				var hg = items.height();
-				var bpos = items.find(".btn-box").offset().top;
 				
 				if (windowPos >= pos && windowPos < (pos + hg)) {
 					tfix.show();
