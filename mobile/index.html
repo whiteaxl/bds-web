@@ -1123,93 +1123,6 @@
         </div>
     </div>
     
-    <div class="modal fade modal-choose modal-none" id="profileBox" tabindex="-1" role="dialog" aria-labelledby="profileBoxLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header blue">
-                	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconLeftOpen"></span></button>
-                	<a role="button" class="pull-right modal-header-txt">Thay đổi</a>
-                    <h4 class="modal-title" id="profileBoxLabel">Trần Việt Anh</h4>
-                </div>
-                <div class="modal-body uln profile">
-                	<div class="title border">Thông tin liên lạc</div>
-                    <div class="collapse-box">
-                    	<div class="collapse-title">
-                        	<div class="titlefr">Tên đầy đủ</div>
-                            <div class="ovh profile-txt">Trần Việt Anh</div>
-                        </div>
-                    </div>
-                    <div class="collapse-box">
-                    	<div class="collapse-title">
-                        	<div class="titlefr">Số điện thoại</div>
-                            <div class="ovh profile-txt">096 758 889</div>
-                        </div>
-                    </div>
-                    <div class="collapse-box">
-                    	<div class="collapse-title">
-                        	<div class="titlefr">Email</div>
-                            <div class="ovh profile-txt">tranvietanh@gmail.com</div>
-                        </div>
-                    </div>
-                    <div class="collapse-box">
-                    	<div class="collapse-title">
-                        	<div class="titlefr">Website</div>
-                            <div class="ovh profile-txt">batdongsan.vn</div>
-                        </div>
-                    </div>
-                    <div class="collapse-box fr">
-                    	<div class="collapse-title">
-                        	<div class="titlefr">Giới thiệu</div>
-                            <div class="ovh profile-txt"><textarea></textarea><div class="text-right datetime">6/250</div></div>
-                        </div>
-                    </div>
-                    <div class="collapse-box border-none">
-                    	<div class="collapse-title">
-                        	<div class="titlefr">Ảnh</div>
-                            <div class="ovh profile-txt"><label class="datetime"><img src="images/avarta.jpg" class="img-circle" /><input type="file">Chạm để thay đổi ảnh</label></div>
-                        </div>
-                    </div>
-                    <div class="title border">&nbsp;</div>
-                    <div class="changepass-box collapse-box border-none">
-                        <a role="button" class="collapse-title" data-toggle="modal" data-target="#changepassBox">Thay đổi mật khẩu <span><i class="iconRightOpen"></i></span></a>
-                    </div>
-                    <div class="title border">Thông tin cá nhận</div>
-                    <div class="changepass-box collapse-box">
-                        <div class="collapse-title">Giới tính <span>Nam</span></div>
-                    </div>
-                    <div class="changepass-box collapse-box">
-                        <div class="collapse-title">Ngày sinh <span>11/11/1982</span></div>
-                    </div>
-                    <div class="address-box collapse-box">
-                        <a role="button" class="collapse-title" data-toggle="modal" data-target="#addressBox">Địa chỉ <span><label>Đường Phùng Hưng</label> <i class="iconRightOpen"></i></span></a>
-                    </div>
-                    <div class="changepass-box collapse-box border-none">
-                        <div class="collapse-title">Vai trò của bạn <span>Môi giới</span></div>
-                    </div>
-                    <div class="title border">Thông tin tài khoản</div>
-                    <div class="card-chart">
-                        <div class="chart-reland">
-                            <div class="chart" id="napthe"></div>
-                            <script>
-                                $(function(){
-                                  $("#napthe").drawDoughnutChart([
-                                    { title: "Tài khoản chính", value : 400,  color: "#00a8e6" },
-                                    { title: "Tài khoản khuyến mại", value:  100,   color: "#ff8400" }
-                                  ]);
-                                });
-                            </script>
-                        </div>
-                        <div class="chart-txt uln ovh">
-                            <ul>
-                                <li class="chart-txt-1"><i></i>400k<span>Tài khoản chính</span></li>
-                                <li class="chart-txt-2"><i></i>100k<span>Tài khoản khuyến mại</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     
     <div class="modal fade modal-choose" id="projectBox" tabindex="-1" role="dialog" aria-labelledby="projectBoxLabel">
         <div class="modal-dialog" role="document">
@@ -1231,25 +1144,6 @@
         </div>
     </div>
     
-    <div class="modal fade modal-choose modal-none modal-bg" id="addressBox" tabindex="-1" role="dialog" aria-labelledby="addressBoxLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconLeftOpen"></span></button>
-                	<h4 class="modal-title" id="addressBoxLabel">Địa chỉ</h4>
-                </div>
-                <div class="modal-body uln">
-                	<div class="title">Số nhà, ngõ, đường</div>
-                    <div class="pd15"><input type="text" class="form-control mb10"></div>
-                    <div class="note-fr pd15">Ví dụ: Số 15, ngõ 68 Hai Bà Trưng</div>
-                    <div class="clb">&nbsp;</div>
-                    <div class="title">Phường, quận, thành phố</div>
-                    <div class="pd15"><input type="text" class="form-control mb10" value="Phường Phúc La, Hà Đông, Hà Nội"></div>
-                    <div class="note-fr pd15">Thông tin này được lấy từ vị trí bạn chọn trên bản đồ. Nếu chưa thấy đúng bạn quay lại bản đồ chọn lại vị trí nhà.</div>
-                </div>
-            </div>
-        </div>
-    </div>
     
     <div class="modal fade modal-choose modal-none" id="mapsBox" tabindex="-1" role="dialog" aria-labelledby="mapsBoxLabel">
         <div class="modal-dialog" role="document">
@@ -1379,7 +1273,233 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade modal-choose modal-none" id="profileBox" tabindex="-1" role="dialog" aria-labelledby="profileBoxLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header blue">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconLeftOpen"></span></button>
+                    <a role="button" class="pull-right modal-header-txt">Thay đổi</a>
+                    <h4 class="modal-title" id="profileBoxLabel">Trần Việt Anh</h4>
+                </div>
+                <div class="modal-body uln profile">
+                    <div class="title border">Thông tin liên lạc</div>
+                    <div class="collapse-box">
+                        <div class="collapse-title profile-title">
+                            <div class="titlefr">Tên đầy đủ</div>
+                            <div class="ovh profile-txt"><input type="text" value="Trần Việt Anh"></div>
+                        </div>
+                    </div>
+                    <div class="collapse-box">
+                        <div class="collapse-title profile-title">
+                            <div class="titlefr">Số điện thoại</div>
+                            <div class="ovh profile-txt"><input type="text" value="096 758 889"></div>
+                        </div>
+                    </div>
+                    <div class="collapse-box">
+                        <div class="collapse-title profile-title">
+                            <div class="titlefr">Email</div>
+                            <div class="ovh profile-txt"><input type="text" value="tranvietanh@gmail.com"></div>
+                        </div>
+                    </div>
+                    <div class="collapse-box">
+                        <div class="collapse-title profile-title">
+                            <div class="titlefr">Website</div>
+                            <div class="ovh profile-txt"><input type="text" value="batdongsan.vn"></div>
+                        </div>
+                    </div>
+                    <div class="collapse-box fr">
+                        <div class="collapse-title">
+                            <div class="titlefr">Giới thiệu</div>
+                            <div class="ovh profile-txt"><textarea></textarea><div class="text-right datetime">6/250</div></div>
+                        </div>
+                    </div>
+                    <div class="collapse-box border-none">
+                        <div class="collapse-title">
+                            <div class="titlefr">Ảnh</div>
+                            <div class="ovh profile-txt"><label class="datetime"><img src="images/avarta.jpg" class="img-circle" /><input type="file">Chạm để thay đổi ảnh</label></div>
+                        </div>
+                    </div>
+                    <div class="title border">&nbsp;</div>
+                    <div class="changepass-box collapse-box border-none">
+                        <a role="button" class="collapse-title" data-toggle="modal" data-target="#changepassBox">Thay đổi mật khẩu <span><i class="iconRightOpen"></i></span></a>
+                    </div>
+                    <div class="title border">Thông tin cá nhận</div>
+                    <div class="changepass-box collapse-box">
+                        <a role="button" class="collapse-title" data-toggle="modal" data-target="#genderBox">Giới tính <span>Nam</span></a>
+                    </div>
+                    <div class="changepass-box collapse-box">
+                        <a role="button" class="collapse-title" data-toggle="modal" data-target="#brithdayBox">Ngày sinh <span>11/11/1982</span></a>
+                    </div>
+                    <div class="address-box collapse-box">
+                        <a role="button" class="collapse-title" data-toggle="modal" data-target="#addressBox">Địa chỉ <span><label>Đường Phùng Hưng</label> <i class="iconRightOpen"></i></span></a>
+                    </div>
+                    <div class="changepass-box collapse-box border-none">
+                        <a role="button" class="collapse-title" data-toggle="modal" data-target="#positionBox">Vai trò của bạn <span>Môi giới</span></a>
+                    </div>
+                    <div class="title border">Thông tin tài khoản</div>
+                    <div class="card-chart">
+                        <div class="chart-reland">
+                            <div class="chart" id="napthe"></div>
+                            <script>
+                                $(function(){
+                                  $("#napthe").drawDoughnutChart([
+                                    { title: "Tài khoản chính", value : 400,  color: "#00a8e6" },
+                                    { title: "Tài khoản khuyến mại", value:  100,   color: "#ff8400" }
+                                  ]);
+                                });
+                            </script>
+                        </div>
+                        <div class="chart-txt uln ovh">
+                            <ul>
+                                <li class="chart-txt-1"><i></i>400k<span>Tài khoản chính</span></li>
+                                <li class="chart-txt-2"><i></i>100k<span>Tài khoản khuyến mại</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal  fade modal-choose" id="brithdayBox" tabindex="-1" role="dialog" aria-labelledby="brithdayBoxLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconLeftOpen"></span></button>
+                    <h4 class="modal-title" id="brithdayBoxLabel">Ngày sinh</h4>
+                </div>
+                <div class="modal-body profile pop fr uln">
+                    <div class="collapse-box margin-none">
+                        <div class="collapse-title profile-title">
+                            <div class="titlefr">Ngày:</div>
+                            <div class="ovh profile-txt"><input type="text"></div>
+                        </div>
+                    </div>
+                    <div class="collapse-box margin-none">
+                        <div class="collapse-title profile-title">
+                            <div class="titlefr">Tháng:</div>
+                            <div class="ovh profile-txt"><select><option>Tháng 1</option><option>Tháng 2</option><option>Tháng 3</option><option>Tháng 4</option></select></div>
+                        </div>
+                    </div>
+                    <div class="collapse-box margin-none border-none">
+                        <div class="collapse-title profile-title">
+                            <div class="titlefr">Năm:</div>
+                            <div class="ovh profile-txt"><select><option>1987</option><option>1988</option><option>1989</option><option>1990</option></select></div>
+                        </div>
+                    </div>
+                    <div class="clb ovh collapse-box border-none">&nbsp;</div>
+                    <div class="pd15 btnBox"><button type="submit" class="btn btn-organe btn-block">Xong</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal  fade modal-choose" id="genderBox" tabindex="-1" role="dialog" aria-labelledby="genderBoxLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconLeftOpen"></span></button>
+                    <h4 class="modal-title" id="genderBoxLabel">Giới tính</h4>
+                </div>
+                <div class="modal-body uln">
+                    <ul class="type-list">
+                        <li><a href="#" data-dismiss="modal" aria-label="Close" class="active">Nam</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Nữ</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Không xác định</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal  fade modal-choose" id="positionBox" tabindex="-1" role="dialog" aria-labelledby="positionBoxLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconLeftOpen"></span></button>
+                    <h4 class="modal-title" id="positionBoxLabel">Vai trò</h4>
+                </div>
+                <div class="modal-body uln">
+                    <ul class="type-list">
+                        <li><a href="#" data-dismiss="modal" aria-label="Close" class="active">Môi giới</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Chính chủ</a></li>
+                        <li><a href="#" data-dismiss="modal" aria-label="Close">Khac</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                        <li><a>&nbsp;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     
+    <div class="modal  fade modal-choose" id="changepassBox" tabindex="-1" role="dialog" aria-labelledby="changepassBoxLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconLeftOpen"></span></button>
+                    <h4 class="modal-title" id="changepassBoxLabel">Thay đổi mật khẩu</h4>
+                </div>
+                <div class="modal-body profile pop fr uln">
+                    <div class="collapse-box margin-none">
+                        <div class="collapse-title profile-title">
+                            <div class="titlefr">Mật khẩu cũ:</div>
+                            <div class="ovh profile-txt"><input type="text"></div>
+                        </div>
+                    </div>
+                    <div class="collapse-box margin-none">
+                        <div class="collapse-title profile-title">
+                            <div class="titlefr">Mật khẩu mới:</div>
+                            <div class="ovh profile-txt"><input type="text"></div>
+                        </div>
+                    </div>
+                    <div class="collapse-box margin-none border-none">
+                        <div class="collapse-title profile-title">
+                            <div class="titlefr">Nhập lại:</div>
+                            <div class="ovh profile-txt"><input type="text"></div>
+                        </div>
+                    </div>
+                    <div class="clb ovh collapse-box border-none">&nbsp;</div>
+                    <div class="pd15 btnBox"><button type="submit" class="btn btn-organe btn-block">Xong</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-choose modal-none modal-bg" id="addressBox" tabindex="-1" role="dialog" aria-labelledby="addressBoxLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconLeftOpen"></span></button>
+                    <h4 class="modal-title" id="addressBoxLabel">Địa chỉ</h4>
+                </div>
+                <div class="modal-body uln">
+                    <div class="title">Số nhà, ngõ, đường</div>
+                    <div class="pd15"><input type="text" class="form-control mb10"></div>
+                    <div class="note-fr pd15">Ví dụ: Số 15, ngõ 68 Hai Bà Trưng</div>
+                    <div class="clb">&nbsp;</div>
+                    <div class="title">Phường, quận, thành phố</div>
+                    <div class="pd15"><input type="text" class="form-control mb10" value="Phường Phúc La, Hà Đông, Hà Nội"></div>
+                    <div class="note-fr pd15">Thông tin này được lấy từ vị trí bạn chọn trên bản đồ. Nếu chưa thấy đúng bạn quay lại bản đồ chọn lại vị trí nhà.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="loading"><img src="img/loading_spinner.gif" /></div>
 
 </body>

@@ -439,7 +439,7 @@
 				<a><i class="iconCheck"></i></a>
 			</div>
 			<div class="note-fr pdall15 title border-top"><span>Sử dụng các gói LOGO để tin của bạn thu hút được nhiều sự chú ý của người xem hơn.</span></div>
-            <div class="pd15"><button type="reset" class="btn btn-organe btn-block" onclick="showNotify('','.loading');">Nâng cấp</button></div>
+            <div class="pd15"><button  role="button" data-toggle="modal" data-target="#updatemsgBox" class="btn btn-organe btn-block">Nâng cấp</button></div>
 		</div>
     </div>
 	<div class="overlay"></div>
@@ -804,6 +804,21 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-msg" id="updatemsgBox" tabindex="-1" role="dialog" aria-labelledby="updatemsgLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body uln">
+                    <div class="text-center">
+                        <p>Bạn đã nâng cấp gói tin TRANG CHỦ thành công!</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" data-dismiss="modal" aria-label="Close">Thoát</a>
+                    <a type="button" data-dismiss="modal" aria-label="Close">Nâng cấp khác</a>
                 </div>
             </div>
         </div>

@@ -348,8 +348,7 @@ $(function(){
 	$(window).scroll(function (event) {
         event.stopPropagation();
         windowPos = $(window).scrollTop();
-		if($(".wapper .reland-box .reland-title").hasClass("fixed")){
-			console.log("dfgf");
+		if($(".reland-title").hasClass("fixed")){
 			for(var i=1; i<=box; i++){
 				var items = $(".wapper .reland-box_"+i);
 				var pos = items.offset().top-120;
@@ -369,7 +368,11 @@ $(function(){
 						tfix.hide();
 				}
 			});
-		}	
+		}
+		if($("div").hasClass("detail-page")){
+			if(windowPos > 324) $("header.main").removeClass("gradient").addClass("blue");
+			else  $("header.main").removeClass("blue").addClass("gradient");
+		}
 	});
 	
 	// picker scroll

@@ -201,7 +201,13 @@
     <header class="main blue">
         <a href="chats.html" class="header-icon"><i class="iconLeftOpen"></i></a>
         <span class="name">Tran Anh <br><small>Trực tuyến 30 phút trước</small></span>
-        <a class="header-icon pull-right"><i class="fa fa-trash-o"></i></a>
+        <div class="btn-group pull-right" role="group">
+            <a role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="header-icon"><img src="img/dots-three-horizontal.svg" width="28" /></a>
+            <ul class="dropdown-menu">
+              <li><a role="button" data-toggle="modal" data-target="#blockuserBox">Chặn người dùng này</a></li>
+              <li><a role="button" data-toggle="modal" data-target="#deluserBox">Xóa hội thoại</a></li>
+            </ul>
+        </div>
     </header>
     <div class="wapper">
     	<div class="chat-detail">
@@ -276,9 +282,9 @@
             <div class="chat-footer">
             	<textarea placeholder="Nhập tin nhắn"></textarea>
                 <div class="action">
-                	<a href="javascript:void(0)" class="active">Aa</a>
+                	<a href="javascript:void(0)" class="active"><i class="fa fa-commenting-o"></i></a>
                     <a href="javascript:void(0)"><i class="iconCamera"></i></a>
-                    <a href="javascript:void(0)"><i class="iconPicture"></i></a>
+                    <a href="javascript:void(0)"><i class="fa fa-picture-o"></i></a>
                     <a href="javascript:void(0)"><i class="iconLocation"></i></a>
                     <a href="javascript:void(0)"><i class="p-icon i-more"></i></a>
                 </div>
@@ -647,6 +653,40 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-msg" id="blockuserBox" tabindex="-1" role="dialog" aria-labelledby="blockuserBoxLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body uln">
+                    <div class="text-center">
+                        <h3>Chặn người dùng!</h3>
+                        <p>Bạn có muốn chặn người dùng Nguyena này không?</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" data-dismiss="modal" aria-label="Close">Thoát</a>
+                    <a href="#">Thực hiện</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-msg" id="deluserBox" tabindex="-1" role="dialog" aria-labelledby="deluserBoxLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body uln">
+                    <div class="text-center">
+                        <h3>Xóa người dùng!</h3>
+                        <p>Bạn có muốn xóa người dùng Nguyena này không?</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" data-dismiss="modal" aria-label="Close">Thoát</a>
+                    <a href="#">Thực hiện</a>
                 </div>
             </div>
         </div>
