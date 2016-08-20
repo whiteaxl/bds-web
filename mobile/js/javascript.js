@@ -370,7 +370,7 @@ $(function(){
 			});
 		}
 		if($("div").hasClass("detail-page")){
-			if(windowPos > 324) $("header.main").removeClass("gradient").addClass("blue");
+			if(windowPos > 300) $("header.main").removeClass("gradient").addClass("blue");
 			else  $("header.main").removeClass("blue").addClass("gradient");
 		}
 	});

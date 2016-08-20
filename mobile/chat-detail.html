@@ -202,7 +202,7 @@
         <a href="chats.html" class="header-icon"><i class="iconLeftOpen"></i></a>
         <span class="name">Tran Anh <br><small>Trực tuyến 30 phút trước</small></span>
         <div class="btn-group pull-right" role="group">
-            <a role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="header-icon"><img src="img/dots-three-horizontal.svg" width="28" /></a>
+            <a role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="header-icon"><i class="iconList"></i></a>
             <ul class="dropdown-menu">
               <li><a role="button" data-toggle="modal" data-target="#blockuserBox">Chặn người dùng này</a></li>
               <li><a role="button" data-toggle="modal" data-target="#deluserBox">Xóa hội thoại</a></li>
@@ -282,11 +282,22 @@
             <div class="chat-footer">
             	<textarea placeholder="Nhập tin nhắn"></textarea>
                 <div class="action">
-                	<a href="javascript:void(0)" class="active"><i class="fa fa-commenting-o"></i></a>
+                	<a href="javascript:void(0)" class="active"  onClick="showhide('.list-sort');"><i class="fa fa-commenting-o"></i></a>
                     <a href="javascript:void(0)"><i class="iconCamera"></i></a>
                     <a href="javascript:void(0)"><i class="fa fa-picture-o"></i></a>
                     <a href="javascript:void(0)"><i class="iconLocation"></i></a>
-                    <a href="javascript:void(0)"><i class="p-icon i-more"></i></a>
+                    <div class="list-sort popovers top uln">
+                        <ul>
+                            <li><a href="javascript:void(0)">Xin chào bạn!</a></li>
+                            <li><a href="javascript:void(0)">Nhà đã bán chưa bạn?</a></li>
+                            <li><a href="javascript:void(0)">Gửi cho mình thêm ảnh</a></li>
+                            <li><a href="javascript:void(0)">Gửi cho mình vị trí chính xác của nhà</a></li>
+                            <li><a href="javascript:void(0)">Giá cuối cùng bạn bán là bao nhiêu?</a></li>
+                            <li><a href="javascript:void(0)">Giá có thương lượng được không bạn?</a></li>
+                            <li><a href="javascript:void(0)">Cảm ơn bạn!</a></li>
+                            <li><a href="javascript:void(0)">Giảm giá thêm đi bạn.</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
