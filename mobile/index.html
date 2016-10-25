@@ -57,7 +57,7 @@
 <body class="hfixed header">
 	<nav class="main uln">
     	<ul>
-        	<li class="logo"><a href="index.html"><img src="img/logo.png" height="25" alt="Reland" title="Reland" /></a></li>
+        	<li class="logo"><a href="index.html"><img src="img/logo.svg" height="25" alt="Reland" title="Reland" /></a></li>
             <li>
                 <a class="login" role="button" data-toggle="modal" data-target="#profileBox">
                 <p>Đăng nhập/Profile</p>
@@ -497,7 +497,27 @@
                             </select>
                         </div>
                     </div>
-                    <div class="room-box collapse-box collapse-cus group-cus ovh">
+					<div class="price-box drum-full collapse-box spinnerIpt">
+                    	<a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Mức giá <span><label id="prices2_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
+                        <div class="priceBox spinner spinner-hide">
+                        	<div class="mb10 ovh">
+                            	<div class="col-sm-6 text-center"><input type="text" class="form-control" /></div>
+                                <div class="col-sm-6 text-center"><input type="text" class="form-control" /></div>
+                            </div>
+                            <select id="prices2" class="drum">
+                            	<option selected value="p0">Bất kỳ</option>
+                                <option value="p1">1 tỷ</option>
+                                <option value="p2">2 tỷ</option>
+                                <option value="p3">3 tỷ</option>
+                                <option value="p4">5 tỷ</option>
+                                <option value="p5">7 tỷ</option>
+                                <option value="p6">10 tỷ</option>
+                                <option value="p7">20 tỷ</option>
+                                <option value="p8">30 tỷ</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="room-box collapse-box collapse-cus group-cus border-none ovh">
                     	<a class="collapse-title">Số phòng ngủ</a>
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn active">
@@ -520,34 +540,9 @@
                             </label>
                         </div>
                     </div>
-                    
-                    <div class="price-box drum-full collapse-box border-none spinnerIpt">
-                    	<a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Mức giá <span><label id="prices2_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
-                        <div class="priceBox spinner spinner-hide">
-                        	<div class="mb10 ovh">
-                            	<div class="col-sm-6 text-center"><input type="text" class="form-control" /></div>
-                                <div class="col-sm-6 text-center"><input type="text" class="form-control" /></div>
-                            </div>
-                            <select id="prices2" class="drum">
-                            	<option selected value="p0">Bất kỳ</option>
-                                <option value="p1">1 tỷ</option>
-                                <option value="p2">2 tỷ</option>
-                                <option value="p3">3 tỷ</option>
-                                <option value="p4">5 tỷ</option>
-                                <option value="p5">7 tỷ</option>
-                                <option value="p6">10 tỷ</option>
-                                <option value="p7">20 tỷ</option>
-                                <option value="p8">30 tỷ</option>
-                            </select>
-                        </div>
-                    </div>
-					<div class="title title-more border">&nbsp;</div>
-                    <div class="btn-box collapse-box btn-more border-none">
-                    	<a role="button" class="collapse-title blue">Mở rộng</a>
-                    </div>
-					<div class="title title-more border">&nbsp;</div>
-                    <div class="more-box more-box-hide">
-                    	<div class="trend-box collapse-box border-top">
+                    <div class="more-box">
+						<div class="title border">&nbsp;</div>
+                    	<div class="trend-box collapse-box">
                             <a role="button" class="collapse-title" data-toggle="modal" data-target="#trendBox">Hướng nhà <span><label>Bất kỳ</label> <i class="iconRightOpen"></i></span></a>
                         </div>
                         <div class="date-box drum-full collapse-box border-none spinnerIpt">
@@ -570,6 +565,7 @@
                             </div>
                         </div>
                     </div>
+					<div class="title border">&nbsp;</div>
 					<div class="btn-box collapse-box btn-reset border-bottom">
                     	<button type="reset" class="collapse-title red">Thiết lập lại</button>
                     </div>
@@ -582,61 +578,37 @@
                 <div role="tabpanel" class="tab-pane" id="searchsale">
 					<div class="title">Các điều kiện</div>
                     <div class="type-box collapse-box">
-                        <a role="button" class="collapse-title" data-toggle="modal" data-target="#typeBox">Loại nhà đất <span><label>Bất kỳ</label> <i class="iconRightOpen"></i></span></a>
+                    	<a role="button" class="collapse-title" data-toggle="modal" data-target="#typeBox">Loại nhà đất <span><label>Bất kỳ</label> <i class="iconRightOpen"></i></span></a>
                     </div>
                     <div class="area-box drum-full collapse-box spinnerIpt">
-                        <a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Diện tích <span><label id="barea2_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
+                        <a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Diện tích <span><label id="area2_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
                         <div class="areaBox spinner spinner-hide">
                         	<div class="mb10 ovh">
                             	<div class="col-sm-6 text-center"><input type="text" class="form-control" /></div>
                                 <div class="col-sm-6 text-center"><input type="text" class="form-control" /></div>
                             </div>
-                            <select id="barea2" class="drum">
-                                <option selected value="a0">Bất kỳ</option>
-                                <option value="ba12">10 m2</option>
-                                <option value="ba22">20 m2</option>
-                                <option value="ba32">30 m2</option>
-                                <option value="ba52">50 m2</option>
-                                <option value="ba62">70 m2</option>
-                                <option value="ba72">100 m2</option>
-                                <option value="ba82">200 m2</option>
-                                <option value="ba92">300 m2</option>
+							<select id="area2" class="drum">
+                            	<option selected value="a0">Bất kỳ</option>
+                                <option value="a12">10 m2</option>
+                                <option value="a22">20 m2</option>
+                                <option value="a32">30 m2</option>
+                                <option value="a52">50 m2</option>
+                                <option value="a62">70 m2</option>
+                                <option value="a72">100 m2</option>
+                                <option value="a82">200 m2</option>
+                                <option value="a92">300 m2</option>
                             </select>
                         </div>
                     </div>
-                    <div class="room-box collapse-box collapse-cus group-cus ovh">
-                        <a class="collapse-title">Số phòng ngủ</a>
-                        <div class="btn-group" data-toggle="buttons">
-                            <label class="btn active">
-                                <input type="radio" name="options" id="room0" autocomplete="off" checked>Bất kỳ
-                            </label>
-                            <label class="btn">
-                                <input type="radio" name="options" id="room1" autocomplete="off">1+
-                            </label>
-                            <label class="btn">
-                                <input type="radio" name="options" id="room2" autocomplete="off">2+
-                            </label>
-                            <label class="btn">
-                                <input type="radio" name="options" id="room3" autocomplete="off">3+
-                            </label>
-                            <label class="btn">
-                                <input type="radio" name="options" id="room4" autocomplete="off">4+
-                            </label>
-                            <label class="btn">
-                                <input type="radio" name="options" id="room5" autocomplete="off">5+
-                            </label>
-                        </div>
-                    </div>
-                   
-                    <div class="price-box drum-full collapse-box border-none spinnerIpt">
-                        <a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Mức giá <span><label id="bprices2_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
+					<div class="price-box drum-full collapse-box spinnerIpt">
+                    	<a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Mức giá <span><label id="prices2_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
                         <div class="priceBox spinner spinner-hide">
                         	<div class="mb10 ovh">
                             	<div class="col-sm-6 text-center"><input type="text" class="form-control" /></div>
                                 <div class="col-sm-6 text-center"><input type="text" class="form-control" /></div>
                             </div>
-                            <select id="bprices2" class="drum">
-                                <option selected value="p0">Bất kỳ</option>
+                            <select id="prices2" class="drum">
+                            	<option selected value="p0">Bất kỳ</option>
                                 <option value="p1">1 tỷ</option>
                                 <option value="p2">2 tỷ</option>
                                 <option value="p3">3 tỷ</option>
@@ -648,36 +620,56 @@
                             </select>
                         </div>
                     </div>
-                    <div class="title title-more border">&nbsp;</div>
-                    <div class="btn-box collapse-box btn-more border-none">
-                    	<a role="button" class="collapse-title blue">Mở rộng</a>
+                    <div class="room-box collapse-box collapse-cus group-cus border-none ovh">
+                    	<a class="collapse-title">Số phòng ngủ</a>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn active">
+                            	<input type="radio" name="options" id="room0" autocomplete="off" checked>Bất kỳ
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="room1" autocomplete="off">1+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="room2" autocomplete="off">2+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="room3" autocomplete="off">3+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="room4" autocomplete="off">4+
+                            </label>
+                            <label class="btn">
+                            	<input type="radio" name="options" id="room5" autocomplete="off">5+
+                            </label>
+                        </div>
                     </div>
-					<div class="title title-more border">&nbsp;</div>
-                    <div class="more-box more-box-hide">
-                    	<div class="trend-box collapse-box border-top">
+                    <div class="more-box">
+						<div class="title border">&nbsp;</div>
+                    	<div class="trend-box collapse-box">
                             <a role="button" class="collapse-title" data-toggle="modal" data-target="#trendBox">Hướng nhà <span><label>Bất kỳ</label> <i class="iconRightOpen"></i></span></a>
                         </div>
                         <div class="date-box drum-full collapse-box border-none spinnerIpt">
-                            <a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Ngày đăng <span><label id="bdatepost_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
+                            <a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Ngày đăng <span><label id="datepost_value">Bất kỳ</label> <i class="iconDownOpen"></i></span></a>
                             <div class="dateBox spinner spinner-hide">
-                                <div class="mb10 ovh">
+								<div class="mb10 ovh">
 									<div class="col-sm-12 text-center"><input type="text" class="form-control" /></div>
 								</div>
-								<select id="bdatepost" class="drum">
+                                <select id="datepost" class="drum">
                                     <option selected value="a0">Bất kỳ</option>
-                                    <option value="ba1">1 ngày</option>
-                                    <option value="ba2">2 ngày</option>
-                                    <option value="ba3">3 ngày</option>
-                                    <option value="ba5">5 ngày</option>
-                                    <option value="ba6">7 ngày</option>
-                                    <option value="ba7">30 ngày</option>
-                                    <option value="ba8">60 ngày</option>
-                                    <option value="ba9">90 ngày</option>
+                                    <option value="a1">1 ngày</option>
+                                    <option value="a2">2 ngày</option>
+                                    <option value="a3">3 ngày</option>
+                                    <option value="a5">5 ngày</option>
+                                    <option value="a6">7 ngày</option>
+                                    <option value="a7">30 ngày</option>
+                                    <option value="a8">60 ngày</option>
+                                    <option value="a9">90 ngày</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-                    <div class="btn-box collapse-box btn-reset border-bottom">
+					<div class="title border">&nbsp;</div>
+					<div class="btn-box collapse-box btn-reset border-bottom">
                     	<button type="reset" class="collapse-title red">Thiết lập lại</button>
                     </div>
 					<div class="clb ovh mb10">&nbsp;</div>
@@ -692,8 +684,8 @@
     </div>
     <header class="main blue">
         <a href="javascript:void(0)" class="nav_mobile header-icon"><i class="iconMenu"></i><span>33</span></a>
-		<a href="index.html" class="pull-left"><img src="img/logo.png" /></a>
-		<a href="chats.html" class="chat_mobile header-icon pull-right"><img src="img/location.svg" class="location"/><span>3</span></a>
+		<a href="index.html" class="pull-left"><img src="img/logo.svg" width="120" /></a>
+		<a href="chats.html" class="chat_mobile header-icon pull-right"><img src="img/location.png" class="location"/><span>3</span></a>
         <a href="javascript:void(0)" class="search_mobile header-icon"><i class="iconSearch"></i></a>
     </header>
     <div class="reland-title fixed">
