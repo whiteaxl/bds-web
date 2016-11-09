@@ -225,7 +225,7 @@
                         </div>
 						<div class="title border">Giá và liên hệ</div>
 						<div class="pr-box collapse-box fr">
-							<a class="collapse-title" onClick="spinner(this, '.spinner', 'spinner-hide')">Giá (triệu)<span><input type="text" /></span></a>
+							<a role="button" class="collapse-title" data-toggle="modal" data-target="#priceBox">Giá <span><label>100 triệu</label> <i class="iconRightOpen"></i></span></a>
 						</div>
 						<div class="contact-box collapse-box border-none">
 							<a role="button" class="collapse-title" data-toggle="modal" data-target="#contactBox">Liên hệ <span><label>Mr Việt - 0968 898 678</label> <i class="iconRightOpen"></i></span></a>
@@ -1087,9 +1087,49 @@
                 	<h4 class="modal-title" id="mapsBoxLabel">Bản đồ</h4>
                 </div>
                 <div class="modal-body uln">
+					<script>
+						$(function(){
+							var searchmaps = [
+							  {
+								diadiem: "CT1B1 - KDT Xa La",
+								diadiemlbl: "Địa điểm",
+								diadiemicon: "iconLocation gray",
+								label: "Xala",
+								quanlbl: "Quận",
+								quanicon: "iconStar red",
+								tinh: "Hà Nội",
+								tinhlbl: "Tỉnh",
+								tinhicon: "iconStar red"
+							  }
+							];
+							$("#searchmaps").autocomplete({
+							  minLength: 0,
+							  source: searchmaps,
+							  focus: function( event, ui ) {
+								$( "#searchmaps" ).val( ui.item.label );
+								return false;
+							  }
+							})
+							.autocomplete( "instance" )._renderItem = function( ul, item ) {
+								ul.addClass('relandAutoOne relandMaps');
+								return $( "<li>")
+								.append("<p><i class='" + item.diadiemicon + "'></i>" + item.diadiem + "<span>" + item.diadiemlbl + "</span></p>")
+								.append("<p><i class='" + item.quanicon + "'></i>" + item.label + "<span>" + item.quanlbl + "</span></p>")
+								.append("<p><i class='" + item.tinhicon + "'></i>" + item.tinh + "<span>" + item.tinhlbl + "</span></p>")
+								.appendTo( ul );
+							};	
+						});
+					</script>
+					<div class="pdall15"><input type="text" class="form-control" id="searchmaps"></div>
                 	<div class="maps">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50116.36124904685!2d105.7882095786251!3d20.995810207556246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b1520664ffff066!2zSG9hIGzhu6VhIFV5w6puIHNob3A!5e0!3m2!1svi!2s!4v1469250664773" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
+					<footer class="main border blue uln">
+						<ul class="navmain nav-2 nav-text">
+							<li><a role="button">Thoát</a></li>
+							<li><a role="button">Chọn</a></li>
+						</ul>
+					</footer>
                 </div>
             </div>
         </div>
@@ -1468,6 +1508,30 @@
                     <div class="title">Phường, quận, thành phố</div>
                     <div class="pd15"><input type="text" class="form-control mb10" value="Phường Phúc La, Hà Đông, Hà Nội"></div>
                     <div class="note-fr pd15">Thông tin này được lấy từ vị trí bạn chọn trên bản đồ. Nếu chưa thấy đúng bạn quay lại bản đồ chọn lại vị trí nhà.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<div class="modal fade modal-choose" id="priceBox" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconLeftOpen"></span></button>
+                	<h4 class="modal-title">Giá tiền</h4>
+                </div>
+				<div class="title">Nhập giá tiền</div>
+				<div class="pd15"><input type="text" class="form-control" pattern="\d*"></div>
+				<div class="title"></div>
+				<div class="title border">Đơn vị</div>
+                <div class="modal-body uln">
+                	<ul class="list-option">
+                    	<li><a href="#" class="active">Triệu <i class="iconCheck"></i></a></li>
+                        <li><a href="#">Tỷ <i class="iconCheck"></i></a></li>
+                        <li><a href="#">Trăn nghìn/m2 <i class="iconCheck"></i></a></li>
+						<li><a href="#">Triệu/m2 <i class="iconCheck"></i></a></li>
+						<li><a href="#">Thỏa thuận <i class="iconCheck"></i></a></li>
+                    </ul>
                 </div>
             </div>
         </div>

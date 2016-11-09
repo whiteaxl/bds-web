@@ -253,6 +253,11 @@ $(function(){
 	$(".list-check li a").click(function(){
 		$(this).toggleClass("active");
 	});
+	// add class list option
+	$(".list-option li a").click(function(){
+		$(".list-option li a").removeClass("active");
+		$(this).addClass("active");
+	});
 	// set active lien he in post
 	$("#contactBox .contact-list li a").click(function(){
 		$(this).toggleClass("active");
