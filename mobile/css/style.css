@@ -3810,11 +3810,11 @@ div.disabled > .toggle-slide {
   margin-left: 20px; }
 
 .loading {
-  width: 60px;
+  width: 40px;
   position: fixed;
   top: 45%;
   left: 50%;
-  margin-left: -30px;
+  margin-left: -20px;
   z-index: 9999999;
   display: none; }
 
