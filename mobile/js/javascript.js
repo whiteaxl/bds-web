@@ -3,7 +3,7 @@ function update(){
 	$ww = $(window).width();
 	
 	$(".modal-choose .modal-body").height($wh-46);
-	$(".search, .post").height($wh);
+	//$(".search, .post").height($wh);
 	$(".wapper > .maps").height($wh-42);
 		
 	if($(".search").find("input").hasClass("input-fr")){
